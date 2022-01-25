@@ -4,10 +4,10 @@ title: AI Conference
 date: 2022-01-25
 description: AI Conferences suitable for RL research
 tags:
-  - AI Conferences
-  - RL
+    - AI Conferences
+    - RL
 categories:
-  - Conferences
+    - Conferences
 ---
 
 This post shows recent deadlines of AI conferences that are related to RL, security and Robotics research.
