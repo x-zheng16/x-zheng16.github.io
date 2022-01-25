@@ -2,7 +2,7 @@
 author: Xiang Zheng
 title: AI Conference
 date: 2022-01-25
-description: AI Conferences suitable to RL research
+description: AI Conferences suitable for RL research
 tags:
   - AI Conferences
   - RL
