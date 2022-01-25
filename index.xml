@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Example Site</title><link>https://x-zheng16.github.io/</link><description>Recent content on Example Site</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 25 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://x-zheng16.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Conference</title><link>https://x-zheng16.github.io/p/ai-conference/</link><pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate><guid>https://x-zheng16.github.io/p/ai-conference/</guid><description>&lt;img src="https://x-zheng16.github.io/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post AI Conference" />&lt;p>This post shows recent deadlines and URL of AI conferences that are related to RL, security and Robotics research.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Example Site</title><link>https://x-zheng16.github.io/</link><description>Recent content on Example Site</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 25 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://x-zheng16.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Conference</title><link>https://x-zheng16.github.io/p/ai-conference/</link><pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate><guid>https://x-zheng16.github.io/p/ai-conference/</guid><description>&lt;p>This post shows recent deadlines of AI conferences that are related to RL, security and Robotics research.&lt;/p>
 &lt;p>AI conference&lt;/p>
 &lt;p>(Classification is based on CCF)&lt;/p>
-&lt;p>A&lt;/p>
+&lt;h2 id="a">A&lt;/h2>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -10,14 +10,6 @@
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
-&lt;tr>
-&lt;td>ICML2022&lt;/td>
-&lt;td>January 27, 2022&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>IJCAI2022&lt;/td>
-&lt;td>January 14, 2022&lt;/td>
-&lt;/tr>
 &lt;tr>
 &lt;td>NeurIPS2021&lt;/td>
 &lt;td>May 21, 2021&lt;/td>
@@ -34,9 +26,17 @@
 &lt;td>ICCV2022&lt;/td>
 &lt;td>December 23, 2021&lt;/td>
 &lt;/tr>
+&lt;tr>
+&lt;td>IJCAI2022&lt;/td>
+&lt;td>January 14, 2022&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ICML2022&lt;/td>
+&lt;td>January 27, 2022&lt;/td>
+&lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>B&lt;/p>
+&lt;h2 id="b">B&lt;/h2>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -46,6 +46,18 @@
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>ICRA2022&lt;/td>
+&lt;td>Sept 15, 2021&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>AAMAS2022&lt;/td>
+&lt;td>October 8, 2021&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ICAPS2022&lt;/td>
+&lt;td>December 15, 2021&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>COLT2022&lt;/td>
 &lt;td>February 9, 2022&lt;/td>
 &lt;/tr>
@@ -53,21 +65,9 @@
 &lt;td>ECCV2022&lt;/td>
 &lt;td>March 7, 2022&lt;/td>
 &lt;/tr>
-&lt;tr>
-&lt;td>ICRA2022&lt;/td>
-&lt;td>Sept 15, 2021&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ICAPS2022&lt;/td>
-&lt;td>December 15, 2021&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>AAMAS2022&lt;/td>
-&lt;td>October 8, 2021&lt;/td>
-&lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>C&lt;/p>
+&lt;h2 id="c">C&lt;/h2>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -81,12 +81,12 @@
 &lt;td>October 15, 2021&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>IROS2022&lt;/td>
-&lt;td>March 1, 2022&lt;/td>
-&lt;/tr>
-&lt;tr>
 &lt;td>IJCNN2022&lt;/td>
 &lt;td>January 31, 2022&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>IROS2022&lt;/td>
+&lt;td>March 1, 2022&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Chinese Test</title><link>https://x-zheng16.github.io/p/test-chinese/</link><pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate><guid>https://x-zheng16.github.io/p/test-chinese/</guid><description>&lt;img src="https://x-zheng16.github.io/p/test-chinese/helena-hertz-wWZzXlDpMog-unsplash.jpg" alt="Featured image of post Chinese Test" />&lt;h2 id="正文测试">正文测试&lt;/h2>
