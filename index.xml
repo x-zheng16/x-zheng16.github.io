@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xiang Zheng's Blog</title><link>https://x-zheng16.github.io/</link><description>Recent content on Xiang Zheng's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 25 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://x-zheng16.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>AI and Security Conferences</title><link>https://x-zheng16.github.io/p/ai-and-security-conferences/</link><pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate><guid>https://x-zheng16.github.io/p/ai-and-security-conferences/</guid><description>&lt;p>This post shows upcoming deadlines of several conferences related to RL, Security and Robotics research.&lt;/p>
 &lt;h2 id="ai-conferences">AI Conferences&lt;/h2>
-&lt;p>(Classification is based on CCF)&lt;/p>
+&lt;p>(Classification is based on &lt;a class="link" href="https://www.ccf.org.cn/Academic_Evaluation/AI/" target="_blank" rel="noopener"
+>CCF&lt;/a>)&lt;/p>
 &lt;h3 id="a">A&lt;/h3>
 &lt;table>
 &lt;thead>
@@ -16,23 +17,23 @@
 &lt;/tr>
 &lt;tr>
 &lt;td>AAAI2022&lt;/td>
-&lt;td>&lt;del>August 30, 2021&lt;/del>&lt;/td>
+&lt;td>&lt;del>Aug. 30, 2021&lt;/del>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>CVPR2022&lt;/td>
-&lt;td>&lt;del>November 18, 2021&lt;/del>&lt;/td>
+&lt;td>&lt;del>Nov. 18, 2021&lt;/del>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>ICCV2022&lt;/td>
-&lt;td>&lt;del>December 23, 2021&lt;/del>&lt;/td>
+&lt;td>&lt;del>Dec. 23, 2021&lt;/del>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>IJCAI2022&lt;/td>
-&lt;td>&lt;del>January 14, 2022&lt;/del>&lt;/td>
+&lt;td>&lt;del>Jan. 14, 2022&lt;/del>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>ICML2022&lt;/td>
-&lt;td>January 27, 2022&lt;/td>
+&lt;td>Jan. 27, 2022&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -47,23 +48,23 @@
 &lt;tbody>
 &lt;tr>
 &lt;td>ICRA2022&lt;/td>
-&lt;td>&lt;del>Sept 15, 2021&lt;/del>&lt;/td>
+&lt;td>&lt;del>Sept. 15, 2021&lt;/del>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>AAMAS2022&lt;/td>
-&lt;td>&lt;del>October 8, 2021&lt;/del>&lt;/td>
+&lt;td>&lt;del>Oct. 8, 2021&lt;/del>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>ICAPS2022&lt;/td>
-&lt;td>&lt;del>December 15, 2021&lt;/del>&lt;/td>
+&lt;td>&lt;del>Dec. 15, 2021&lt;/del>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>COLT2022&lt;/td>
-&lt;td>February 9, 2022&lt;/td>
+&lt;td>Feb. 9, 2022&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>ECCV2022&lt;/td>
-&lt;td>March 7, 2022&lt;/td>
+&lt;td>Mar. 7, 2022&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -78,15 +79,15 @@
 &lt;tbody>
 &lt;tr>
 &lt;td>AISTATS2022&lt;/td>
-&lt;td>&lt;del>October 15, 2021&lt;/del>&lt;/td>
+&lt;td>&lt;del>Oct. 15, 2021&lt;/del>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>IJCNN2022&lt;/td>
-&lt;td>January 31, 2022&lt;/td>
+&lt;td>Jan. 31, 2022&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>IROS2022&lt;/td>
-&lt;td>March 1, 2022&lt;/td>
+&lt;td>Mar. 1, 2022&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -97,25 +98,25 @@
 &lt;tr>
 &lt;th>Conf&lt;/th>
 &lt;th>Deadline&lt;/th>
-&lt;th>url&lt;/th>
+&lt;th>URL&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>S&amp;amp;P 2023&lt;/td>
-&lt;td>April 1, 2022&lt;/td>
+&lt;td>Apr. 1, Aug. 19, Dec. 2, 2022&lt;/td>
 &lt;td>&lt;a class="link" href="https://www.ieee-security.org/TC/SP2023/cfpapers.html" target="_blank" rel="noopener"
 >site&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>CCS 2022&lt;/td>
-&lt;td>May 2, 2022&lt;/td>
+&lt;td>Jan. 14, May 2, 2022&lt;/td>
 &lt;td>&lt;a class="link" href="https://www.sigsac.org/ccs/CCS2022/call-for-papers.html" target="_blank" rel="noopener"
 >site&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Usenix 2023&lt;/td>
-&lt;td>~ June 2022&lt;/td>
+&lt;td>Usenix 2022&lt;/td>
+&lt;td>Jun. 8, Oct. 12, 2021, Feb. 1, 2022&lt;/td>
 &lt;td>&lt;a class="link" href="https://www.usenix.org/conference/usenixsecurity23#venue" target="_blank" rel="noopener"
 >site&lt;/a>&lt;/td>
 &lt;/tr>
@@ -127,27 +128,146 @@
 &lt;tr>
 &lt;th>Conf&lt;/th>
 &lt;th>Deadline&lt;/th>
-&lt;th>url&lt;/th>
+&lt;th>URL&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>ESORICS 2022&lt;/td>
-&lt;td>May 15, 2022&lt;/td>
+&lt;td>Jan. 31, May 15, 2022&lt;/td>
 &lt;td>&lt;a class="link" href="https://esorics2022.compute.dtu.dk/cfp.html" target="_blank" rel="noopener"
 >site&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>CSF 2022&lt;/td>
-&lt;td>February 4, 2022&lt;/td>
+&lt;td>May 14th, Oct. 1st, 2021, Feb. 4, 2022&lt;/td>
 &lt;td>&lt;a class="link" href="https://www.ieee-security.org/TC/CSF2022/cfp.html" target="_blank" rel="noopener"
 >site&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>ACSAC 2021&lt;/td>
-&lt;td>June 28, 2021&lt;/td>
+&lt;td>Jun. 28, 2021&lt;/td>
 &lt;td>&lt;a class="link" href="https://www.acsac.org/2021/submissions/papers/" target="_blank" rel="noopener"
 >site&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>NDSS 2022&lt;/td>
+&lt;td>May 21, Jul. 27, 2021&lt;/td>
+&lt;td>&lt;a class="link" href="https://www.ndss-symposium.org/ndss2022/call-for-papers/" target="_blank" rel="noopener"
+>site&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="c-1">C&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Conf&lt;/th>
+&lt;th>Deadline&lt;/th>
+&lt;th>URL&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>ACNS 2022&lt;/td>
+&lt;td>Sept. 3, 2021, Jan. 14, 2022&lt;/td>
+&lt;td>&lt;a class="link" href="https://sites.google.com/di.uniroma1.it/acns2022/" target="_blank" rel="noopener"
+>site&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>AsiaCCS 2022&lt;/td>
+&lt;td>Jul. 30, Nov. 19, 2021&lt;/td>
+&lt;td>&lt;a class="link" href="https://asiaccs2022.conferenceservice.jp/dateandcall/importantdates/" target="_blank" rel="noopener"
+>site&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="others">Others&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Conf&lt;/th>
+&lt;th>Deadline&lt;/th>
+&lt;th>URL&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>ICLR 2022&lt;/td>
+&lt;td>Oct. 06, 2021&lt;/td>
+&lt;td>&lt;a class="link" href="https://iclr.cc/Conferences/2022/Dates" target="_blank" rel="noopener"
+>site&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>CoRL 2022&lt;/td>
+&lt;td>Jun. 15, 2022&lt;/td>
+&lt;td>&lt;a class="link" href="http://corl2022.org/key-dates/" target="_blank" rel="noopener"
+>site&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>RSS 2022&lt;/td>
+&lt;td>Jan. 28th, 2022&lt;/td>
+&lt;td>&lt;a class="link" href="https://roboticsconference.org" target="_blank" rel="noopener"
+>site&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="classification-by-month">Classification by Month&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Month&lt;/th>
+&lt;th>Conference&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>ICML, IJCAI, IJCNN, CCS, ESORICS, ACNS, RSS&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>COLT, Usenix, CSF&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>ECCV, IROS&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td>S&amp;amp;P&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td>NeurIPS, CCS, ESORICS, CSF, NDSS&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td>Usenix, ACSAC, CoRL&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>7&lt;/td>
+&lt;td>NDSS, AsiaCCS&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>8&lt;/td>
+&lt;td>AAAI, S&amp;amp;P&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>9&lt;/td>
+&lt;td>ICRA, ACNS&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>10&lt;/td>
+&lt;td>AAMAS, AISTATS, Usenix, CSF, ICLR&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>11&lt;/td>
+&lt;td>CVPR, AsiaCCS&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>12&lt;/td>
+&lt;td>ICCV, ICAPS, S&amp;amp;P&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item></channel></rss>
