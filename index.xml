@@ -18,9 +18,9 @@ width="1298"
 height="750"
 srcset="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/VM_network_conf_hu6df28b9863123eb761d7bd1ec978a942_409265_480x0_resize_box_3.png 480w, https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/VM_network_conf_hu6df28b9863123eb761d7bd1ec978a942_409265_1024x0_resize_box_3.png 1024w"
 loading="lazy"
-alt="VM_network_conf">
+alt="VM Network panel">
 &lt;/a>
-&lt;figcaption>VM_network_conf&lt;/figcaption>
+&lt;figcaption>VM Network panel&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;p>Following figure shows how NAT Network looks like. Please refer to &lt;a class="link" href="https://www.nakivo.com/blog/virtualbox-network-setting-guide/" target="_blank" rel="noopener"
 >VirtualBox Network Settings: Complete Guide&lt;/a> or &lt;a class="link" href="https://www.virtualbox.org/manual/ch06.html" target="_blank" rel="noopener"
@@ -37,9 +37,9 @@ width="1714"
 height="954"
 srcset="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/NAT_network_hu439bf2ed46e7b410d8195a2ab0eb1785_608506_480x0_resize_box_3.png 480w, https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/NAT_network_hu439bf2ed46e7b410d8195a2ab0eb1785_608506_1024x0_resize_box_3.png 1024w"
 loading="lazy"
-alt="[NAT_network]">
+alt="NAT network">
 &lt;/a>
-&lt;figcaption>[NAT_network]&lt;/figcaption>
+&lt;figcaption>NAT network&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;h2 id="step-2-set-up-ssh-server-service-in-vm">Step 2: Set Up SSH Server Service in VM&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1">## Install sshd server&lt;/span>
@@ -75,9 +75,9 @@ width="1108"
 height="732"
 srcset="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/port_forwarding_hu6ff436fd1de6b69040debb46d2fb8d82_189387_480x0_resize_box_3.png 480w, https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/port_forwarding_hu6ff436fd1de6b69040debb46d2fb8d82_189387_1024x0_resize_box_3.png 1024w"
 loading="lazy"
-alt="port">
+alt="VirtualBox Network panel">
 &lt;/a>
-&lt;figcaption>port&lt;/figcaption>
+&lt;figcaption>VirtualBox Network panel&lt;/figcaption>
 &lt;/figure>
 &lt;figure
 class="gallery-image"
@@ -91,9 +91,9 @@ width="1058"
 height="238"
 srcset="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule_hu65cd8af79cb1c1cc4dad04665267afd3_35833_480x0_resize_box_3.png 480w, https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule_hu65cd8af79cb1c1cc4dad04665267afd3_35833_1024x0_resize_box_3.png 1024w"
 loading="lazy"
-alt="rule">
+alt="Port forwording rule">
 &lt;/a>
-&lt;figcaption>rule&lt;/figcaption>
+&lt;figcaption>Port forwording rule&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;h2 id="step-4-set-up-ssh-client-service-in-host">Step 4: Set Up SSH Client Service in Host&lt;/h2>
 &lt;h3 id="install-ssh-client">Install ssh client&lt;/h3>

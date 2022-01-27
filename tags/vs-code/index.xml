@@ -2,5 +2,5 @@
 Step 1: Create a Virtual Machine (VM) Please refer to Install SEED VM on VirtualBox. Skip if you have one.
 username: seed
 password: dees
-VM_network_conf
-Following figure shows how NAT Network looks like. Please refer to VirtualBox Network Settings: Complete Guide or Virtual Networking if interesed.</description></item></channel></rss>
+VM Network panel
+Following figure shows how NAT Network looks like.</description></item></channel></rss>
