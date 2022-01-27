@@ -101,7 +101,7 @@ ssh seed@127.0.0.1
 Protocol: TCP<br>
 Host IP: 127.0.0.1 (any available ip of your local machine)<br>
 Host Port: 8022 (any unused port higher than 1024)<br>
-Guest IP: 10.0.2.5 (type <code>ifconfig</code> in terminal of VM to check)<br>
+Guest IP: 10.0.2.4 (type <code>ifconfig</code> in terminal of VM to check)<br>
 Guest Port: 22 (SSH default port)</p>
 </blockquote>
 <p><figure class=gallery-image style=flex-grow:151;flex-basis:363px>
@@ -112,9 +112,9 @@ Guest Port: 22 (SSH default port)</p>
 </figure>
 <figure class=gallery-image style=flex-grow:444;flex-basis:1066px>
 <a href=/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule.png data-size=1058x238>
-<img src=/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule.png width=1058 height=238 srcset="/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule_hu65cd8af79cb1c1cc4dad04665267afd3_35833_480x0_resize_box_3.png 480w, /p/quickly-configure-vs-code-to-develop-in-remote-machine/rule_hu65cd8af79cb1c1cc4dad04665267afd3_35833_1024x0_resize_box_3.png 1024w" loading=lazy alt="Port forwording rule">
+<img src=/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule.png width=1058 height=238 srcset="/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule_hu65cd8af79cb1c1cc4dad04665267afd3_35833_480x0_resize_box_3.png 480w, /p/quickly-configure-vs-code-to-develop-in-remote-machine/rule_hu65cd8af79cb1c1cc4dad04665267afd3_35833_1024x0_resize_box_3.png 1024w" loading=lazy alt="Port forwarding rule">
 </a>
-<figcaption>Port forwording rule</figcaption>
+<figcaption>Port forwarding rule</figcaption>
 </figure></p>
 <h2 id=step-4-set-up-ssh-client-service-in-host>Step 4: Set Up SSH Client Service in Host</h2>
 <h3 id=install-ssh-client>Install ssh client</h3>
@@ -133,7 +133,7 @@ ssh-keygen -t ed25519 -C <span class=s2>&#34;your_email@example.com&#34;</span>
 <span class=nb>eval</span> <span class=s2>&#34;</span><span class=k>$(</span>ssh-agent -s<span class=k>)</span><span class=s2>&#34;</span>
 
 <span class=c1># Add your SSH private key to the ssh-agent</span>
-ssh-add -K ~/.ssh/id_ed25519
+ssh-add ~/.ssh/id_ed25519
 
 <span class=c1># copy public key to VM</span>
 ssh-copy-id seed@127.0.0.1 -p <span class=m>8022</span>

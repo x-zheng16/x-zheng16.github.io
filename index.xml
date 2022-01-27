@@ -60,7 +60,7 @@ ssh seed@127.0.0.1
 Protocol: TCP&lt;br>
 Host IP: 127.0.0.1 (any available ip of your local machine)&lt;br>
 Host Port: 8022 (any unused port higher than 1024)&lt;br>
-Guest IP: 10.0.2.5 (type &lt;code>ifconfig&lt;/code> in terminal of VM to check)&lt;br>
+Guest IP: 10.0.2.4 (type &lt;code>ifconfig&lt;/code> in terminal of VM to check)&lt;br>
 Guest Port: 22 (SSH default port)&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;figure
@@ -91,9 +91,9 @@ width="1058"
 height="238"
 srcset="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule_hu65cd8af79cb1c1cc4dad04665267afd3_35833_480x0_resize_box_3.png 480w, https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule_hu65cd8af79cb1c1cc4dad04665267afd3_35833_1024x0_resize_box_3.png 1024w"
 loading="lazy"
-alt="Port forwording rule">
+alt="Port forwarding rule">
 &lt;/a>
-&lt;figcaption>Port forwording rule&lt;/figcaption>
+&lt;figcaption>Port forwarding rule&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;h2 id="step-4-set-up-ssh-client-service-in-host">Step 4: Set Up SSH Client Service in Host&lt;/h2>
 &lt;h3 id="install-ssh-client">Install ssh client&lt;/h3>
@@ -110,7 +110,7 @@ ssh-keygen -t ed25519 -C &lt;span class="s2">&amp;#34;your_email@example.com&amp
 &lt;span class="c1"># Start the ssh-agent in the background&lt;/span>
 &lt;span class="nb">eval&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>ssh-agent -s&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
 &lt;span class="c1"># Add your SSH private key to the ssh-agent&lt;/span>
-ssh-add -K ~/.ssh/id_ed25519
+ssh-add ~/.ssh/id_ed25519
 &lt;span class="c1"># copy public key to VM&lt;/span>
 ssh-copy-id seed@127.0.0.1 -p &lt;span class="m">8022&lt;/span>
 &lt;span class="c1"># Now try again to login without password&lt;/span>
