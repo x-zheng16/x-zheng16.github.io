@@ -2,7 +2,7 @@
 author: Xiang Zheng
 title: Quickly Configure VS Code to Develop in Remote Machine
 date: 2022-01-27
-description: Quickly Configure VS Code to Develop in Remote Machine
+description:
 tags:
     - VS Code
     - Virtual Box
