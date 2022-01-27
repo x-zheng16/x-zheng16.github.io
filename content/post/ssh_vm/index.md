@@ -18,8 +18,8 @@ This post aims to introduce how to quickly configure your VS Code installed in H
 
 Please refer to [Install SEED VM on VirtualBox](https://github.com/seed-labs/seed-labs/blob/master/manuals/vm/seedvm-manual.md). Skip if you have one.
 
-> username: seed<br>
-> password: dees<br>
+> username: seed  
+> password: dees
 
 ![VM_network_conf](VM_network_conf.png)
 
@@ -49,12 +49,12 @@ ssh seed@127.0.0.1
 
 Go to VirtualBox/Preferences/Network, edit your NATNetwork and select Port Forwarding. Add Rules as follows.
 
-> Name: SSH (any arbitrary unique name)<br>
-> Protocol: TCP<br>
-> Host IP: 127.0.0.1 (any available ip of your local machine)<br>
-> Host Port: 8022 (any unused port higher than 1024)<br>
-> Guest IP: 10.0.2.5 (type `ifconfig` in terminal of VM to check)<br>
-> Guest Port: 22 (SSH default port)<br>
+> Name: SSH (any arbitrary unique name)  
+> Protocol: TCP  
+> Host IP: 127.0.0.1 (any available ip of your local machine)  
+> Host Port: 8022 (any unused port higher than 1024)  
+> Guest IP: 10.0.2.5 (type `ifconfig` in terminal of VM to check)  
+> Guest Port: 22 (SSH default port)
 
 ![port](port_forwarding.png)
 ![rule](rule.png)
@@ -118,43 +118,43 @@ ssh sd
 
 Install VSCode and the following recommended plugin:
 
-> ### Remote<br>
+> ### Remote
 >
-> Remote - SSH<br>
-> Remote - SSH: Editing Configuration Files<br>
+> Remote - SSH  
+> Remote - SSH: Editing Configuration Files
 >
-> ### Hex<br>
+> ### Hex
 >
-> Hex Editor (or hexdump for VSCode)<br>
+> Hex Editor (or hexdump for VSCode)
 >
-> ### _Bonus: C/C++_<br>
+> ### _Bonus: C/C++_
 >
-> C/C++<br>
-> CMake<br>
-> CMake Tools<br>
+> C/C++  
+> CMake  
+> CMake Tools
 
 Check the plugin details to learn how to use it (quite easy)! I also provide several plugins that I prefer beyond our class.
 
-> Code Runner<br>
-> Visual Studio Intellicode<br>
+> Code Runner  
+> Visual Studio Intellicode
 >
-> ### _Bonus: Markdown_<br>
+> ### _Bonus: Markdown_
 >
-> Markdown All in One<br>
-> Markdown Preview Enhanced<br>
-> markdownlint<br>
+> Markdown All in One  
+> Markdown Preview Enhanced  
+> markdownlint
 >
-> ### _Bonus: Formatter_<br>
+> ### _Bonus: Formatter_
 >
-> Prettier<br>
-> Bracket Pair Colorizer 2<br>
-> indent-rainbow<br>
+> Prettier  
+> Bracket Pair Colorizer 2  
+> indent-rainbow
 >
-> ### _Bonus: Git_<br>
+> ### _Bonus: Git_
 >
-> GitLens<br>
-> Git Graph<br>
-> gitignore<br>
+> GitLens  
+> Git Graph  
+> gitignore
 
 ## Q&A
 
