@@ -275,7 +275,7 @@
 &lt;p>Please refer to &lt;a class="link" href="https://github.com/seed-labs/seed-labs/blob/master/manuals/vm/seedvm-manual.md" target="_blank" rel="noopener"
 >Install SEED VM on VirtualBox&lt;/a>. Skip if you have one.&lt;/p>
 &lt;blockquote>
-&lt;p>Username: seed
+&lt;p>username: seed&lt;br>
 password: dees&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;figure
@@ -326,11 +326,11 @@ ssh seed@127.0.0.1
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="step-3-add-port-forwarding-rule-in-virtualbox">Step 3: Add Port Forwarding Rule in VirtualBox&lt;/h2>
 &lt;p>Go to VirtualBox/Preferences/Network, edit your NATNetwork and select Port Forwarding. Add Rules as follows.&lt;/p>
 &lt;blockquote>
-&lt;p>Name: SSH (any arbitrary unique name)
-Protocol: TCP
-Host IP: 127.0.0.1 (any available ip of your local machine)
-Host Port: 8022 (any unused port higher than 1024)
-Guest IP: 10.0.2.5 (type &lt;code>ifconfig&lt;/code> in terminal of VM to check)
+&lt;p>Name: SSH (any arbitrary unique name)&lt;br>
+Protocol: TCP&lt;br>
+Host IP: 127.0.0.1 (any available ip of your local machine)&lt;br>
+Host Port: 8022 (any unused port higher than 1024)&lt;br>
+Guest IP: 10.0.2.5 (type &lt;code>ifconfig&lt;/code> in terminal of VM to check)&lt;br>
 Guest Port: 22 (SSH default port)&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;figure
@@ -401,32 +401,33 @@ Port 8022
 &lt;p>Install VSCode and the following recommended plugin:&lt;/p>
 &lt;blockquote>
 &lt;h3 id="remote">Remote&lt;/h3>
-&lt;p>Remote - SSH
+&lt;p>Remote - SSH&lt;br>
 Remote - SSH: Editing Configuration Files&lt;/p>
 &lt;h3 id="hex">Hex&lt;/h3>
 &lt;p>Hex Editor (or hexdump for VSCode)&lt;/p>
 &lt;h3 id="_bonus-cc_">&lt;em>Bonus: C/C++&lt;/em>&lt;/h3>
-&lt;p>C/C++
-CMake
+&lt;p>C/C++&lt;br>
+CMake&lt;br>
 CMake Tools&lt;/p>
 &lt;/blockquote>
 &lt;p>Check the plugin details to learn how to use it (quite easy)! I also provide several plugins that I prefer beyond our class.&lt;/p>
 &lt;blockquote>
-&lt;p>Code Runner
+&lt;p>Code Runner&lt;br>
 Visual Studio Intellicode&lt;/p>
 &lt;h3 id="_bonus-markdown_">&lt;em>Bonus: Markdown&lt;/em>&lt;/h3>
-&lt;p>Markdown All in One
-Markdown Preview Enhanced
+&lt;p>Markdown All in One&lt;br>
+Markdown Preview Enhanced&lt;br>
 markdownlint&lt;/p>
 &lt;h3 id="_bonus-formatter_">&lt;em>Bonus: Formatter&lt;/em>&lt;/h3>
-&lt;p>Prettier
-Bracket Pair Colorizer 2
+&lt;p>Prettier&lt;br>
+Bracket Pair Colorizer 2&lt;br>
 indent-rainbow&lt;/p>
 &lt;h3 id="_bonus-git_">&lt;em>Bonus: Git&lt;/em>&lt;/h3>
-&lt;p>GitLens
-Git Graph
+&lt;p>GitLens&lt;br>
+Git Graph&lt;br>
 gitignore&lt;/p>
 &lt;/blockquote>
-&lt;h3 id="q-how-to-beautify-my-terminal">Q: How to beautify my terminal&lt;/h3>
-&lt;p>&lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh" target="_blank" rel="noopener"
+&lt;h2 id="qa">Q&amp;amp;A&lt;/h2>
+&lt;p>Q: How to beautify my terminal&lt;/p>
+&lt;p>A: &lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh" target="_blank" rel="noopener"
 >Oh My Zsh&lt;/a> is all you need.&lt;/p></description></item></channel></rss>

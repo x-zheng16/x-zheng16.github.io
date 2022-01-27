@@ -1,14 +1,14 @@
 <!doctype html><html lang=en-us>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Conferences suitable for RL and AI Security research"><title>Quickly Configure VS Code to Develop in Remote Machine</title>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Quickly Configure VS Code to Develop in Remote Machine"><title>Quickly Configure VS Code to Develop in Remote Machine</title>
 <link rel=canonical href=https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/>
 <link rel=stylesheet href=/scss/style.min.1b3ac667198cb83edcc9c45e606a6f4dd6910b8ada6b74d7fd988f1b2dfd0c7c.css><meta property="og:title" content="Quickly Configure VS Code to Develop in Remote Machine">
-<meta property="og:description" content="Conferences suitable for RL and AI Security research">
+<meta property="og:description" content="Quickly Configure VS Code to Develop in Remote Machine">
 <meta property="og:url" content="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/">
 <meta property="og:site_name" content="Xiang Zheng's Blog">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Conferences"><meta property="article:tag" content="AI"><meta property="article:tag" content="RL"><meta property="article:tag" content="Security"><meta property="article:published_time" content="2022-01-25T00:00:00+00:00"><meta property="article:modified_time" content="2022-01-25T00:00:00+00:00">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="VS Code"><meta property="article:tag" content="Virtual Box"><meta property="article:tag" content="SSH"><meta property="article:published_time" content="2022-01-25T00:00:00+00:00"><meta property="article:modified_time" content="2022-01-25T00:00:00+00:00">
 <meta name=twitter:title content="Quickly Configure VS Code to Develop in Remote Machine">
-<meta name=twitter:description content="Conferences suitable for RL and AI Security research">
+<meta name=twitter:description content="Quickly Configure VS Code to Develop in Remote Machine">
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"light")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -24,15 +24,15 @@ extended">
 <header class=article-header>
 <div class=article-details>
 <header class=article-category>
-<a href=/categories/conferences/>
-Conferences
+<a href=/categories/tutorials/>
+Tutorials
 </a>
 </header>
 <h2 class=article-title>
 <a href=/p/quickly-configure-vs-code-to-develop-in-remote-machine/>Quickly Configure VS Code to Develop in Remote Machine</a>
 </h2>
 <h3 class=article-subtitle>
-Conferences suitable for RL and AI Security research
+Quickly Configure VS Code to Develop in Remote Machine
 </h3>
 <footer class=article-time>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
@@ -51,7 +51,7 @@ Conferences suitable for RL and AI Security research
 <h2 id=step-1-create-a-virtual-machine-vm>Step 1: Create a Virtual Machine (VM)</h2>
 <p>Please refer to <a class=link href=https://github.com/seed-labs/seed-labs/blob/master/manuals/vm/seedvm-manual.md target=_blank rel=noopener>Install SEED VM on VirtualBox</a>. Skip if you have one.</p>
 <blockquote>
-<p>Username: seed
+<p>username: seed<br>
 password: dees</p>
 </blockquote>
 <p><figure class=gallery-image style=flex-grow:173;flex-basis:415px>
@@ -85,11 +85,11 @@ ssh seed@127.0.0.1
 </code></pre></div><h2 id=step-3-add-port-forwarding-rule-in-virtualbox>Step 3: Add Port Forwarding Rule in VirtualBox</h2>
 <p>Go to VirtualBox/Preferences/Network, edit your NATNetwork and select Port Forwarding. Add Rules as follows.</p>
 <blockquote>
-<p>Name: SSH (any arbitrary unique name)
-Protocol: TCP
-Host IP: 127.0.0.1 (any available ip of your local machine)
-Host Port: 8022 (any unused port higher than 1024)
-Guest IP: 10.0.2.5 (type <code>ifconfig</code> in terminal of VM to check)
+<p>Name: SSH (any arbitrary unique name)<br>
+Protocol: TCP<br>
+Host IP: 127.0.0.1 (any available ip of your local machine)<br>
+Host Port: 8022 (any unused port higher than 1024)<br>
+Guest IP: 10.0.2.5 (type <code>ifconfig</code> in terminal of VM to check)<br>
 Guest Port: 22 (SSH default port)</p>
 </blockquote>
 <p><figure class=gallery-image style=flex-grow:151;flex-basis:363px>
@@ -142,41 +142,41 @@ ssh seed@127.0.0.1 -p <span class=m>8022</span>
 <p>Install VSCode and the following recommended plugin:</p>
 <blockquote>
 <h3 id=remote>Remote</h3>
-<p>Remote - SSH
+<p>Remote - SSH<br>
 Remote - SSH: Editing Configuration Files</p>
 <h3 id=hex>Hex</h3>
 <p>Hex Editor (or hexdump for VSCode)</p>
 <h3 id=_bonus-cc_><em>Bonus: C/C++</em></h3>
-<p>C/C++
-CMake
+<p>C/C++<br>
+CMake<br>
 CMake Tools</p>
 </blockquote>
 <p>Check the plugin details to learn how to use it (quite easy)! I also provide several plugins that I prefer beyond our class.</p>
 <blockquote>
-<p>Code Runner
+<p>Code Runner<br>
 Visual Studio Intellicode</p>
 <h3 id=_bonus-markdown_><em>Bonus: Markdown</em></h3>
-<p>Markdown All in One
-Markdown Preview Enhanced
+<p>Markdown All in One<br>
+Markdown Preview Enhanced<br>
 markdownlint</p>
 <h3 id=_bonus-formatter_><em>Bonus: Formatter</em></h3>
-<p>Prettier
-Bracket Pair Colorizer 2
+<p>Prettier<br>
+Bracket Pair Colorizer 2<br>
 indent-rainbow</p>
 <h3 id=_bonus-git_><em>Bonus: Git</em></h3>
-<p>GitLens
-Git Graph
+<p>GitLens<br>
+Git Graph<br>
 gitignore</p>
 </blockquote>
-<h3 id=q-how-to-beautify-my-terminal>Q: How to beautify my terminal</h3>
-<p><a class=link href=https://github.com/ohmyzsh/ohmyzsh target=_blank rel=noopener>Oh My Zsh</a> is all you need.</p>
+<h2 id=qa>Q&A</h2>
+<p>Q: How to beautify my terminal</p>
+<p>A: <a class=link href=https://github.com/ohmyzsh/ohmyzsh target=_blank rel=noopener>Oh My Zsh</a> is all you need.</p>
 </section>
 <footer class=article-footer>
 <section class=article-tags>
-<a href=/tags/conferences/>Conferences</a>
-<a href=/tags/ai/>AI</a>
-<a href=/tags/rl/>RL</a>
-<a href=/tags/security/>Security</a>
+<a href=/tags/vs-code/>VS Code</a>
+<a href=/tags/virtual-box/>Virtual Box</a>
+<a href=/tags/ssh/>SSH</a>
 </section>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>Licensed under CC BY-NC-SA 4.0</span>
@@ -185,18 +185,6 @@ gitignore</p>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css integrity=sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js integrity=sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
 </article>
 <aside class=related-contents--wrapper>
-<h2 class=section-title>Related contents</h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/p/ai-and-security-conferences/>
-<div class=article-details>
-<h2 class=article-title>AI and Security Conferences</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
 </aside>
 <footer class=site-footer>
 <section class=copyright>
@@ -271,9 +259,9 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <li><a href=#_bonus-markdown_><em>Bonus: Markdown</em></a></li>
 <li><a href=#_bonus-formatter_><em>Bonus: Formatter</em></a></li>
 <li><a href=#_bonus-git_><em>Bonus: Git</em></a></li>
-<li><a href=#q-how-to-beautify-my-terminal>Q: How to beautify my terminal</a></li>
 </ol>
 </li>
+<li><a href=#qa>Q&A</a></li>
 </ol>
 </nav>
 </div>
