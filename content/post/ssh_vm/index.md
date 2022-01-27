@@ -21,10 +21,10 @@ Please refer to [Install SEED VM on VirtualBox](https://github.com/seed-labs/see
 > username: seed  
 > password: dees
 
-![VM_network_conf](VM_network_conf.png)
+![VM Network panel](VM_network_conf.png)
 
 Following figure shows how NAT Network looks like. Please refer to [VirtualBox Network Settings: Complete Guide](https://www.nakivo.com/blog/virtualbox-network-setting-guide/) or [Virtual Networking](https://www.virtualbox.org/manual/ch06.html) if interesed.
-![[NAT_network]](NAT_network.png)
+![NAT network](NAT_network.png)
 
 ## Step 2: Set Up SSH Server Service in VM
 
@@ -56,8 +56,8 @@ Go to VirtualBox/Preferences/Network, edit your NATNetwork and select Port Forwa
 > Guest IP: 10.0.2.5 (type `ifconfig` in terminal of VM to check)  
 > Guest Port: 22 (SSH default port)
 
-![port](port_forwarding.png)
-![rule](rule.png)
+![VirtualBox Network panel](port_forwarding.png)
+![Port forwording rule](rule.png)
 
 ## Step 4: Set Up SSH Client Service in Host
 
