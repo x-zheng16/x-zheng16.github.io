@@ -23,8 +23,8 @@ Please refer to [Install SEED VM on VirtualBox](https://github.com/seed-labs/see
 
 ![VM_network_conf](VM_network_conf.png)
 
-Following figure shows how NAT Network looks like.
-![NAT_network](NAT_network.png)
+Following figure shows how NAT Network looks like. Please refer to [VirtualBox Network Settings: Complete Guide](https://www.nakivo.com/blog/virtualbox-network-setting-guide/) or [Virtual Networking](https://www.virtualbox.org/manual/ch06.html) if interesed.
+![[NAT_network]](NAT_network.png)
 
 ## Step 2: Set Up SSH Server Service in VM
 
