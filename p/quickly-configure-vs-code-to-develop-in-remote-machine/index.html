@@ -1,14 +1,29 @@
 <!doctype html><html lang=en-us>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Quickly Configure VS Code to Develop in Remote Machine"><title>Quickly Configure VS Code to Develop in Remote Machine</title>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="This post aims to introduce how to quickly configure your VS Code installed in Host (a.k.a. local machine) to develop in Guest (i.e. remote machine, remote server, virtual machine in VirtualBox or Cloud)
+Step 1: Create a Virtual Machine (VM) Please refer to Install SEED VM on VirtualBox. Skip if you have one.
+ username: seed
+password: dees
+  VM Network panel 
+Following figure shows how NAT Network looks like."><title>Quickly Configure VS Code to Develop in Remote Machine</title>
 <link rel=canonical href=https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/>
 <link rel=stylesheet href=/scss/style.min.1b3ac667198cb83edcc9c45e606a6f4dd6910b8ada6b74d7fd988f1b2dfd0c7c.css><meta property="og:title" content="Quickly Configure VS Code to Develop in Remote Machine">
-<meta property="og:description" content="Quickly Configure VS Code to Develop in Remote Machine">
+<meta property="og:description" content="This post aims to introduce how to quickly configure your VS Code installed in Host (a.k.a. local machine) to develop in Guest (i.e. remote machine, remote server, virtual machine in VirtualBox or Cloud)
+Step 1: Create a Virtual Machine (VM) Please refer to Install SEED VM on VirtualBox. Skip if you have one.
+ username: seed
+password: dees
+  VM Network panel 
+Following figure shows how NAT Network looks like.">
 <meta property="og:url" content="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/">
 <meta property="og:site_name" content="Xiang Zheng's Blog">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="VS Code"><meta property="article:tag" content="Virtual Box"><meta property="article:tag" content="SSH"><meta property="article:published_time" content="2022-01-27T00:00:00+00:00"><meta property="article:modified_time" content="2022-01-27T00:00:00+00:00">
 <meta name=twitter:title content="Quickly Configure VS Code to Develop in Remote Machine">
-<meta name=twitter:description content="Quickly Configure VS Code to Develop in Remote Machine">
+<meta name=twitter:description content="This post aims to introduce how to quickly configure your VS Code installed in Host (a.k.a. local machine) to develop in Guest (i.e. remote machine, remote server, virtual machine in VirtualBox or Cloud)
+Step 1: Create a Virtual Machine (VM) Please refer to Install SEED VM on VirtualBox. Skip if you have one.
+ username: seed
+password: dees
+  VM Network panel 
+Following figure shows how NAT Network looks like.">
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"light")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -31,9 +46,6 @@ Tutorials
 <h2 class=article-title>
 <a href=/p/quickly-configure-vs-code-to-develop-in-remote-machine/>Quickly Configure VS Code to Develop in Remote Machine</a>
 </h2>
-<h3 class=article-subtitle>
-Quickly Configure VS Code to Develop in Remote Machine
-</h3>
 <footer class=article-time>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
 <time class=article-time--published>Jan 27, 2022</time>
