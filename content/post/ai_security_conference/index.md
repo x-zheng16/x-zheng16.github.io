@@ -4,12 +4,12 @@ title: AI and Security Conferences
 date: 2022-01-25
 description: Conferences suitable for RL and AI Security research
 tags:
-  - Conferences
-  - AI
-  - RL
-  - Security
+    - Conferences
+    - AI
+    - RL
+    - Security
 categories:
-  - Conferences
+    - Conferences
 ---
 
 This post shows upcoming deadlines of several conferences related to RL, Security and Robotics research.
