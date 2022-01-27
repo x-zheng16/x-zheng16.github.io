@@ -53,11 +53,11 @@ Go to VirtualBox/Preferences/Network, edit your NATNetwork and select Port Forwa
 > Protocol: TCP  
 > Host IP: 127.0.0.1 (any available ip of your local machine)  
 > Host Port: 8022 (any unused port higher than 1024)  
-> Guest IP: 10.0.2.5 (type `ifconfig` in terminal of VM to check)  
+> Guest IP: 10.0.2.4 (type `ifconfig` in terminal of VM to check)  
 > Guest Port: 22 (SSH default port)
 
 ![VirtualBox Network panel](port_forwarding.png)
-![Port forwording rule](rule.png)
+![Port forwarding rule](rule.png)
 
 ## Step 4: Set Up SSH Client Service in Host
 
@@ -86,7 +86,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 eval "$(ssh-agent -s)"
 
 # Add your SSH private key to the ssh-agent
-ssh-add -K ~/.ssh/id_ed25519
+ssh-add ~/.ssh/id_ed25519
 
 # copy public key to VM
 ssh-copy-id seed@127.0.0.1 -p 8022
