@@ -2,14 +2,13 @@
 author: Xiang Zheng
 title: Quickly Configure VS Code to Develop in Remote Machine
 date: 2022-01-25
-description: Conferences suitable for RL and AI Security research
+description: Quickly Configure VS Code to Develop in Remote Machine
 tags:
-    - Conferences
-    - AI
-    - RL
-    - Security
+    - VS Code
+    - Virtual Box
+    - SSH
 categories:
-    - Conferences
+    - Tutorials
 draft: false
 ---
 
@@ -19,8 +18,8 @@ This post aims to introduce how to quickly configure your VS Code installed in H
 
 Please refer to [Install SEED VM on VirtualBox](https://github.com/seed-labs/seed-labs/blob/master/manuals/vm/seedvm-manual.md). Skip if you have one.
 
-> Username: seed
-> password: dees
+> username: seed<br>
+> password: dees<br>
 
 ![VM_network_conf](VM_network_conf.png)
 
@@ -50,12 +49,12 @@ ssh seed@127.0.0.1
 
 Go to VirtualBox/Preferences/Network, edit your NATNetwork and select Port Forwarding. Add Rules as follows.
 
-> Name: SSH (any arbitrary unique name)
-> Protocol: TCP
-> Host IP: 127.0.0.1 (any available ip of your local machine)
-> Host Port: 8022 (any unused port higher than 1024)
-> Guest IP: 10.0.2.5 (type `ifconfig` in terminal of VM to check)
-> Guest Port: 22 (SSH default port)
+> Name: SSH (any arbitrary unique name)<br>
+> Protocol: TCP<br>
+> Host IP: 127.0.0.1 (any available ip of your local machine)<br>
+> Host Port: 8022 (any unused port higher than 1024)<br>
+> Guest IP: 10.0.2.5 (type `ifconfig` in terminal of VM to check)<br>
+> Guest Port: 22 (SSH default port)<br>
 
 ![port](port_forwarding.png)
 ![rule](rule.png)
@@ -119,44 +118,46 @@ ssh sd
 
 Install VSCode and the following recommended plugin:
 
-> ### Remote
+> ### Remote<br>
 >
-> Remote - SSH
-> Remote - SSH: Editing Configuration Files
+> Remote - SSH<br>
+> Remote - SSH: Editing Configuration Files<br>
 >
-> ### Hex
+> ### Hex<br>
 >
-> Hex Editor (or hexdump for VSCode)
+> Hex Editor (or hexdump for VSCode)<br>
 >
-> ### _Bonus: C/C++_
+> ### _Bonus: C/C++_<br>
 >
-> C/C++
-> CMake
-> CMake Tools
+> C/C++<br>
+> CMake<br>
+> CMake Tools<br>
 
 Check the plugin details to learn how to use it (quite easy)! I also provide several plugins that I prefer beyond our class.
 
-> Code Runner
-> Visual Studio Intellicode
+> Code Runner<br>
+> Visual Studio Intellicode<br>
 >
-> ### _Bonus: Markdown_
+> ### _Bonus: Markdown_<br>
 >
-> Markdown All in One
-> Markdown Preview Enhanced
-> markdownlint
+> Markdown All in One<br>
+> Markdown Preview Enhanced<br>
+> markdownlint<br>
 >
-> ### _Bonus: Formatter_
+> ### _Bonus: Formatter_<br>
 >
-> Prettier
-> Bracket Pair Colorizer 2
-> indent-rainbow
+> Prettier<br>
+> Bracket Pair Colorizer 2<br>
+> indent-rainbow<br>
 >
-> ### _Bonus: Git_
+> ### _Bonus: Git_<br>
 >
-> GitLens
-> Git Graph
-> gitignore
+> GitLens<br>
+> Git Graph<br>
+> gitignore<br>
 
-### Q: How to beautify my terminal
+## Q&A
 
-[Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) is all you need.
+Q: How to beautify my terminal
+
+A: [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) is all you need.
