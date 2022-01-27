@@ -3,6 +3,6 @@ Step 1: Create a Virtual Machine (VM) Please refer to Install SEED VM on Virtual
 username: seed
 password: dees
 VM_network_conf
-Following figure shows how NAT Network looks like. NAT_network</description></item><item><title>AI and Security Conferences</title><link>https://x-zheng16.github.io/p/ai-and-security-conferences/</link><pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate><guid>https://x-zheng16.github.io/p/ai-and-security-conferences/</guid><description>This post shows upcoming deadlines of several conferences related to RL, Security and Robotics research.
+Following figure shows how NAT Network looks like. Please refer to VirtualBox Network Settings: Complete Guide or Virtual Networking if interesed.</description></item><item><title>AI and Security Conferences</title><link>https://x-zheng16.github.io/p/ai-and-security-conferences/</link><pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate><guid>https://x-zheng16.github.io/p/ai-and-security-conferences/</guid><description>This post shows upcoming deadlines of several conferences related to RL, Security and Robotics research.
 AI Conferences (Classification is based on CCF)
 A Conf Deadline NeurIPS2021 May 21, 2021 AAAI2022 Aug. 30, 2021 CVPR2022 Nov. 18, 2021 ICCV2022 Dec. 23, 2021 IJCAI2022 Jan. 14, 2022 ICML2022 Jan. 27, 2022 B Conf Deadline ICRA2022 Sept.</description></item></channel></rss>
