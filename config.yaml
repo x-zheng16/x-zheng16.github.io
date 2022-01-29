@@ -54,77 +54,59 @@ params:
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
-        enabled: false
-        provider: disqus
-
-        disqusjs:
-            shortname:
-            apiUrl:
-            apiKey:
-            admin:
-            adminLabel:
-
-        utterances:
-            repo:
-            issueTerm: pathname
-            label:
-
-        remark42:
-            host:
-            site:
-            locale:
-
-        vssue:
-            platform:
-            owner:
-            repo:
-            clientId:
-            clientSecret:
-            autoCreateIssue: false
+        enabled: true
+        provider: waline
 
         # Waline client configuration see: https://waline.js.org/en/reference/client.html
         waline:
-            serverURL:
-            lang:
+            serverURL: https://blog-comment-api-nine.vercel.app
+            lang: en
             visitor:
-            avatar:
+            avatar: mp
             emoji:
                 - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
+                - https://cdn.jsdelivr.net/gh/walinejs/emojis/bilibili
+                - https://cdn.jsdelivr.net/gh/walinejs/emojis/qq
+                - https://cdn.jsdelivr.net/gh/walinejs/emojis/tieba
+                - https://cdn.jsdelivr.net/gh/walinejs/emojis/tw-emoji
             requiredMeta:
-                - name
-                - email
-                - url
+                - nick
+                - mail
             placeholder:
+            visitor: true
             locale:
+                nick: NickName
+                nickError: NickName cannot be less than 3 bytes.
+                mail: Email
+                mailError: Please confirm your Email address.
+                link: URL
+                placeholder: Comment here...
+                sofa: No comment yet.
+                submit: Submit
+                reply: Reply
+                cancelReply: Cancel reply
+                comment: Comments
+                more: Load More...
+                preview: Preview
+                emoji: Emoji
+                uploadImage: Upload Image
+                seconds: seconds ago
+                minutes: minutes ago
+                hours: hours ago
+                days: days ago
+                now: just now
+                uploading: Uploading...
+                login: Login
+                logout: Logout
                 admin: Admin
+                word: Words
+                wordHint: 'Please input comments between $0 and $1 words!\n Current word number: $2'
 
-        twikoo:
-            envId:
-            region:
-            path:
-            lang:
-
-        giscus:
-            repo:
-            repoID:
-            category:
-            categoryID:
-            mapping:
-            lightTheme:
-            darkTheme:
-            reactionsEnabled: 1
-            emitMetadata: 0
-
-        gitalk:
-            owner:
-            admin:
-            repo:
-            clientID:
-            clientSecret:
-
-        cusdis:
-            host:
-            id:
+        # twikoo:
+        #     envId: https://twikoo-red-six.vercel.app
+        #     region:
+        #     path:
+        #     lang: en
 
     widgets:
         enabled:
@@ -136,7 +118,7 @@ params:
             limit: 5
 
         tagCloud:
-            limit: 5
+            limit: 10
 
     opengraph:
         twitter:

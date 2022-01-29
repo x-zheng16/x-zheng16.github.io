@@ -88,7 +88,7 @@ eval "$(ssh-agent -s)"
 # Add your SSH private key to the ssh-agent
 ssh-add ~/.ssh/id_ed25519
 
-# copy public key to VM
+# Copy public key to VM
 ssh-copy-id seed@127.0.0.1 -p 8022
 
 # Now try again to login without password
@@ -116,7 +116,7 @@ ssh sd
 
 ## Step 5: Use VSCode Remote SSH Plugin
 
-Install VSCode and the following recommended plugin:
+Install VSCode and the following recommended plugins:
 
 > ### Remote
 >
