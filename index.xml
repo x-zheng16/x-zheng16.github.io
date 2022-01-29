@@ -101,24 +101,25 @@ alt="Port forwarding rule">
 >Install a supported SSH client&lt;/a>.&lt;/p>
 &lt;h3 id="now-you-can-connect-vm-by-ssh">Now you can connect VM by SSH&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">ssh seed@127.0.0.1 -p &lt;span class="m">8022&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="_bonus_">&lt;em>Bonus&lt;/em>&lt;/h3>
-&lt;p>If you want to login without password, you need to do the following substeps in Ubuntu Host.&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="set-up-password-free-login-optional">Set up password-free login (Optional)&lt;/h3>
+&lt;p>If you want password-free login, do the following substeps in your local machine.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># Lists the files in your .ssh directory, if they exist&lt;/span>
-ls -al ~/.ssh
-&lt;span class="c1"># Generate new key if needed&lt;/span>
-ssh-keygen -t ed25519 -C &lt;span class="s2">&amp;#34;your_email@example.com&amp;#34;&lt;/span>
+ll ~/.ssh
+&lt;span class="c1"># Generate new key if needed with RSA 2048⁄4096 or Ed25519&lt;/span>
+&lt;span class="c1"># Just don’t use ECDSA/DSA!&lt;/span>
+ssh-keygen -t ed25519
 &lt;span class="c1"># Start the ssh-agent in the background&lt;/span>
 &lt;span class="nb">eval&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>ssh-agent -s&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
 &lt;span class="c1"># Add your SSH private key to the ssh-agent&lt;/span>
 ssh-add ~/.ssh/id_ed25519
-&lt;span class="c1"># copy public key to VM&lt;/span>
+&lt;span class="c1"># Copy public key to VM&lt;/span>
 ssh-copy-id seed@127.0.0.1 -p &lt;span class="m">8022&lt;/span>
-&lt;span class="c1"># Now try again to login without password&lt;/span>
+&lt;span class="c1"># Now try again to login with no password required&lt;/span>
 ssh seed@127.0.0.1 -p &lt;span class="m">8022&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Please refer to &lt;a class="link" href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04" target="_blank" rel="noopener"
 >How to Set Up SSH Keys on Ubuntu 20.04&lt;/a> or &lt;a class="link" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh" target="_blank" rel="noopener"
 >Connecting to GitHub with SSH&lt;/a> for more info.&lt;/p>
-&lt;p>If you want further simplify the connection, open &lt;code>~/.ssh/config&lt;/code> in Ubuntu Host and append the following config.&lt;/p>
+&lt;p>If you want further simplify the connection, open &lt;code>~/.ssh/config&lt;/code> in your local machine and append the following ssh config.&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-ssh_config" data-lang="ssh_config">Host sd
 HostName 127.0.0.1
 User seed
@@ -127,38 +128,36 @@ IdentityFile ~/.ssh/id_ed25519
 Port 8022
 &lt;/code>&lt;/pre>&lt;p>Now try to login by&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">ssh sd
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="step-5-use-vscode-remote-ssh-plugin">Step 5: Use VSCode Remote SSH Plugin&lt;/h2>
-&lt;p>Install VSCode and the following recommended plugin:&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="step-5-install-vscode-and-remote-ssh-extension">Step 5: Install VSCode and Remote SSH Extension&lt;/h2>
+&lt;p>Install VSCode in your local machine and install &lt;code>Remote - SSH&lt;/code> extension in VSCode and click the bottom left &lt;code>&amp;gt;&amp;lt;&lt;/code> icon to use it. All the extensions I prefer are listed below.&lt;/p>
 &lt;blockquote>
-&lt;h3 id="remote">Remote&lt;/h3>
+&lt;p>&lt;strong>Remote&lt;/strong>&lt;/p>
 &lt;p>Remote - SSH&lt;br>
 Remote - SSH: Editing Configuration Files&lt;/p>
-&lt;h3 id="hex">Hex&lt;/h3>
+&lt;p>&lt;strong>Hex&lt;/strong>&lt;/p>
 &lt;p>Hex Editor (or hexdump for VSCode)&lt;/p>
-&lt;h3 id="_bonus-cc_">&lt;em>Bonus: C/C++&lt;/em>&lt;/h3>
+&lt;p>&lt;strong>C/C++&lt;/strong>&lt;/p>
 &lt;p>C/C++&lt;br>
 CMake&lt;br>
 CMake Tools&lt;/p>
-&lt;/blockquote>
-&lt;p>Check the plugin details to learn how to use it (quite easy)! I also provide several plugins that I prefer beyond our class.&lt;/p>
-&lt;blockquote>
-&lt;p>Code Runner&lt;br>
-Visual Studio Intellicode&lt;/p>
-&lt;h3 id="_bonus-markdown_">&lt;em>Bonus: Markdown&lt;/em>&lt;/h3>
+&lt;p>&lt;strong>Markdown&lt;/strong>&lt;/p>
 &lt;p>Markdown All in One&lt;br>
 Markdown Preview Enhanced&lt;br>
 markdownlint&lt;/p>
-&lt;h3 id="_bonus-formatter_">&lt;em>Bonus: Formatter&lt;/em>&lt;/h3>
+&lt;p>&lt;strong>Formatter&lt;/strong>&lt;/p>
 &lt;p>Prettier&lt;br>
 Bracket Pair Colorizer 2&lt;br>
 indent-rainbow&lt;/p>
-&lt;h3 id="_bonus-git_">&lt;em>Bonus: Git&lt;/em>&lt;/h3>
+&lt;p>&lt;strong>Git&lt;/strong>&lt;/p>
 &lt;p>GitLens&lt;br>
 Git Graph&lt;br>
 gitignore&lt;/p>
+&lt;p>&lt;strong>Development&lt;/strong>&lt;/p>
+&lt;p>Visual Studio Intellicode&lt;br>
+Code Runner&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="qa">Q&amp;amp;A&lt;/h2>
-&lt;p>Q: How to beautify my terminal&lt;/p>
+&lt;h3 id="q-how-to-beautify-the-terminal">Q: How to beautify the terminal?&lt;/h3>
 &lt;p>A: &lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh" target="_blank" rel="noopener"
 >Oh My Zsh&lt;/a> is all you need.&lt;/p></description></item><item><title>AI and Security Conferences</title><link>https://x-zheng16.github.io/p/ai-and-security-conferences/</link><pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate><guid>https://x-zheng16.github.io/p/ai-and-security-conferences/</guid><description>&lt;p>This post shows upcoming deadlines of several conferences related to RL, Security and Robotics research.&lt;/p>
 &lt;h2 id="ai-conferences">AI Conferences&lt;/h2>

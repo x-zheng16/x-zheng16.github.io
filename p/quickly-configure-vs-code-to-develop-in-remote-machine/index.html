@@ -121,13 +121,14 @@ Guest Port: 22 (SSH default port)</p>
 <p>For macOS Host, it comes pre-installed. For Ubuntu Host, Debian/Ubuntu Run <code>sudo apt-get install openssh-client</code>. For other OS, please refer to <a class=link href=https://code.visualstudio.com/docs/remote/troubleshooting#_installing-a-supported-ssh-client target=_blank rel=noopener>Install a supported SSH client</a>.</p>
 <h3 id=now-you-can-connect-vm-by-ssh>Now you can connect VM by SSH</h3>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>ssh seed@127.0.0.1 -p <span class=m>8022</span>
-</code></pre></div><h3 id=_bonus_><em>Bonus</em></h3>
-<p>If you want to login without password, you need to do the following substeps in Ubuntu Host.</p>
+</code></pre></div><h3 id=set-up-password-free-login-optional>Set up password-free login (Optional)</h3>
+<p>If you want password-free login, do the following substeps in your local machine.</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=c1># Lists the files in your .ssh directory, if they exist</span>
-ls -al ~/.ssh
+ll ~/.ssh
 
-<span class=c1># Generate new key if needed</span>
-ssh-keygen -t ed25519 -C <span class=s2>&#34;your_email@example.com&#34;</span>
+<span class=c1># Generate new key if needed with RSA 2048⁄4096 or Ed25519</span>
+<span class=c1># Just don’t use ECDSA/DSA!</span>
+ssh-keygen -t ed25519
 
 <span class=c1># Start the ssh-agent in the background</span>
 <span class=nb>eval</span> <span class=s2>&#34;</span><span class=k>$(</span>ssh-agent -s<span class=k>)</span><span class=s2>&#34;</span>
@@ -135,13 +136,13 @@ ssh-keygen -t ed25519 -C <span class=s2>&#34;your_email@example.com&#34;</span>
 <span class=c1># Add your SSH private key to the ssh-agent</span>
 ssh-add ~/.ssh/id_ed25519
 
-<span class=c1># copy public key to VM</span>
+<span class=c1># Copy public key to VM</span>
 ssh-copy-id seed@127.0.0.1 -p <span class=m>8022</span>
 
-<span class=c1># Now try again to login without password</span>
+<span class=c1># Now try again to login with no password required</span>
 ssh seed@127.0.0.1 -p <span class=m>8022</span>
 </code></pre></div><p>Please refer to <a class=link href=https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04 target=_blank rel=noopener>How to Set Up SSH Keys on Ubuntu 20.04</a> or <a class=link href=https://docs.github.com/en/authentication/connecting-to-github-with-ssh target=_blank rel=noopener>Connecting to GitHub with SSH</a> for more info.</p>
-<p>If you want further simplify the connection, open <code>~/.ssh/config</code> in Ubuntu Host and append the following config.</p>
+<p>If you want further simplify the connection, open <code>~/.ssh/config</code> in your local machine and append the following ssh config.</p>
 <pre tabindex=0><code class=language-ssh_config data-lang=ssh_config>Host sd
     HostName 127.0.0.1
     User seed
@@ -150,38 +151,36 @@ ssh seed@127.0.0.1 -p <span class=m>8022</span>
     Port 8022
 </code></pre><p>Now try to login by</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>ssh sd
-</code></pre></div><h2 id=step-5-use-vscode-remote-ssh-plugin>Step 5: Use VSCode Remote SSH Plugin</h2>
-<p>Install VSCode and the following recommended plugin:</p>
+</code></pre></div><h2 id=step-5-install-vscode-and-remote-ssh-extension>Step 5: Install VSCode and Remote SSH Extension</h2>
+<p>Install VSCode in your local machine and install <code>Remote - SSH</code> extension in VSCode and click the bottom left <code>>&lt;</code> icon to use it. All the extensions I prefer are listed below.</p>
 <blockquote>
-<h3 id=remote>Remote</h3>
+<p><strong>Remote</strong></p>
 <p>Remote - SSH<br>
 Remote - SSH: Editing Configuration Files</p>
-<h3 id=hex>Hex</h3>
+<p><strong>Hex</strong></p>
 <p>Hex Editor (or hexdump for VSCode)</p>
-<h3 id=_bonus-cc_><em>Bonus: C/C++</em></h3>
+<p><strong>C/C++</strong></p>
 <p>C/C++<br>
 CMake<br>
 CMake Tools</p>
-</blockquote>
-<p>Check the plugin details to learn how to use it (quite easy)! I also provide several plugins that I prefer beyond our class.</p>
-<blockquote>
-<p>Code Runner<br>
-Visual Studio Intellicode</p>
-<h3 id=_bonus-markdown_><em>Bonus: Markdown</em></h3>
+<p><strong>Markdown</strong></p>
 <p>Markdown All in One<br>
 Markdown Preview Enhanced<br>
 markdownlint</p>
-<h3 id=_bonus-formatter_><em>Bonus: Formatter</em></h3>
+<p><strong>Formatter</strong></p>
 <p>Prettier<br>
 Bracket Pair Colorizer 2<br>
 indent-rainbow</p>
-<h3 id=_bonus-git_><em>Bonus: Git</em></h3>
+<p><strong>Git</strong></p>
 <p>GitLens<br>
 Git Graph<br>
 gitignore</p>
+<p><strong>Development</strong></p>
+<p>Visual Studio Intellicode<br>
+Code Runner</p>
 </blockquote>
 <h2 id=qa>Q&A</h2>
-<p>Q: How to beautify my terminal</p>
+<h3 id=q-how-to-beautify-the-terminal>Q: How to beautify the terminal?</h3>
 <p>A: <a class=link href=https://github.com/ohmyzsh/ohmyzsh target=_blank rel=noopener>Oh My Zsh</a> is all you need.</p>
 </section>
 <footer class=article-footer>
@@ -198,6 +197,9 @@ gitignore</p>
 </article>
 <aside class=related-contents--wrapper>
 </aside>
+<script src=//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js></script>
+<div id=waline class=waline-container></div>
+<style>.waline-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}.waline-container .vcount{color:var(--card-text-color-main)}</style><script>new Waline({avatar:"mp",dark:'html[data-scheme="dark"]',el:"#waline",emoji:["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://cdn.jsdelivr.net/gh/walinejs/emojis/bilibili","https://cdn.jsdelivr.net/gh/walinejs/emojis/qq","https://cdn.jsdelivr.net/gh/walinejs/emojis/tieba","https://cdn.jsdelivr.net/gh/walinejs/emojis/tw-emoji"],lang:"en",locale:{admin:"Admin",cancelreply:"Cancel reply",comment:"Comments",days:"days ago",emoji:"Emoji",hours:"hours ago",link:"URL",login:"Login",logout:"Logout",mail:"Email",mailerror:"Please confirm your Email address.",minutes:"minutes ago",more:"Load More...",nick:"NickName",nickerror:"NickName cannot be less than 3 bytes.",now:"just now",placeholder:"Comment here...",preview:"Preview",reply:"Reply",seconds:"seconds ago",sofa:"No comment yet.",submit:"Submit",uploadimage:"Upload Image",uploading:"Uploading...",word:"Words",wordhint:"Please input comments between $0 and $1 words!\\n Current word number: $2"},requiredMeta:["nick","mail"],serverURL:"https://blog-comment-api-nine.vercel.app",visitor:!0})</script>
 <footer class=site-footer>
 <section class=copyright>
 &copy;
@@ -260,20 +262,15 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <ol>
 <li><a href=#install-ssh-client>Install ssh client</a></li>
 <li><a href=#now-you-can-connect-vm-by-ssh>Now you can connect VM by SSH</a></li>
-<li><a href=#_bonus_><em>Bonus</em></a></li>
+<li><a href=#set-up-password-free-login-optional>Set up password-free login (Optional)</a></li>
 </ol>
 </li>
-<li><a href=#step-5-use-vscode-remote-ssh-plugin>Step 5: Use VSCode Remote SSH Plugin</a>
+<li><a href=#step-5-install-vscode-and-remote-ssh-extension>Step 5: Install VSCode and Remote SSH Extension</a></li>
+<li><a href=#qa>Q&A</a>
 <ol>
-<li><a href=#remote>Remote</a></li>
-<li><a href=#hex>Hex</a></li>
-<li><a href=#_bonus-cc_><em>Bonus: C/C++</em></a></li>
-<li><a href=#_bonus-markdown_><em>Bonus: Markdown</em></a></li>
-<li><a href=#_bonus-formatter_><em>Bonus: Formatter</em></a></li>
-<li><a href=#_bonus-git_><em>Bonus: Git</em></a></li>
+<li><a href=#q-how-to-beautify-the-terminal>Q: How to beautify the terminal?</a></li>
 </ol>
 </li>
-<li><a href=#qa>Q&A</a></li>
 </ol>
 </nav>
 </div>
