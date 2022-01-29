@@ -12,7 +12,7 @@ categories:
     - Conferences
 ---
 
-This post shows upcoming deadlines of several conferences related to RL, Security and Robotics research.
+This post shows upcoming deadlines of conferences related to RL, Security and Robotics research.
 
 ## AI Conferences
 
