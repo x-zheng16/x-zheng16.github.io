@@ -75,11 +75,11 @@ params:
             placeholder:
             visitor: true
             locale:
-                nick: NickName
-                nickError: NickName cannot be less than 3 bytes.
+                nick: Nickname
+                nickError: Nickname cannot be less than 3 bytes.
                 mail: Email
                 mailError: Please confirm your Email address.
-                link: URL
+                link: Website
                 placeholder: Comment here...
                 sofa: No comment yet.
                 submit: Submit
