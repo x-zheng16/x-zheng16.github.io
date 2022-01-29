@@ -71,16 +71,17 @@ For macOS Host, it comes pre-installed. For Ubuntu Host, Debian/Ubuntu Run `sudo
 ssh seed@127.0.0.1 -p 8022
 ```
 
-### _Bonus_
+### Set up password-free login (Optional)
 
-If you want to login without password, you need to do the following substeps in Ubuntu Host.
+If you want password-free login, do the following substeps in your local machine.
 
 ```bash
 # Lists the files in your .ssh directory, if they exist
-ls -al ~/.ssh
+ll ~/.ssh
 
-# Generate new key if needed
-ssh-keygen -t ed25519 -C "your_email@example.com"
+# Generate new key if needed with RSA 2048⁄4096 or Ed25519
+# Just don’t use ECDSA/DSA!
+ssh-keygen -t ed25519
 
 # Start the ssh-agent in the background
 eval "$(ssh-agent -s)"
@@ -91,13 +92,13 @@ ssh-add ~/.ssh/id_ed25519
 # Copy public key to VM
 ssh-copy-id seed@127.0.0.1 -p 8022
 
-# Now try again to login without password
+# Now try again to login with no password required
 ssh seed@127.0.0.1 -p 8022
 ```
 
 Please refer to [How to Set Up SSH Keys on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04) or [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) for more info.
 
-If you want further simplify the connection, open `~/.ssh/config` in Ubuntu Host and append the following config.
+If you want further simplify the connection, open `~/.ssh/config` in your local machine and append the following ssh config.
 
 ```ssh_config
 Host sd
@@ -114,50 +115,50 @@ Now try to login by
 ssh sd
 ```
 
-## Step 5: Use VSCode Remote SSH Plugin
+## Step 5: Install VSCode and Remote SSH Extension
 
-Install VSCode and the following recommended plugins:
+Install VSCode in your local machine and install `Remote - SSH` extension in VSCode and click the bottom left `><` icon to use it. All the extensions I prefer are listed below.
 
-> ### Remote
+> **Remote**
 >
 > Remote - SSH  
 > Remote - SSH: Editing Configuration Files
 >
-> ### Hex
+> **Hex**
 >
 > Hex Editor (or hexdump for VSCode)
 >
-> ### _Bonus: C/C++_
+> **C/C++**
 >
 > C/C++  
 > CMake  
 > CMake Tools
-
-Check the plugin details to learn how to use it (quite easy)! I also provide several plugins that I prefer beyond our class.
-
-> Code Runner  
-> Visual Studio Intellicode
 >
-> ### _Bonus: Markdown_
+> **Markdown**
 >
 > Markdown All in One  
 > Markdown Preview Enhanced  
 > markdownlint
 >
-> ### _Bonus: Formatter_
+> **Formatter**
 >
 > Prettier  
 > Bracket Pair Colorizer 2  
 > indent-rainbow
 >
-> ### _Bonus: Git_
+> **Git**
 >
 > GitLens  
 > Git Graph  
 > gitignore
+>
+> **Development**
+>
+> Visual Studio Intellicode  
+> Code Runner
 
 ## Q&A
 
-Q: How to beautify my terminal
+### Q: How to beautify the terminal?
 
 A: [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) is all you need.
