@@ -5,7 +5,7 @@ paginate: 5
 title: Xiang Zheng's Blog
 
 # Change it to your Disqus shortname before using
-disqusShortname: xiangzheng
+# disqusShortname: xiangzheng
 
 # GA Tracking ID
 googleAnalytics:
