@@ -14,6 +14,23 @@ categories:
 
 This post lists conferences related to RL, Robotics, Control, AI, CV and Security research
 
+## Classification by Month
+
+| Month | Conference                                                                 |
+| ----- | -------------------------------------------------------------------------- |
+| 1     | ICML, IJCAI, RSS, CCS(1), ESORICS(1), ACNS(2), ICPR, ICONIP, IJCNN         |
+| 2     | USENIX Security(3), CSF(3), COLT, UAI, ICIP                                |
+| 3     | ECCV, IROS, CDC, MICCAI, ICICS                                             |
+| 4     | S&P(1), ACM Multimedia, SMC, ICANN                                         |
+| 5     | NeurIPS, CCS(2), NDSS(1), ESORICS(2)                                       |
+| 6     | USENIX Security(1), CSF(1), ACSAC, CoRL, ACML, ICONIP                      |
+| 7     | NDSS(2), INFOCOM, AsiaCCS(1)                                               |
+| 8     | AAAI, S&P(2)                                                               |
+| 9     | ICRA, ACNS(1)                                                              |
+| 10    | USENIX Security(2), CSF(2), ICLR, AISTATS, AAMAS, ACC, IFAC World Congress |
+| 11    | CVPR, AsiaCCS(2), ECC                                                      |
+| 12    | ICCV, S&P(3), ICAPS, GNC                                                   |
+
 ## AI Conferences
 
 (Classification is based on [CCF](https://wwwccforgcn/Academic_Evaluation/AI/))
@@ -53,17 +70,17 @@ This post lists conferences related to RL, Robotics, Control, AI, CV and Securit
 | ICPR 2022    | IEEE     | ~~Jan 24, 2022~~ | [site](https://www.icpr2022.com/important-dates/)     |
 | ICIP 2022    | IEEE     | ~~Feb 16, 2022~~ | [site](https://2022.ieeeicip.org/important-dates/)    |
 | ICANN 2022   | Springer | Apr 3, 2022      | [site](https://e-nns.org/icann2022/important-dates/)  |
-| ICONIP2021   | Springer | ~~Jun 30, 2021~~ | [site](https://iconip2021.apnns.org/important-dates/) |
+| ICONIP 2021  | Springer | ~~Jun 30, 2021~~ | [site](https://iconip2021.apnns.org/important-dates/) |
 
 ## Security Conferences
 
 ### A
 
-| Conf                          | Press              | Deadline                                     | URL                                                                        |
-| ----------------------------- | ------------------ | -------------------------------------------- | -------------------------------------------------------------------------- |
-| S&P 2023                      | IEEE               | Apr 1, Aug 19, Dec 2, 2022                   | [site](https://www.ieee-security.org/TC/SP2023/cfpapers.html)              |
-| CCS 2022                      | ACM                | ~~Jan 14~~, May 2, 2022                      | [site](https://www.sigsac.org/ccs/CCS2022/call-for-papers.html)            |
-| USENIX Security Security 2022 | USENIX Association | ~~Jun 8~~, ~~Oct 12, 2021~~, ~~Feb 1, 2022~~ | [site](https://www.usenix.org/conference/usenixsecurity22/call-for-papers) |
+| Conf                 | Press              | Deadline                                     | URL                                                                        |
+| -------------------- | ------------------ | -------------------------------------------- | -------------------------------------------------------------------------- |
+| S&P 2023             | IEEE               | Apr 1, Aug 19, Dec 2, 2022                   | [site](https://www.ieee-security.org/TC/SP2023/cfpapers.html)              |
+| CCS 2022             | ACM                | ~~Jan 14~~, May 2, 2022                      | [site](https://www.sigsac.org/ccs/CCS2022/call-for-papers.html)            |
+| USENIX Security 2022 | USENIX Association | ~~Jun 8~~, ~~Oct 12, 2021~~, ~~Feb 1, 2022~~ | [site](https://www.usenix.org/conference/usenixsecurity22/call-for-papers) |
 
 ### B
 
@@ -99,20 +116,3 @@ This post lists conferences related to RL, Robotics, Control, AI, CV and Securit
 | IFAC World Congress 2023 | Oct, 2022        | [site](https://www.ifac2023.org)                                                 |
 | INFOCOM 2022             | ~~Jul 31, 2021~~ | [site](https://infocom2022.ieee-infocom.org/authors/call-papers-main-conference) |
 | ICDCS 2022               | ~~Jan 31, 2022~~ | [site](https://icdcs2022.icdcs.org/cfp/)                                         |
-
-## Classification by Month
-
-| Month | Conference                                                                 |
-| ----- | -------------------------------------------------------------------------- |
-| 1     | ICML, IJCAI, RSS, CCS(1), ESORICS(1), ACNS(2), ICPR, ICONIP, IJCNN         |
-| 2     | COLT, UAI, USENIX Security(3), CSF(3), ICIP                                |
-| 3     | ECCV, IROS, CDC, MICCAI, ICICS                                             |
-| 4     | S&P(1), ACM Multimedia, SMC, ICANN                                         |
-| 5     | NeurIPS, CCS(2), NDSS(1), ESORICS(2)                                       |
-| 6     | USENIX Security(1), CSF(1), ACSAC, CoRL, ACML, ICONIP                      |
-| 7     | NDSS(2), INFOCOM, AsiaCCS(1)                                               |
-| 8     | AAAI, S&P(2)                                                               |
-| 9     | ICRA, ACNS(1)                                                              |
-| 10    | USENIX Security(2), CSF(2), AISTATS, ICLR, AAMAS, ACC, IFAC World Congress |
-| 11    | CVPR, AsiaCCS(2), ECC                                                      |
-| 12    | ICCV, S&P(3), ICAPS, GNC                                                   |
