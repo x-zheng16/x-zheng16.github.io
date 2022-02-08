@@ -102,7 +102,7 @@ This post shows upcoming deadlines of conferences related to RL, Security and Ro
 
 | Month | Conference                                                                 |
 | ----- | -------------------------------------------------------------------------- |
-| 1     | ICML[4], IJCAI, IJCNN, CCS(1), ESORICS(1), ACNS(2), RSS, ICPR, ICONIP      |
+| 1     | ICML, IJCAI, IJCNN, CCS(1), ESORICS(1), ACNS(2), RSS, ICPR, ICONIP         |
 | 2     | COLT, USENIX Security(3), CSF(3), UAI, ICIP                                |
 | 3     | ECCV, IROS, CDC, MICCAI, ICICS                                             |
 | 4     | S&P(1), ICANN, SMC                                                         |
