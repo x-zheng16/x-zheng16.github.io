@@ -107,7 +107,7 @@ This post lists conferences related to RL, Robotics, Control, AI, CV and Securit
 | 1     | ICML, IJCAI, RSS, CCS(1), ESORICS(1), ACNS(2), ICPR, ICONIP, IJCNN         |
 | 2     | COLT, UAI, USENIX Security(3), CSF(3), ICIP                                |
 | 3     | ECCV, IROS, CDC, MICCAI, ICICS                                             |
-| 4     | S&P(1), SMC, ICANN                                                         |
+| 4     | S&P(1), ACM Multimedia, SMC, ICANN                                         |
 | 5     | NeurIPS, CCS(2), NDSS(1), ESORICS(2)                                       |
 | 6     | USENIX Security(1), CSF(1), ACSAC, CoRL, ACML, ICONIP                      |
 | 7     | NDSS(2), INFOCOM, AsiaCCS(1)                                               |
