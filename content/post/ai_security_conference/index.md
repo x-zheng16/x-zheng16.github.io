@@ -2,7 +2,7 @@
 author: Xiang Zheng
 title: AI and Security Conferences
 date: 2022-02-08
-description: Conferences related to RL and AI Security research
+description: Conferences related to RL, Robotics, Control, AI, CV and Security research
 tags:
     - Conferences
     - AI
@@ -12,7 +12,7 @@ categories:
     - Conferences
 ---
 
-This post shows upcoming deadlines of conferences related to RL, Security and Robotics research
+This post lists conferences related to RL, Robotics, Control, AI, CV and Security research
 
 ## AI Conferences
 
