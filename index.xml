@@ -66,7 +66,7 @@
 &lt;thead>
 &lt;tr>
 &lt;th>Conf&lt;/th>
-&lt;th>Press&lt;/th>
+&lt;th>Publisher&lt;/th>
 &lt;th>Deadline&lt;/th>
 &lt;th>URL&lt;/th>
 &lt;/tr>
@@ -74,7 +74,7 @@
 &lt;tbody>
 &lt;tr>
 &lt;td>NeurIPS 2021&lt;/td>
-&lt;td>MIT Press&lt;/td>
+&lt;td>&lt;/td>
 &lt;td>&lt;del>May 21, 2021&lt;/del>&lt;/td>
 &lt;td>&lt;a class="link" href="https://nips.cc/Conferences/2021/Dates" target="_blank" rel="noopener"
 >site&lt;/a>&lt;/td>
@@ -109,7 +109,7 @@
 &lt;/tr>
 &lt;tr>
 &lt;td>ICML 2022&lt;/td>
-&lt;td>ACM&lt;/td>
+&lt;td>&lt;/td>
 &lt;td>&lt;del>Jan 27, 2022&lt;/del>&lt;/td>
 &lt;td>&lt;a class="link" href="https://icml.cc/Conferences/2022/Dates" target="_blank" rel="noopener"
 >site&lt;/a>&lt;/td>
@@ -128,7 +128,7 @@
 &lt;thead>
 &lt;tr>
 &lt;th>Conf&lt;/th>
-&lt;th>Press&lt;/th>
+&lt;th>Publisher&lt;/th>
 &lt;th>Deadline&lt;/th>
 &lt;th>URL&lt;/th>
 &lt;/tr>
@@ -157,7 +157,7 @@
 &lt;/tr>
 &lt;tr>
 &lt;td>AAMAS 2022&lt;/td>
-&lt;td>Springer&lt;/td>
+&lt;td>ACM&lt;/td>
 &lt;td>&lt;del>Oct 8, 2021&lt;/del>&lt;/td>
 &lt;td>&lt;a class="link" href="https://aamas2022-conference.auckland.ac.nz" target="_blank" rel="noopener"
 >site&lt;/a>&lt;/td>
@@ -190,7 +190,7 @@
 &lt;thead>
 &lt;tr>
 &lt;th>Conf&lt;/th>
-&lt;th>Press&lt;/th>
+&lt;th>Publisher&lt;/th>
 &lt;th>Deadline&lt;/th>
 &lt;th>URL&lt;/th>
 &lt;/tr>
@@ -260,7 +260,7 @@
 &lt;thead>
 &lt;tr>
 &lt;th>Conf&lt;/th>
-&lt;th>Press&lt;/th>
+&lt;th>Publisher&lt;/th>
 &lt;th>Deadline&lt;/th>
 &lt;th>URL&lt;/th>
 &lt;/tr>
@@ -294,7 +294,7 @@
 &lt;thead>
 &lt;tr>
 &lt;th>Conf&lt;/th>
-&lt;th>Press&lt;/th>
+&lt;th>Publisher&lt;/th>
 &lt;th>Deadline&lt;/th>
 &lt;th>URL&lt;/th>
 &lt;/tr>
@@ -323,7 +323,7 @@
 &lt;/tr>
 &lt;tr>
 &lt;td>NDSS 2022&lt;/td>
-&lt;td>ISOC&lt;/td>
+&lt;td>Internet Society&lt;/td>
 &lt;td>&lt;del>May 21&lt;/del>, &lt;del>Jul 27, 2021&lt;/del>&lt;/td>
 &lt;td>&lt;a class="link" href="https://www.ndss-symposium.org/ndss2022/call-for-papers/" target="_blank" rel="noopener"
 >site&lt;/a>&lt;/td>
@@ -335,7 +335,7 @@
 &lt;thead>
 &lt;tr>
 &lt;th>Conf&lt;/th>
-&lt;th>Press&lt;/th>
+&lt;th>Publisher&lt;/th>
 &lt;th>Deadline&lt;/th>
 &lt;th>URL&lt;/th>
 &lt;/tr>
