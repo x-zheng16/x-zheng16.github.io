@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xiang Zheng's Blog</title><link>https://x-zheng16.github.io/</link><description>Recent content on Xiang Zheng's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 08 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://x-zheng16.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>AI and Security Conferences</title><link>https://x-zheng16.github.io/p/ai-and-security-conferences/</link><pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate><guid>https://x-zheng16.github.io/p/ai-and-security-conferences/</guid><description>&lt;p>This post lists conferences related to RL, Robotics, Control, AI, CV and Security research&lt;/p>
-&lt;h2 id="classification-by-month">Classification by Month&lt;/h2>
+&lt;h2 id="classification-by-month-of-submission-deadline">Classification by Month of Submission Deadline&lt;/h2>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -10,7 +10,7 @@
 &lt;tbody>
 &lt;tr>
 &lt;td>1&lt;/td>
-&lt;td>ICML, IJCAI, RSS, CCS(1), ESORICS(1), ACNS(2), ICPR, ICONIP, IJCNN&lt;/td>
+&lt;td>ICML, IJCAI, RSS, CCS(1), ESORICS(1), ACNS(2), ICPR, IJCNN&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>2&lt;/td>
@@ -55,6 +55,65 @@
 &lt;tr>
 &lt;td>12&lt;/td>
 &lt;td>ICCV, S&amp;amp;P(3), ICAPS, GNC&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="classification-by-month-of-paper-notification">Classification by Month of Paper Notification&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Month&lt;/th>
+&lt;th>Conference&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>ICRA, ICLR&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td>IJCAI, RSS, CCS(1)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td>ICML&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>7&lt;/td>
+&lt;td>ECCV, IROS, CDC&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>8&lt;/td>
+&lt;td>CCS(2)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>9&lt;/td>
+&lt;td>NeurIPS, CoRL&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>10&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>11&lt;/td>
+&lt;td>AAAI&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>12&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
