@@ -14,11 +14,11 @@ categories:
 
 This post lists conferences related to RL, Robotics, Control, AI, CV and Security research
 
-## Classification by Month
+## Classification by Month of Submission Deadline
 
 | Month | Conference                                                                 |
 | ----- | -------------------------------------------------------------------------- |
-| 1     | ICML, IJCAI, RSS, CCS(1), ESORICS(1), ACNS(2), ICPR, ICONIP, IJCNN         |
+| 1     | ICML, IJCAI, RSS, CCS(1), ESORICS(1), ACNS(2), ICPR, IJCNN                 |
 | 2     | USENIX Security(3), CSF(3), COLT, UAI, ICIP                                |
 | 3     | ECCV, IROS, CDC, MICCAI, ICICS                                             |
 | 4     | S&P(1), ACM Multimedia, SMC, ICANN                                         |
@@ -30,6 +30,23 @@ This post lists conferences related to RL, Robotics, Control, AI, CV and Securit
 | 10    | USENIX Security(2), CSF(2), ICLR, AISTATS, AAMAS, ACC, IFAC World Congress |
 | 11    | CVPR, AsiaCCS(2), ECC                                                      |
 | 12    | ICCV, S&P(3), ICAPS, GNC                                                   |
+
+## Classification by Month of Paper Notification
+
+| Month | Conference         |
+| ----- | ------------------ |
+| 1     | ICRA, ICLR         |
+| 2     |                    |
+| 3     |                    |
+| 4     | IJCAI, RSS, CCS(1) |
+| 5     | ICML               |
+| 6     |                    |
+| 7     | ECCV, IROS, CDC    |
+| 8     | CCS(2)             |
+| 9     | NeurIPS, CoRL      |
+| 10    |                    |
+| 11    | AAAI               |
+| 12    |                    |
 
 ## AI Conferences
 
