@@ -12,7 +12,7 @@ categories:
 draft: false
 ---
 
-This post aims to introduce how to quickly configure your VS Code installed in Host (a.k.a. local machine) to develop in Guest (i.e. remote machine, remote server, virtual machine in VirtualBox or Cloud)
+This post aims to introduce how to quickly configure your VS Code installed in Host (a.k.a. local machine) to develop in Guest (i.e., remote machine, remote server, virtual machine in VirtualBox or Cloud)
 
 ## Step 1: Create a Virtual Machine (VM)
 
@@ -23,7 +23,7 @@ Please refer to [Install SEED VM on VirtualBox](https://github.com/seed-labs/see
 
 ![VM Network panel](VM_network_conf.png)
 
-Following figure shows how NAT Network looks like. Please refer to [VirtualBox Network Settings: Complete Guide](https://www.nakivo.com/blog/virtualbox-network-setting-guide/) or [Virtual Networking](https://www.virtualbox.org/manual/ch06.html) if interesed.
+The following figure shows what NAT Network looks like. Please refer to [VirtualBox Network Settings: Complete Guide](https://www.nakivo.com/blog/virtualbox-network-setting-guide/) or [Virtual Networking](https://www.virtualbox.org/manual/ch06.html) if interested.
 ![NAT network](NAT_network.png)
 
 ## Step 2: Set Up SSH Server Service in VM
@@ -73,13 +73,13 @@ ssh seed@127.0.0.1 -p 8022
 
 ### Set up password-free login (Optional)
 
-If you want password-free login, do the following substeps in your local machine.
+Do the following substeps in your local machine if you want password-free login.
 
 ```bash
 # Lists the files in your .ssh directory, if they exist
 ll ~/.ssh
 
-# Generate new key if needed with RSA 2048⁄4096 or Ed25519
+# Generate a new key if needed with RSA 2048⁄4096 or Ed25519
 # Just don’t use ECDSA/DSA!
 ssh-keygen -t ed25519
 
@@ -92,7 +92,7 @@ ssh-add ~/.ssh/id_ed25519
 # Copy public key to VM
 ssh-copy-id seed@127.0.0.1 -p 8022
 
-# Now try again to login with no password required
+# Now try again to log in with no password required
 ssh seed@127.0.0.1 -p 8022
 ```
 
@@ -117,7 +117,7 @@ ssh sd
 
 ## Step 5: Install VSCode and Remote SSH Extension
 
-Install VSCode in your local machine and install `Remote - SSH` extension in VSCode and click the bottom left `><` icon to use it. All the extensions I prefer are listed below.
+Install VSCode in your local machine and install `Remote - SSH` extension in VSCode, and click the bottom left `><` icon to use it. All the extensions I prefer are listed below.
 
 > **Remote**
 >
@@ -159,6 +159,6 @@ Install VSCode in your local machine and install `Remote - SSH` extension in VSC
 
 ## Q&A
 
-### Q: How to beautify the terminal?
+**Q**: How to beautify the terminal?
 
 A: [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) is all you need.

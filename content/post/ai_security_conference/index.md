@@ -2,7 +2,7 @@
 author: Xiang Zheng
 title: AI and Security Conferences
 date: 2022-02-08
-description: Conferences related to RL, Robotics, Control, AI, CV and Security research
+description: Conferences related to RL, Robotics, Control, AI, CV, and Security research
 tags:
     - Conferences
     - AI
@@ -12,12 +12,12 @@ categories:
     - Conferences
 ---
 
-This post lists conferences related to RL, Robotics, Control, AI, CV and Security research
+This post lists RL, Robotics, Control, AI, CV, and Security research conferences.
 
 ## Classification by Month of Submission Deadline
 
 | Month | Conference                                                                 |
-| ----- | -------------------------------------------------------------------------- |
+|-------|----------------------------------------------------------------------------|
 | 1     | ICML, IJCAI, RSS, CCS(1), ESORICS(1), ACNS(2), ICPR, IJCNN                 |
 | 2     | USENIX Security(3), CSF(3), COLT, UAI, ICIP                                |
 | 3     | ECCV, IROS, CDC, MICCAI, ICICS                                             |
@@ -55,7 +55,7 @@ This post lists conferences related to RL, Robotics, Control, AI, CV and Securit
 ### A
 
 | Conf                | Publisher | Deadline         | URL                                                      |
-| ------------------- | --------- | ---------------- | -------------------------------------------------------- |
+|---------------------|-----------|------------------|----------------------------------------------------------|
 | NeurIPS 2021        |           | ~~May 21, 2021~~ | [site](https://nips.cc/Conferences/2021/Dates)           |
 | AAAI 2022           | AAAI      | ~~Aug 30, 2021~~ | [site](https://aaai.org/Conferences/AAAI-22/aaai22call/) |
 | CVPR 2022           | IEEE      | ~~Nov 18, 2021~~ | [site](https://cvpr2022.thecvf.com/submission-timeline)  |
@@ -67,7 +67,7 @@ This post lists conferences related to RL, Robotics, Control, AI, CV and Securit
 ### B
 
 | Conf       | Publisher | Deadline         | URL                                                           |
-| ---------- | --------- | ---------------- | ------------------------------------------------------------- |
+|------------|-----------|------------------|---------------------------------------------------------------|
 | ICRA 2022  | IEEE      | ~~Sep 15, 2021~~ | [site](https://www.icra2022.org/contribute/important-dates)   |
 | ICME 2022  | IEEE      | ~~Dec 22, 2021~~ | [site](http://2022.ieeeicme.org/cf-papers.html)               |
 | ICAPS 2022 | AAAI      | ~~Dec 15, 2021~~ | [site](http://icaps22.icaps-conference.org)                   |
