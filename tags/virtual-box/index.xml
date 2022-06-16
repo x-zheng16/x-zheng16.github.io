@@ -1,6 +1,146 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Virtual Box on Xiang Zheng's Blog</title><link>https://x-zheng16.github.io/tags/virtual-box/</link><description>Recent content in Virtual Box on Xiang Zheng's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 27 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://x-zheng16.github.io/tags/virtual-box/index.xml" rel="self" type="application/rss+xml"/><item><title>Quickly Configure VS Code to Develop in Remote Machine</title><link>https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/</link><pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate><guid>https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/</guid><description>This post aims to introduce how to quickly configure your VS Code installed in Host (a.k.a. local machine) to develop in Guest (i.e., remote machine, remote server, virtual machine in VirtualBox or Cloud)
-Step 1: Create a Virtual Machine (VM) Please refer to Install SEED VM on VirtualBox. Skip if you have one.
-username: seed
-password: dees
-VM Network panel
-The following figure shows what NAT Network looks like.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Virtual Box on Xiang Zheng's Blog</title><link>https://x-zheng16.github.io/tags/virtual-box/</link><description>Recent content in Virtual Box on Xiang Zheng's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 27 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://x-zheng16.github.io/tags/virtual-box/index.xml" rel="self" type="application/rss+xml"/><item><title>Quickly Configure VS Code to Develop in Remote Machine</title><link>https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/</link><pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate><guid>https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/</guid><description>&lt;p>This post aims to introduce how to quickly configure your VS Code installed in Host (a.k.a. local machine) to develop in Guest (i.e., remote machine, remote server, virtual machine in VirtualBox or Cloud)&lt;/p>
+&lt;h2 id="step-1-create-a-virtual-machine-vm">Step 1: Create a Virtual Machine (VM)&lt;/h2>
+&lt;p>Please refer to &lt;a class="link" href="https://github.com/seed-labs/seed-labs/blob/master/manuals/vm/seedvm-manual.md" target="_blank" rel="noopener"
+>Install SEED VM on VirtualBox&lt;/a>. Skip if you have one.&lt;/p>
+&lt;blockquote>
+&lt;p>username: seed&lt;br>
+password: dees&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/VM_network_conf.png"
+width="1298"
+height="750"
+srcset="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/VM_network_conf_hu6df28b9863123eb761d7bd1ec978a942_409265_480x0_resize_box_3.png 480w, https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/VM_network_conf_hu6df28b9863123eb761d7bd1ec978a942_409265_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="VM Network panel"
+class="gallery-image"
+data-flex-grow="173"
+data-flex-basis="415px"
+>&lt;/p>
+&lt;p>The following figure shows what NAT Network looks like. Please refer to &lt;a class="link" href="https://www.nakivo.com/blog/virtualbox-network-setting-guide/" target="_blank" rel="noopener"
+>VirtualBox Network Settings: Complete Guide&lt;/a> or &lt;a class="link" href="https://www.virtualbox.org/manual/ch06.html" target="_blank" rel="noopener"
+>Virtual Networking&lt;/a> if interested.
+&lt;img src="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/NAT_network.png"
+width="1714"
+height="954"
+srcset="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/NAT_network_hu439bf2ed46e7b410d8195a2ab0eb1785_608506_480x0_resize_box_3.png 480w, https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/NAT_network_hu439bf2ed46e7b410d8195a2ab0eb1785_608506_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="NAT network"
+class="gallery-image"
+data-flex-grow="179"
+data-flex-basis="431px"
+>&lt;/p>
+&lt;h2 id="step-2-set-up-ssh-server-service-in-vm">Step 2: Set Up SSH Server Service in VM&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## Install sshd server&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install openssh-server
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## Start server and check status&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo service ssh start
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo service ssh status
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## Further config sshd server only when needed&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># sudo vim /etc/.ssh/sshd_config&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># sudo service ssh restart&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## Verify ssh login&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># tip: use `whoami` to display your username&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh seed@127.0.0.1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="step-3-add-port-forwarding-rule-in-virtualbox">Step 3: Add Port Forwarding Rule in VirtualBox&lt;/h2>
+&lt;p>Go to VirtualBox/Preferences/Network, edit your NATNetwork and select Port Forwarding. Add Rules as follows.&lt;/p>
+&lt;blockquote>
+&lt;p>Name: SSH (any arbitrary unique name)&lt;br>
+Protocol: TCP&lt;br>
+Host IP: 127.0.0.1 (any available ip of your local machine)&lt;br>
+Host Port: 8022 (any unused port higher than 1024)&lt;br>
+Guest IP: 10.0.2.4 (type &lt;code>ifconfig&lt;/code> in terminal of VM to check)&lt;br>
+Guest Port: 22 (SSH default port)&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/port_forwarding.png"
+width="1108"
+height="732"
+srcset="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/port_forwarding_hu6ff436fd1de6b69040debb46d2fb8d82_189387_480x0_resize_box_3.png 480w, https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/port_forwarding_hu6ff436fd1de6b69040debb46d2fb8d82_189387_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="VirtualBox Network panel"
+class="gallery-image"
+data-flex-grow="151"
+data-flex-basis="363px"
+>
+&lt;img src="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule.png"
+width="1058"
+height="238"
+srcset="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule_hu65cd8af79cb1c1cc4dad04665267afd3_35833_480x0_resize_box_3.png 480w, https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule_hu65cd8af79cb1c1cc4dad04665267afd3_35833_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Port forwarding rule"
+class="gallery-image"
+data-flex-grow="444"
+data-flex-basis="1066px"
+>&lt;/p>
+&lt;h2 id="step-4-set-up-ssh-client-service-in-host">Step 4: Set Up SSH Client Service in Host&lt;/h2>
+&lt;h3 id="install-ssh-client">Install ssh client&lt;/h3>
+&lt;p>For macOS Host, it comes pre-installed. For Ubuntu Host, Debian/Ubuntu Run &lt;code>sudo apt-get install openssh-client&lt;/code>. For other OS, please refer to &lt;a class="link" href="https://code.visualstudio.com/docs/remote/troubleshooting#_installing-a-supported-ssh-client" target="_blank" rel="noopener"
+>Install a supported SSH client&lt;/a>.&lt;/p>
+&lt;h3 id="now-you-can-connect-vm-by-ssh">Now you can connect VM by SSH&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">ssh seed@127.0.0.1 -p &lt;span class="m">8022&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="set-up-password-free-login-optional">Set up password-free login (Optional)&lt;/h3>
+&lt;p>Do the following substeps in your local machine if you want password-free login.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Lists the files in your .ssh directory, if they exist&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ll ~/.ssh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Generate a new key if needed with RSA 2048⁄4096 or Ed25519&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Just don’t use ECDSA/DSA!&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh-keygen -t ed25519
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Start the ssh-agent in the background&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">eval&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>ssh-agent -s&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Add your SSH private key to the ssh-agent&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh-add ~/.ssh/id_ed25519
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Copy public key to VM&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh-copy-id seed@127.0.0.1 -p &lt;span class="m">8022&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Now try again to log in with no password required&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh seed@127.0.0.1 -p &lt;span class="m">8022&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Please refer to &lt;a class="link" href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04" target="_blank" rel="noopener"
+>How to Set Up SSH Keys on Ubuntu 20.04&lt;/a> or &lt;a class="link" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh" target="_blank" rel="noopener"
+>Connecting to GitHub with SSH&lt;/a> for more info.&lt;/p>
+&lt;p>If you want further simplify the connection, open &lt;code>~/.ssh/config&lt;/code> in your local machine and append the following ssh config.&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-ssh_config" data-lang="ssh_config">Host sd
+HostName 127.0.0.1
+User seed
+# replace id_ed25519 with your secret key
+IdentityFile ~/.ssh/id_ed25519
+Port 8022
+&lt;/code>&lt;/pre>&lt;p>Now try to login by&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">ssh sd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="step-5-install-vscode-and-remote-ssh-extension">Step 5: Install VSCode and Remote SSH Extension&lt;/h2>
+&lt;p>Install VSCode in your local machine and install &lt;code>Remote - SSH&lt;/code> extension in VSCode, and click the bottom left &lt;code>&amp;gt;&amp;lt;&lt;/code> icon to use it. All the extensions I prefer are listed below.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Remote&lt;/strong>&lt;/p>
+&lt;p>Remote - SSH&lt;br>
+Remote - SSH: Editing Configuration Files&lt;/p>
+&lt;p>&lt;strong>Hex&lt;/strong>&lt;/p>
+&lt;p>Hex Editor (or hexdump for VSCode)&lt;/p>
+&lt;p>&lt;strong>C/C++&lt;/strong>&lt;/p>
+&lt;p>C/C++&lt;br>
+CMake&lt;br>
+CMake Tools&lt;/p>
+&lt;p>&lt;strong>Markdown&lt;/strong>&lt;/p>
+&lt;p>Markdown All in One&lt;br>
+Markdown Preview Enhanced&lt;br>
+markdownlint&lt;/p>
+&lt;p>&lt;strong>Formatter&lt;/strong>&lt;/p>
+&lt;p>Prettier&lt;br>
+Bracket Pair Colorizer 2&lt;br>
+indent-rainbow&lt;/p>
+&lt;p>&lt;strong>Git&lt;/strong>&lt;/p>
+&lt;p>GitLens&lt;br>
+Git Graph&lt;br>
+gitignore&lt;/p>
+&lt;p>&lt;strong>Development&lt;/strong>&lt;/p>
+&lt;p>Visual Studio Intellicode&lt;br>
+Code Runner&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="qa">Q&amp;amp;A&lt;/h2>
+&lt;p>&lt;strong>Q&lt;/strong>: How to beautify the terminal?&lt;/p>
+&lt;p>A: &lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh" target="_blank" rel="noopener"
+>Oh My Zsh&lt;/a> is all you need.&lt;/p></description></item></channel></rss>

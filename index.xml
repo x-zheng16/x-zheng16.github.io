@@ -1,519 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xiang Zheng's Blog</title><link>https://x-zheng16.github.io/</link><description>Recent content on Xiang Zheng's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 08 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://x-zheng16.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>AI and Security Conferences</title><link>https://x-zheng16.github.io/p/ai-and-security-conferences/</link><pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate><guid>https://x-zheng16.github.io/p/ai-and-security-conferences/</guid><description>&lt;p>This post lists RL, Robotics, Control, AI, CV, and Security research conferences.&lt;/p>
-&lt;h2 id="classification-by-month-of-submission-deadline">Classification by Month of Submission Deadline&lt;/h2>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Month&lt;/th>
-&lt;th>Conference&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>1&lt;/td>
-&lt;td>ICML, IJCAI, RSS, CCS(1), ESORICS(1), ACNS(2), ICPR, IJCNN&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2&lt;/td>
-&lt;td>USENIX Security(3), CSF(3), COLT, UAI, ICIP&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>3&lt;/td>
-&lt;td>ECCV, IROS, CDC, MICCAI, ICICS&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>4&lt;/td>
-&lt;td>S&amp;amp;P(1), ACM Multimedia, SMC, ICANN&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>5&lt;/td>
-&lt;td>NeurIPS, CCS(2), NDSS(1), ESORICS(2)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>6&lt;/td>
-&lt;td>USENIX Security(1), CSF(1), ACSAC, CoRL, ACML, ICONIP&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>7&lt;/td>
-&lt;td>NDSS(2), INFOCOM, AsiaCCS(1)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>8&lt;/td>
-&lt;td>AAAI, S&amp;amp;P(2)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>9&lt;/td>
-&lt;td>ICRA, ACNS(1)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>10&lt;/td>
-&lt;td>USENIX Security(2), CSF(2), ICLR, AISTATS, AAMAS, ACC, IFAC World Congress&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>11&lt;/td>
-&lt;td>CVPR, AsiaCCS(2), ECC&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>12&lt;/td>
-&lt;td>ICCV, S&amp;amp;P(3), ICAPS, GNC&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h2 id="classification-by-month-of-paper-notification">Classification by Month of Paper Notification&lt;/h2>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Month&lt;/th>
-&lt;th>Conference&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>1&lt;/td>
-&lt;td>ICRA, ICLR&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>3&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>4&lt;/td>
-&lt;td>IJCAI, RSS, CCS(1)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>5&lt;/td>
-&lt;td>ICML&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>6&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>7&lt;/td>
-&lt;td>ECCV, IROS, CDC&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>8&lt;/td>
-&lt;td>CCS(2)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>9&lt;/td>
-&lt;td>NeurIPS, CoRL&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>10&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>11&lt;/td>
-&lt;td>AAAI&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>12&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h2 id="ai-conferences">AI Conferences&lt;/h2>
-&lt;p>(Classification is based on &lt;a class="link" href="https://wwwccforgcn/Academic_Evaluation/AI/" target="_blank" rel="noopener"
->CCF&lt;/a>)&lt;/p>
-&lt;h3 id="a">A&lt;/h3>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Conf&lt;/th>
-&lt;th>Publisher&lt;/th>
-&lt;th>Deadline&lt;/th>
-&lt;th>URL&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>NeurIPS 2021&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;del>May 21, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://nips.cc/Conferences/2021/Dates" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>AAAI 2022&lt;/td>
-&lt;td>AAAI&lt;/td>
-&lt;td>&lt;del>Aug 30, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://aaai.org/Conferences/AAAI-22/aaai22call/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>CVPR 2022&lt;/td>
-&lt;td>IEEE&lt;/td>
-&lt;td>&lt;del>Nov 18, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://cvpr2022.thecvf.com/submission-timeline" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ICCV 2021&lt;/td>
-&lt;td>IEEE&lt;/td>
-&lt;td>&lt;del>Mar 17, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://iccv2021.thecvf.com/node/5" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>IJCAI 2022&lt;/td>
-&lt;td>IJCAI&lt;/td>
-&lt;td>&lt;del>Jan 14, 2022&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://ijcai-22.org" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ICML 2022&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;del>Jan 27, 2022&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://icml.cc/Conferences/2022/Dates" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ACM Multimedia 2022&lt;/td>
-&lt;td>ACM&lt;/td>
-&lt;td>Apr 8, 2022&lt;/td>
-&lt;td>&lt;a class="link" href="https://2022.acmmm.org/call-for-papers/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h3 id="b">B&lt;/h3>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Conf&lt;/th>
-&lt;th>Publisher&lt;/th>
-&lt;th>Deadline&lt;/th>
-&lt;th>URL&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>ICRA 2022&lt;/td>
-&lt;td>IEEE&lt;/td>
-&lt;td>&lt;del>Sep 15, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://www.icra2022.org/contribute/important-dates" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ICME 2022&lt;/td>
-&lt;td>IEEE&lt;/td>
-&lt;td>&lt;del>Dec 22, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="http://2022.ieeeicme.org/cf-papers.html" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ICAPS 2022&lt;/td>
-&lt;td>AAAI&lt;/td>
-&lt;td>&lt;del>Dec 15, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="http://icaps22.icaps-conference.org" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>AAMAS 2022&lt;/td>
-&lt;td>ACM&lt;/td>
-&lt;td>&lt;del>Oct 8, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://aamas2022-conference.auckland.ac.nz" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>COLT 2022&lt;/td>
-&lt;td>Springer&lt;/td>
-&lt;td>&lt;del>Feb 9, 2022&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="http://learningtheory.org/colt2022/cfp.html" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ECCV 2022&lt;/td>
-&lt;td>Springer&lt;/td>
-&lt;td>Mar 7, 2022&lt;/td>
-&lt;td>&lt;a class="link" href="https://eccv2022.ecva.net/submission/call-for-papers/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>UAI 2022&lt;/td>
-&lt;td>AUAI&lt;/td>
-&lt;td>Feb 25, 2022&lt;/td>
-&lt;td>&lt;a class="link" href="https://www.auai.org/uai2022/call_for_papers" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h3 id="c">C&lt;/h3>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Conf&lt;/th>
-&lt;th>Publisher&lt;/th>
-&lt;th>Deadline&lt;/th>
-&lt;th>URL&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>AISTATS 2022&lt;/td>
-&lt;td>JMLR&lt;/td>
-&lt;td>&lt;del>Oct 15, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="http://aistats.org/aistats2022/cfp.html" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ACML 2021&lt;/td>
-&lt;td>JMLR&lt;/td>
-&lt;td>&lt;del>Jun 25, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="http://www.acml-conf.org/2021/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>IJCNN 2022&lt;/td>
-&lt;td>IEEE&lt;/td>
-&lt;td>&lt;del>Jan 31, 2022&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://wcci2022.org/call-for-papers/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>IROS 2022&lt;/td>
-&lt;td>IEEE&lt;/td>
-&lt;td>Feb 24, 2022&lt;/td>
-&lt;td>&lt;a class="link" href="https://iros2022.org/call-for-papers/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ICPR 2022&lt;/td>
-&lt;td>IEEE&lt;/td>
-&lt;td>&lt;del>Jan 24, 2022&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://www.icpr2022.com/important-dates/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ICIP 2022&lt;/td>
-&lt;td>IEEE&lt;/td>
-&lt;td>&lt;del>Feb 16, 2022&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://2022.ieeeicip.org/important-dates/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ICANN 2022&lt;/td>
-&lt;td>Springer&lt;/td>
-&lt;td>Apr 3, 2022&lt;/td>
-&lt;td>&lt;a class="link" href="https://e-nns.org/icann2022/important-dates/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ICONIP 2021&lt;/td>
-&lt;td>Springer&lt;/td>
-&lt;td>&lt;del>Jun 30, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://iconip2021.apnns.org/important-dates/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h2 id="security-conferences">Security Conferences&lt;/h2>
-&lt;h3 id="a-1">A&lt;/h3>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Conf&lt;/th>
-&lt;th>Publisher&lt;/th>
-&lt;th>Deadline&lt;/th>
-&lt;th>URL&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>S&amp;amp;P 2023&lt;/td>
-&lt;td>IEEE&lt;/td>
-&lt;td>Apr 1, Aug 19, Dec 2, 2022&lt;/td>
-&lt;td>&lt;a class="link" href="https://www.ieee-security.org/TC/SP2023/cfpapers.html" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>CCS 2022&lt;/td>
-&lt;td>ACM&lt;/td>
-&lt;td>&lt;del>Jan 14&lt;/del>, May 2, 2022&lt;/td>
-&lt;td>&lt;a class="link" href="https://www.sigsac.org/ccs/CCS2022/call-for-papers.html" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>USENIX Security 2022&lt;/td>
-&lt;td>USENIX Association&lt;/td>
-&lt;td>&lt;del>Jun 8&lt;/del>, &lt;del>Oct 12, 2021&lt;/del>, &lt;del>Feb 1, 2022&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://www.usenix.org/conference/usenixsecurity22/call-for-papers" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h3 id="b-1">B&lt;/h3>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Conf&lt;/th>
-&lt;th>Publisher&lt;/th>
-&lt;th>Deadline&lt;/th>
-&lt;th>URL&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>ESORICS 2022&lt;/td>
-&lt;td>Springer&lt;/td>
-&lt;td>&lt;del>Jan 31&lt;/del>, May 15, 2022&lt;/td>
-&lt;td>&lt;a class="link" href="https://esorics2022.compute.dtu.dk/cfp.html" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>CSF 2022&lt;/td>
-&lt;td>IEEE&lt;/td>
-&lt;td>&lt;del>May 14th&lt;/del>, &lt;del>Oct 1st, 2021&lt;/del>, &lt;del>Feb 4, 2022&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://www.ieee-security.org/TC/CSF2022/cfp.html" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ACSAC 2021&lt;/td>
-&lt;td>IEEE&lt;/td>
-&lt;td>&lt;del>Jun 28, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://www.acsac.org/2021/submissions/papers/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>NDSS 2022&lt;/td>
-&lt;td>Internet Society&lt;/td>
-&lt;td>&lt;del>May 21&lt;/del>, &lt;del>Jul 27, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://www.ndss-symposium.org/ndss2022/call-for-papers/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h3 id="c-1">C&lt;/h3>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Conf&lt;/th>
-&lt;th>Publisher&lt;/th>
-&lt;th>Deadline&lt;/th>
-&lt;th>URL&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>AsiaCCS 2022&lt;/td>
-&lt;td>ACM&lt;/td>
-&lt;td>&lt;del>Jul 30&lt;/del>, &lt;del>Nov 19, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://asiaccs2022.conferenceservice.jp/dateandcall/callforpapers/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ACNS 2022&lt;/td>
-&lt;td>Springer&lt;/td>
-&lt;td>&lt;del>Sep 3, 2021&lt;/del>, &lt;del>Jan 14, 2022&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://sites.google.com/di.uniroma1.it/acns2022/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ACISP 2022&lt;/td>
-&lt;td>Springer&lt;/td>
-&lt;td>Feb 21, 2022&lt;/td>
-&lt;td>&lt;a class="link" href="https://uow-ic2.github.io/acisp2022/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ICICS 2022&lt;/td>
-&lt;td>Springer&lt;/td>
-&lt;td>Mar 21, 2022&lt;/td>
-&lt;td>&lt;a class="link" href="https://icics2022.cyber.kent.ac.uk" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h2 id="others">Others&lt;/h2>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Conf&lt;/th>
-&lt;th>Deadline&lt;/th>
-&lt;th>URL&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>ICLR 2022&lt;/td>
-&lt;td>&lt;del>Oct 06, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://iclr.cc/Conferences/2022/Dates" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>CoRL 2022&lt;/td>
-&lt;td>Jun 15, 2022&lt;/td>
-&lt;td>&lt;a class="link" href="http://corl2022.org/key-dates/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>RSS 2022&lt;/td>
-&lt;td>&lt;del>Jan 28, 2022&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://roboticsconference.org" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>GNC 2022&lt;/td>
-&lt;td>&lt;del>Dec 2, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://www.aiaa.org/SciTech/presentations-papers/call-for-papers" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>CDC 2022&lt;/td>
-&lt;td>Mar 7, 2022&lt;/td>
-&lt;td>&lt;a class="link" href="https://cdc2022.ieeecss.org/call-for-papers/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ACC 2022&lt;/td>
-&lt;td>&lt;del>Oct 12, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://acc2022.a2c2.org" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>SMC 2022&lt;/td>
-&lt;td>Apr 15, 2022&lt;/td>
-&lt;td>&lt;a class="link" href="https://ieeesmc2022.org/call-for-papers" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ECC 2022&lt;/td>
-&lt;td>&lt;del>Nov 8, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://ecc22.euca-ecc.org/call-for-papers/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>MICCAI 2022&lt;/td>
-&lt;td>Mar 1, 2022&lt;/td>
-&lt;td>&lt;a class="link" href="https://conferences.miccai.org/2022/en/CALL-FOR-PAPERS.html" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>IFAC World Congress 2023&lt;/td>
-&lt;td>Oct, 2022&lt;/td>
-&lt;td>&lt;a class="link" href="https://www.ifac2023.org" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>INFOCOM 2022&lt;/td>
-&lt;td>&lt;del>Jul 31, 2021&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://infocom2022.ieee-infocom.org/authors/call-papers-main-conference" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ICDCS 2022&lt;/td>
-&lt;td>&lt;del>Jan 31, 2022&lt;/del>&lt;/td>
-&lt;td>&lt;a class="link" href="https://icdcs2022.icdcs.org/cfp/" target="_blank" rel="noopener"
->site&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table></description></item><item><title>Quickly Configure VS Code to Develop in Remote Machine</title><link>https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/</link><pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate><guid>https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/</guid><description>&lt;p>This post aims to introduce how to quickly configure your VS Code installed in Host (a.k.a. local machine) to develop in Guest (i.e., remote machine, remote server, virtual machine in VirtualBox or Cloud)&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xiang Zheng's Blog</title><link>https://x-zheng16.github.io/</link><description>Recent content on Xiang Zheng's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 27 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://x-zheng16.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Quickly Configure VS Code to Develop in Remote Machine</title><link>https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/</link><pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate><guid>https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/</guid><description>&lt;p>This post aims to introduce how to quickly configure your VS Code installed in Host (a.k.a. local machine) to develop in Guest (i.e., remote machine, remote server, virtual machine in VirtualBox or Cloud)&lt;/p>
 &lt;h2 id="step-1-create-a-virtual-machine-vm">Step 1: Create a Virtual Machine (VM)&lt;/h2>
 &lt;p>Please refer to &lt;a class="link" href="https://github.com/seed-labs/seed-labs/blob/master/manuals/vm/seedvm-manual.md" target="_blank" rel="noopener"
 >Install SEED VM on VirtualBox&lt;/a>. Skip if you have one.&lt;/p>
@@ -521,41 +6,29 @@
 &lt;p>username: seed&lt;br>
 password: dees&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 173;
-flex-basis: 415px"
->
-&lt;a href="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/VM_network_conf.png" data-size="1298x750">
-&lt;img src="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/VM_network_conf.png"
+&lt;p>&lt;img src="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/VM_network_conf.png"
 width="1298"
 height="750"
 srcset="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/VM_network_conf_hu6df28b9863123eb761d7bd1ec978a942_409265_480x0_resize_box_3.png 480w, https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/VM_network_conf_hu6df28b9863123eb761d7bd1ec978a942_409265_1024x0_resize_box_3.png 1024w"
 loading="lazy"
-alt="VM Network panel">
-&lt;/a>
-&lt;figcaption>VM Network panel&lt;/figcaption>
-&lt;/figure>&lt;/p>
+alt="VM Network panel"
+class="gallery-image"
+data-flex-grow="173"
+data-flex-basis="415px"
+>&lt;/p>
 &lt;p>The following figure shows what NAT Network looks like. Please refer to &lt;a class="link" href="https://www.nakivo.com/blog/virtualbox-network-setting-guide/" target="_blank" rel="noopener"
 >VirtualBox Network Settings: Complete Guide&lt;/a> or &lt;a class="link" href="https://www.virtualbox.org/manual/ch06.html" target="_blank" rel="noopener"
 >Virtual Networking&lt;/a> if interested.
-&lt;figure
-class="gallery-image"
-style="
-flex-grow: 179;
-flex-basis: 431px"
->
-&lt;a href="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/NAT_network.png" data-size="1714x954">
 &lt;img src="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/NAT_network.png"
 width="1714"
 height="954"
 srcset="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/NAT_network_hu439bf2ed46e7b410d8195a2ab0eb1785_608506_480x0_resize_box_3.png 480w, https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/NAT_network_hu439bf2ed46e7b410d8195a2ab0eb1785_608506_1024x0_resize_box_3.png 1024w"
 loading="lazy"
-alt="NAT network">
-&lt;/a>
-&lt;figcaption>NAT network&lt;/figcaption>
-&lt;/figure>&lt;/p>
+alt="NAT network"
+class="gallery-image"
+data-flex-grow="179"
+data-flex-basis="431px"
+>&lt;/p>
 &lt;h2 id="step-2-set-up-ssh-server-service-in-vm">Step 2: Set Up SSH Server Service in VM&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## Install sshd server&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install openssh-server
@@ -581,38 +54,26 @@ Host Port: 8022 (any unused port higher than 1024)&lt;br>
 Guest IP: 10.0.2.4 (type &lt;code>ifconfig&lt;/code> in terminal of VM to check)&lt;br>
 Guest Port: 22 (SSH default port)&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 151;
-flex-basis: 363px"
->
-&lt;a href="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/port_forwarding.png" data-size="1108x732">
-&lt;img src="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/port_forwarding.png"
+&lt;p>&lt;img src="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/port_forwarding.png"
 width="1108"
 height="732"
 srcset="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/port_forwarding_hu6ff436fd1de6b69040debb46d2fb8d82_189387_480x0_resize_box_3.png 480w, https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/port_forwarding_hu6ff436fd1de6b69040debb46d2fb8d82_189387_1024x0_resize_box_3.png 1024w"
 loading="lazy"
-alt="VirtualBox Network panel">
-&lt;/a>
-&lt;figcaption>VirtualBox Network panel&lt;/figcaption>
-&lt;/figure>
-&lt;figure
+alt="VirtualBox Network panel"
 class="gallery-image"
-style="
-flex-grow: 444;
-flex-basis: 1066px"
+data-flex-grow="151"
+data-flex-basis="363px"
 >
-&lt;a href="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule.png" data-size="1058x238">
 &lt;img src="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule.png"
 width="1058"
 height="238"
 srcset="https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule_hu65cd8af79cb1c1cc4dad04665267afd3_35833_480x0_resize_box_3.png 480w, https://x-zheng16.github.io/p/quickly-configure-vs-code-to-develop-in-remote-machine/rule_hu65cd8af79cb1c1cc4dad04665267afd3_35833_1024x0_resize_box_3.png 1024w"
 loading="lazy"
-alt="Port forwarding rule">
-&lt;/a>
-&lt;figcaption>Port forwarding rule&lt;/figcaption>
-&lt;/figure>&lt;/p>
+alt="Port forwarding rule"
+class="gallery-image"
+data-flex-grow="444"
+data-flex-basis="1066px"
+>&lt;/p>
 &lt;h2 id="step-4-set-up-ssh-client-service-in-host">Step 4: Set Up SSH Client Service in Host&lt;/h2>
 &lt;h3 id="install-ssh-client">Install ssh client&lt;/h3>
 &lt;p>For macOS Host, it comes pre-installed. For Ubuntu Host, Debian/Ubuntu Run &lt;code>sudo apt-get install openssh-client&lt;/code>. For other OS, please refer to &lt;a class="link" href="https://code.visualstudio.com/docs/remote/troubleshooting#_installing-a-supported-ssh-client" target="_blank" rel="noopener"
@@ -682,4 +143,4 @@ Code Runner&lt;/p>
 &lt;h2 id="qa">Q&amp;amp;A&lt;/h2>
 &lt;p>&lt;strong>Q&lt;/strong>: How to beautify the terminal?&lt;/p>
 &lt;p>A: &lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh" target="_blank" rel="noopener"
->Oh My Zsh&lt;/a> is all you need.&lt;/p></description></item></channel></rss>
+>Oh My Zsh&lt;/a> is all you need.&lt;/p></description></item><item><title>Archives</title><link>https://x-zheng16.github.io/archives/</link><pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate><guid>https://x-zheng16.github.io/archives/</guid><description/></item><item><title>Search</title><link>https://x-zheng16.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://x-zheng16.github.io/search/</guid><description/></item></channel></rss>
