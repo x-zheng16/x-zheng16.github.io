@@ -8,7 +8,7 @@ tags:
     - VS Code
 categories:
     - Tutorials
-draft: false
+draft: true
 ---
 
 Quickly configure your VS Code installed in Host (a.k.a. local machine) to develop in Guest (i.e., remote machine, remote server, virtual machine in VirtualBox or Cloud).
