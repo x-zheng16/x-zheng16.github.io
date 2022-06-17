@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Xiang Zheng&#39;s Blog</title>
-    <link>https://x-zheng16.github.io/</link>
-    <description>Recent content on Xiang Zheng&#39;s Blog</description>
+    <title>RL on Xiang Zheng&#39;s Blog</title>
+    <link>https://x-zheng16.github.io/tags/rl/</link>
+    <description>Recent content in RL on Xiang Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://x-zheng16.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://x-zheng16.github.io/tags/rl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RL and Security Conferences and Journals</title>
       <link>https://x-zheng16.github.io/posts/ai_security_conference/</link>
@@ -16,8 +16,6 @@
       <description>Offer a memorandum for top-ranking conferences appropriate for RL and security research on topics of AI, CV, Robot Learning, Control, Security and Privary.
 Conferences Submission Deadline (A &amp;amp; B) Month RL Security 1 ICML IJCAI ICDCS CCS ESORICS 2 COLT UAI KR USENIX CSF 3 ICCV ECCV 4 MM ICCBR S&amp;amp;P 5 NeurIPS CCS NDSS ESORICS 6 USENIX CSF ACSAC 7 NDSS INFOCOM 8 AAAI S&amp;amp;P 9 ICRA 10 ICLR AAMAS USENIX CSF 11 CVPR 12 ICAPS ICME S&amp;amp;P Submission Deadline Month RL Security 1 ICML IJCAI ICDCS IJCNN ICPR RSS CCS ESORICS ACNS 2 COLT UAI KR ICIP USENIX CSF ACISP 3 ICCV ECCV MICCAI IROS CDC ICICS 4 MM ICCBR ICANN SMC S&amp;amp;P 5 NeurIPS CCS NDSS ESORICS 6 ACML PRICAI ICONIP CoRL USENIX CSF ACSAC 7 NDSS AsiaCCS INFOCOM 8 AAAI S&amp;amp;P 9 ICRA ACNS 10 ICLR AAMAS AISTATS ALT ACC IFAC USENIX CSF 11 CVPR ECC AsiaCCS 12 ICAPS GNC ICME S&amp;amp;P Ranking A ICML NeurIPS AAAI IJCAI CVPR ICCV MM</description>
     </item>
-    
-    
     
   </channel>
 </rss>
