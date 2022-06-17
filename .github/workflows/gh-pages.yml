@@ -2,7 +2,8 @@ name: Github Pages
 
 on:
     push:
-        branches: [main]
+        branches:
+            - main
     workflow_dispatch:
 
 jobs:
@@ -10,7 +11,8 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v2
+            - name: Git checkout
+              uses: actions/checkout@v2
               with:
                   submodules: recursive # Fetch Hugo themes (true OR recursive)
                   fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
@@ -28,3 +30,4 @@ jobs:
               uses: peaceiris/actions-gh-pages@v3
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./public
