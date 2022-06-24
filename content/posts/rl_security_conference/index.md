@@ -44,12 +44,12 @@ Offer a memorandum for top-ranking conferences appropriate for RL and security r
 | 4     | MM ICCBR ICANN SMC                                | **_S&P_**&ensp;                    |
 | 5     | **_NeurIPS_**&ensp;                               | **_CCS_** **_NDSS_**&ensp; ESORICS |
 | 6     | ACML PRICAI ICONIP CoRL                           | **_USENIX_**&ensp; CSF ACSAC       |
-| 7     |                                                   | **_NDSS_**&ensp; AsiaCCS INFOCOM   |
+| 7     |                                                   | **_NDSS_**&ensp;  INFOCOM          |
 | 8     | **_AAAI_**&ensp;                                  | **_S&P_**&ensp;                    |
-| 9     | ICRA                                              | ACNS                               |
+| 9     | ICRA                                              | SaTML, ACNS, AsiaCCS               |
 | 10    | **_ICLR_**&ensp; AAMAS AISTATS ALT ACC IFAC       | **_USENIX_**&ensp; CSF             |
-| 11    | CVPR ECC                                          | AsiaCCS                            |
-| 12    | ICAPS GNC ICME                                    | **_S&P_**&ensp;                    |
+| 11    | CVPR ECC                                          |                                    |
+| 12    | ICAPS GNC ICME                                    | **_S&P_**&ensp; AsiaCCS            |
 
 ### Ranking
 
@@ -73,7 +73,7 @@ Offer a memorandum for top-ranking conferences appropriate for RL and security r
 [COLT](http://learningtheory.org/colt2022/cfp.html)
 [UAI](https://www.auai.org/uai2022/call_for_papers)
 [ECCV](https://eccv2022.ecva.net/submission/call-for-papers/)
-[ICRA](https://www.icra2022.org/contribute/important-dates)
+[ICRA](https://www.icra2023.org)
 [ICAPS](http://icaps22.icaps-conference.org)
 [AAMAS](https://aamas2022-conference.auckland.ac.nz)
 [ICME](http://2022.ieeeicme.org/cf-papers.html)
@@ -117,6 +117,8 @@ Offer a memorandum for top-ranking conferences appropriate for RL and security r
 [ACC](https://acc2022.a2c2.org)
 [ECC](https://ecc22.euca-ecc.org/call-for-papers/)
 [IFAC](https://www.ifac2023.org)
+
+[SaTML](https://satml.org/call-for-papers/)
 
 ## Journals
 
