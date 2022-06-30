@@ -62,6 +62,8 @@ Offer a memorandum for top-ranking conferences appropriate for RL and security r
 [CVPR](https://cvpr2023.thecvf.com)
 [ICCV](https://iccv2021.thecvf.com/node/5)
 [MM](https://2022.acmmm.org/call-for-papers/)
+[KDD](https://kdd.org/kdd2022/cfpResearch.html)
+[ICDE](https://icde2023.ics.uci.edu/research-papers-track/)
 
 [S&P](https://www.ieee-security.org/TC/SP2023/cfpapers.html)
 [CCS](https://www.sigsac.org/ccs/CCS2022/call-for/call-for-papers.html)
@@ -122,4 +124,9 @@ Offer a memorandum for top-ranking conferences appropriate for RL and security r
 
 ## Journals
 
-To be added...
+#### A
+
+TDSC TIFS  
+TODS TOIS TKDE
+TIP
+TPAMI IJCV JMLR AI
