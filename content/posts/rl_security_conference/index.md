@@ -127,6 +127,6 @@ Offer a memorandum for top-ranking conferences appropriate for RL and security r
 #### A
 
 TDSC TIFS  
-TODS TOIS TKDE
-TIP
+TODS TOIS TKDE  
+TIP  
 TPAMI IJCV JMLR AI
