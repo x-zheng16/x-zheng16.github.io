@@ -12,142 +12,142 @@ buildExpired: false
 googleAnalytics: UA-123-45
 
 minify:
-    disableXML: true
-    minifyOutput: true
+  disableXML: true
+  minifyOutput: true
 
 params:
-    env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    title: Xiang Zheng's Blog
-    description: "Xiang's Blog"
-    keywords: [Blog, Xiang Zheng, RL, Security, Exploration]
-    author: Xiang Zheng
-    # author: ["Me", "You"] # multiple authors
-    # images: ["<link or path of image for opengraph, twitter-cards>"]
-    DateFormat: "2006-01-02"
-    defaultTheme: auto # dark, light
-    disableThemeToggle: false
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Xiang Zheng's Blog
+  description: "Xiang's Blog"
+  keywords: [Blog, Xiang Zheng, RL, Security, Exploration]
+  author: Xiang Zheng
+  # author: ["Me", "You"] # multiple authors
+  # images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "2006-01-02"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
 
-    ShowReadingTime: true
-    ShowShareButtons: false
-    ShowPostNavLinks: true
-    ShowBreadCrumbs: true
-    ShowCodeCopyButtons: false
-    ShowWordCount: true
-    ShowRssButtonInSectionTermList: true
-    UseHugoToc: true
-    disableSpecial1stPost: false
-    disableScrollToTop: false
-    comments: false
-    hidemeta: false
-    hideSummary: false
-    showtoc: true
-    tocopen: false
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
 
-    # favicon
-    # assets:
-    #     # disableHLJS: true # to disable highlight.js
-    #     # disableFingerprinting: true
-    #     favicon: "<link / abs url>"
-    #     favicon16x16: "<link / abs url>"
-    #     favicon32x32: "<link / abs url>"
-    #     apple_touch_icon: "<link / abs url>"
-    #     safari_pinned_tab: "<link / abs url>"
+  # favicon
+  # assets:
+  #     # disableHLJS: true # to disable highlight.js
+  #     # disableFingerprinting: true
+  #     favicon: "<link / abs url>"
+  #     favicon16x16: "<link / abs url>"
+  #     favicon32x32: "<link / abs url>"
+  #     apple_touch_icon: "<link / abs url>"
+  #     safari_pinned_tab: "<link / abs url>"
 
-    label:
-        text: "Xiang's Blog"
-        # icon: /apple-touch-icon.png
-        # iconHeight: 35
+  label:
+    text: "Xiang's Blog"
+    # icon: /apple-touch-icon.png
+    # iconHeight: 35
 
-    # profile-mode
-    # profileMode:
-    #     enabled: false # needs to be explicitly set
-    #     title: ExampleSite
-    #     subtitle: "This is subtitle"
-    #     imageUrl: "<img location>"
-    #     imageWidth: 120
-    #     imageHeight: 120
-    #     imageTitle: my image
-    #     buttons:
-    #         - name: Posts
-    #           url: posts
-    #         - name: Tags
-    #           url: tags
+  # profile-mode
+  # profileMode:
+  #     enabled: false # needs to be explicitly set
+  #     title: ExampleSite
+  #     subtitle: "This is subtitle"
+  #     imageUrl: "<img location>"
+  #     imageWidth: 120
+  #     imageHeight: 120
+  #     imageTitle: my image
+  #     buttons:
+  #         - name: Posts
+  #           url: posts
+  #         - name: Tags
+  #           url: tags
 
-    # home-info mode
-    homeInfoParams:
-        Title: Welcome to Xiang's Blog
-        Content: Hi, this is Xiang Zheng. I'm recording my learning process in this blog on **exploration** and **robustness** of RL.
+  # home-info mode
+  homeInfoParams:
+    Title: Welcome to Xiang's Blog
+    Content: Hi, this is Xiang Zheng. I'm recording my learning process in this blog on **efficiency** and **robustness** of RL.
 
-    socialIcons:
-        # - name: twitter
-        #   url: "https://twitter.com/"
-        # - name: stackoverflow
-        #   url: "https://stackoverflow.com"
-        - name: github
-          url: "https://github.com/x-zheng16"
+  socialIcons:
+    # - name: twitter
+    #   url: "https://twitter.com/"
+    # - name: stackoverflow
+    #   url: "https://stackoverflow.com"
+    - name: github
+      url: "https://github.com/x-zheng16"
 
-    analytics:
-        google:
-            SiteVerificationTag: "XYZabc"
-        # bing:
-        #     SiteVerificationTag: "XYZabc"
-        # yandex:
-        #     SiteVerificationTag: "XYZabc"
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    # bing:
+    #     SiteVerificationTag: "XYZabc"
+    # yandex:
+    #     SiteVerificationTag: "XYZabc"
 
-    cover:
-        hidden: true # hide everywhere but not in structured data
-        hiddenInList: true # hide on list pages and home
-        hiddenInSingle: true # hide on single page
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
 
-    # editPost:
-    #     URL: "https://github.com/<path_to_repo>/content"
-    #     Text: "Suggest Changes" # edit text
-    #     appendFilePath: true # to append file path to Edit link
+  # editPost:
+  #     URL: "https://github.com/<path_to_repo>/content"
+  #     Text: "Suggest Changes" # edit text
+  #     appendFilePath: true # to append file path to Edit link
 
-    # for search
-    # https://fusejs.io/api/options.html
-    fuseOpts:
-        isCaseSensitive: false
-        shouldSort: true
-        location: 0
-        distance: 1000
-        threshold: 0.4
-        minMatchCharLength: 0
-        keys: ["title", "permalink", "summary", "content"]
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
 
 menu:
-    main:
-        - identifier: posts
-          name: Posts
-          url: /posts/
-          weight: 10
-        - identifier: archive
-          name: Archive
-          url: /archives
-          weight: 20
-        # - identifier: categories
-        #   name: Categories
-        #   url: /categories/
-        #   weight: 20
-        - identifier: tags
-          name: Tags
-          url: /tags/
-          weight: 30
-        - identifier: search
-          name: Search
-          url: /search
-          weight: 40
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: archive
+      name: Archive
+      url: /archives
+      weight: 20
+    # - identifier: categories
+    #   name: Categories
+    #   url: /categories/
+    #   weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 40
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
-    highlight:
-        noClasses: false
-        # anchorLineNos: true
-        # codeFences: true
-        # guessSyntax: true
-        # lineNos: true
-        # style: monokai
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
 
 outputs:
-    home: ["HTML", "RSS", "JSON"]
+  home: ["HTML", "RSS", "JSON"]

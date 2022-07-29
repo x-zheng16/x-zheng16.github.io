@@ -13,7 +13,7 @@ draft: false
 math: true
 ---
 
-Offer a memorandum for top-ranking conferences appropriate for RL and security research on topics of AI, CV, Robot Learning, Control, Security and Privary.
+Offer an elegant memorandum for top-ranking conferences appropriate for RL and security research on topics of AI, CV, Robot Learning, Control, Security and Privary.
 
 ## Conferences
 
@@ -121,6 +121,7 @@ Offer a memorandum for top-ranking conferences appropriate for RL and security r
 [IFAC](https://www.ifac2023.org)
 
 [SaTML](https://satml.org/call-for-papers/)
+[EuroS&P](https://www.ieee-security.org/TC/EuroSP2022/)
 
 ## Journals
 
