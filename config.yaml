@@ -76,7 +76,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: Welcome to Xiang's Blog
-    Content: Hi, this is Xiang Zheng. I'm recording my learning process in this blog on **efficiency** and **robustness** of RL.
+    Content: Hi, this is Xiang Zheng. I'm recording my learning process in this blog on **efficiency** and **robustness** of reinforcement learning (RL).
 
   socialIcons:
     # - name: twitter
