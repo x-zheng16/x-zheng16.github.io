@@ -1,6 +1,6 @@
 ---
 author: Xiang Zheng
-title: RL and Security Conferences and Journals
+title: RL Conferences and Journals
 date: 2022-02-08
 description:
 tags:
@@ -13,7 +13,7 @@ draft: false
 math: true
 ---
 
-Offer an elegant memorandum for top-ranking conferences appropriate for RL and security research on topics of AI, CV, Robot Learning, Control, Security and Privary.
+This is an elegant checklist for top-ranking conferences appropriate for RL on topics of AI, CV, Robot Learning, Control, Security and Privary.
 
 ## Conferences
 
@@ -27,14 +27,14 @@ Offer an elegant memorandum for top-ranking conferences appropriate for RL and s
 | 4     | MM ICCBR                           | **_S&P_**&ensp;                    |
 | 5     | **_NeurIPS_**&ensp;                | **_CCS_** **_NDSS_**&ensp; ESORICS |
 | 6     |                                    | **_USENIX_**&ensp; CSF ACSAC       |
-| 7     |                                    | **_NDSS_**&ensp; INFOCOM           |
+| 7     |                                    | **_NDSS_**&ensp; **_INFOCOM_**     |
 | 8     | **_AAAI_**&ensp;                   | **_S&P_**&ensp;                    |
 | 9     | ICRA                               |                                    |
 | 10    | **_ICLR_**&ensp; AAMAS             | **_USENIX_**&ensp; CSF             |
 | 11    | CVPR                               |                                    |
 | 12    | ICAPS ICME                         | **_S&P_**&ensp;                    |
 
-### Submission Deadline
+### Submission Deadline (A & B & C)
 
 | Month | RL                                                | Security                           |
 | ----- | ------------------------------------------------- | ---------------------------------- |
@@ -68,6 +68,7 @@ Offer an elegant memorandum for top-ranking conferences appropriate for RL and s
 [S&P](https://www.ieee-security.org/TC/SP2023/cfpapers.html)
 [CCS](https://www.sigsac.org/ccs/CCS2022/call-for/call-for-papers.html)
 [USENIX](https://www.usenix.org/conference/usenixsecurity22/call-for-papers)
+[SIGCOMM](https://conferences.sigcomm.org/sigcomm/2022/cfp.html)
 [INFOCOM](https://infocom2022.ieee-infocom.org/authors/call-papers-main-conference)
 
 #### B
@@ -78,6 +79,7 @@ Offer an elegant memorandum for top-ranking conferences appropriate for RL and s
 [ICRA](https://www.icra2023.org)
 [ICAPS](http://icaps22.icaps-conference.org)
 [AAMAS](https://aamas2022-conference.auckland.ac.nz)
+[CIKM](https://www.cikm2022.org/#important-dates)
 [ICME](http://2022.ieeeicme.org/cf-papers.html)
 [ICCBR](https://iccbr2022.loria.fr/call-for-papers/)
 [KR](https://kr2022.cs.tu-dortmund.de/call_for_papers.php)
@@ -129,5 +131,6 @@ Offer an elegant memorandum for top-ranking conferences appropriate for RL and s
 
 TDSC TIFS  
 TODS TOIS TKDE  
-TIP  
-TPAMI IJCV JMLR AI
+TIP TOG TMM  
+TPAMI IJCV JMLR AI TR
+JACM Proc.IEEE
