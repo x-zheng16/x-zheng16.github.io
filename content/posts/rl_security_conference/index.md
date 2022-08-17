@@ -17,24 +17,41 @@ This is an elegant checklist for top-ranking conferences appropriate for RL on t
 
 ## Conferences
 
-### Submission Deadline (A & B)
+### Submission Deadline
 
-| Month | RL                                 | Security                           |
-| ----- | ---------------------------------- | ---------------------------------- |
-| 1     | **_ICML_** **_IJCAI_**&ensp; ICDCS | **_CCS_**&ensp; ESORICS            |
-| 2     | COLT UAI KR                        | **_USENIX_**&ensp; CSF             |
-| 3     | **_ICCV_**&ensp; ECCV              |                                    |
-| 4     | MM ICCBR                           | **_S&P_**&ensp;                    |
-| 5     | **_NeurIPS_**&ensp;                | **_CCS_** **_NDSS_**&ensp; ESORICS |
-| 6     |                                    | **_USENIX_**&ensp; CSF ACSAC       |
-| 7     |                                    | **_NDSS_**&ensp; **_INFOCOM_**     |
-| 8     | **_AAAI_**&ensp;                   | **_S&P_**&ensp;                    |
-| 9     | ICRA                               |                                    |
-| 10    | **_ICLR_**&ensp; AAMAS             | **_USENIX_**&ensp; CSF             |
-| 11    | CVPR                               |                                    |
-| 12    | ICAPS ICME                         | **_S&P_**&ensp;                    |
+| Month | RL            | Security     |
+| ----- | ------------- | ------------ |
+| 1     | **_ICML_**    | **_CCS_**    |
+| 2     | &ensp;        | **_USENIX_** |
+| 3     | **_ICCV_**    | &ensp;       |
+| 4     | &ensp;        | **_S&P_**    |
+| 5     | **_NeurIPS_** | **_CCS_**    |
+| 6     | &ensp;        | **_USENIX_** |
+| 7     | &ensp;        | &ensp;       |
+| 8     | **_AAAI_**    | **_S&P_**    |
+| 9     | &ensp;        | &ensp;       |
+| 10    | **_ICLR_**    | **_USENIX_** |
+| 11    | **_CVPR_**    | &ensp;       |
+| 12    | &ensp;        | **_S&P_**    |
 
-### Submission Deadline (A & B & C)
+<!-- 
+| Month | RL                           | Security                                 |
+| ----- | ---------------------------- | ---------------------------------------- |
+| 1     | **_ICML_**&ensp; IJCAI ICDCS | **_CCS_**&ensp; ESORICS                  |
+| 2     | COLT UAI KR                  | **_USENIX_**&ensp; CSF                   |
+| 3     | **_ICCV_**&ensp; ECCV        |                                          |
+| 4     | MM                           | **_S&P_**                                |
+| 5     | **_NeurIPS_**&ensp;          | **_CCS_**&ensp; **_NDSS_**&ensp; ESORICS |
+| 6     |                              | **_USENIX_**&ensp; CSF ACSAC             |
+| 7     |                              | **_NDSS_**&ensp; **_INFOCOM_**           |
+| 8     | **_AAAI_**                   | **_S&P_**                                |
+| 9     | ICRA                         |                                          |
+| 10    | **_ICLR_**&ensp; AAMAS       | **_USENIX_**&ensp; CSF                   |
+| 11    | **_CVPR_**                   |                                          |
+| 12    | ICAPS ICME                   | **_S&P_**                                |
+ -->
+
+<!-- ### Submission Deadline (A & B & C)
 
 | Month | RL                                                | Security                           |
 | ----- | ------------------------------------------------- | ---------------------------------- |
@@ -50,6 +67,7 @@ This is an elegant checklist for top-ranking conferences appropriate for RL on t
 | 10    | **_ICLR_**&ensp; AAMAS AISTATS ALT ACC IFAC       | **_USENIX_**&ensp; CSF             |
 | 11    | CVPR ECC                                          |                                    |
 | 12    | ICAPS GNC ICME                                    | **_S&P_**&ensp; AsiaCCS            |
+-->
 
 ### Ranking
 
