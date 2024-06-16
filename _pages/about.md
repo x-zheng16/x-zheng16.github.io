@@ -1,25 +1,26 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle:
 
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+# profile:
+#   align: right
+#   # image: prof_pic.jpg
+#   image_circular: false # crops the image to make it circular
+#   more_info: >
+#     <p>Email: xzheng235-c [at] my.cityu.edu.hk</p>
+#     <p><[Prof. Cong Wang](https://www.cs.cityu.edu.hk/~congwang/)/p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Ph.D. @ [CityU](https://www.cityu.edu.hk) \\
+Email: xzheng235-c [at] my.cityu.edu.hk \\
+[Google Scholar](https://scholar.google.com/citations?hl=en&user=lqirTjkAAAAJ&view_op=list_works&sortby=pubdate) | [GitHub](https://github.com/x-zheng16?preview=true&tab=repositories) | [CityU Scholar](https://scholars.cityu.edu.hk/en/persons/xiang-zheng(1bedd262-cda0-4bd3-b42c-98526a5edb04)/publications.html?remoteOrigin=false&page=0)
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am a final-year Ph.D. student at the Department of Computer Science, City University of Hong Kong, supervised by [Prof. Cong Wang](https://www.cs.cityu.edu.hk/~congwang/) and working closely with [Dr. Xingjun Ma](http://xingjunma.com) and [Prof. Chao Shen](https://gr.xjtu.edu.cn/web/cshen/english). My research interests lie in the intersection of reinforcement learning and trustworthy AI. Particularly, I am interested in developing efficient reinforcement learning algorithms for robot learning, adversarial policy learning, and AI red teaming.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I received my Master degree from the [Department of Automation](https://www.au.tsinghua.edu.cn/en/), Tsinghua University in 2019, supervised by [Prof. Tao Zhang](https://www.au.tsinghua.edu.cn/info/1110/1573.htm), and obtained my Bachelor degree from [Shen Yuan Honors College](https://hc.buaa.edu.cn) (formerly School of Advanced Engineering), Beihang University in 2016.
