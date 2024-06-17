@@ -38,6 +38,39 @@ body.sticky-bottom-footer {
   }
 }
 
+// About
+.latest-news {
+  h3 {
+    margin-bottom: 1rem; // Adjust the spacing under the header
+  }
+}
+
+.section-divider {
+  border: 0;
+  height: 1px;
+  background-color: var(--global-divider-color); // A subtle gradient for the horizontal line
+  margin-bottom: 2rem; // Ensure there's space after the line before the next section
+}
+
+.teaching-assistant {
+  margin-bottom: 2rem; /* Adjust the value as needed */
+}
+
+.teaching-assistant h3 {
+  margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+
+.latest-news .table-sm th,
+.latest-news .table-sm td {
+  padding-top: 3px; /* Reduce the top padding */
+  padding-bottom: 3px; /* Reduce the bottom padding */
+}
+
+.teaching-assistant .custom-margin {
+  margin-bottom: 2px; /* Adjust this value as needed */
+}
+
 // TODO: redefine content layout.
 
 /******************************************************************************

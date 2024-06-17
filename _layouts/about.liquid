@@ -22,11 +22,9 @@ layout: default
           {% if page.profile.image_circular %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
           {% endif %}
-          {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
+          {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
           {%
             include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
             cache_bust=true
@@ -41,36 +39,109 @@ layout: default
     <div class="clearfix">{{ content }}</div>
 
     <!-- News -->
-    {% if page.news and site.announcements.enabled %}
-      <h3>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">Latest News</a>
-      </h3>
-      {% include news.liquid limit=true %}
-    {% endif %}
+    <hr class="section-divider">
+    <div class="latest-news">
+      {% if page.news and site.announcements.enabled %}
+        <h3>
+          <a href="{{ '/news/' | relative_url }}" style="color: inherit">Latest News</a>
+        </h3>
+        {% include news.liquid limit=true %}
+      {% endif %}
+    </div>
 
-    <!-- Latest posts -->
-    {% if site.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
+    {% comment %}
+      <!-- Latest posts -->
+      {% if site.latest_posts.enabled %}
+        <h2>
+          <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+        </h2>
+        {% include latest_posts.liquid %}
+      {% endif %}
+    {% endcomment %}
 
     <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h3>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-      </h3>
-      {% include selected_papers.liquid %}
-    {% endif %}
+    <hr class="section-divider">
+    <div class="selected-publications">
+      {% if page.selected_papers %}
+        <h3>
+          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+        </h3>
+        {% include selected_papers.liquid %}
+      {% endif %}
+    </div>
 
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
+    <!-- Teaching Assistant -->
+    <hr class="section-divider">
+    <div class="teaching-assistant">
+      <h3>Selected Awards and Honors</h3>
+      <ul>
+        <li>IJCAI Travel Grant, IJCAI Travel Grant Program, 2024</li>
+        <li>Conference Grant, City University of Hong Kong, 2024</li>
+        <li>DSN Student Travel Grant, DSN Student Travel Awards Committee, 2024</li>
+        <li>Research Activities Fund, City University of Hong Kong, Sep 2022 - Aug 2023</li>
+        <li>Institutional Research Tuition Grant, City University of Hong Kong Sep 2020 - Aug 2024</li>
+        <li><strong>CityU Presidential PhD Scholarship</strong>, City University of Hong Kong, Sep 2020 - Aug 2024</li>
+      </ul>
+    </div>
 
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
+    <!-- Research & Work Experience -->
+    <hr class="section-divider">
+    <div class="teaching-assistant">
+      <h3>Research & Work Experience</h3>
+      Visiting Researcher @ <a href="http://en.xjtu.edu.cn">Xi'an Jiaotong University</a>
+      <ul class="custom-margin">
+        <li>Supervised by <a href="https://gr.xjtu.edu.cn/web/cshen/english">Prof. Chao Shen</a></li>
+        <li>Sep 2022 - Aug 2023, Xi'an, China</li>
+      </ul>
+      Senior Researcher @ <a href="https://www.huawei.com/en/">Huawei</a>
+      <ul class="custom-margin">
+        <li>May 2020 - Aug 2020, Xi'an, China</li>
+      </ul>
+      Visiting Researcher @ <a href="http://en.xjtu.edu.cn">Xi'an Jiaotong University</a>
+      <ul class="custom-margin">
+        <li>Supervised by <a href="https://gr.xjtu.edu.cn/web/cshen/english">Prof. Chao Shen</a></li>
+        <li>Nov 2019 - Feb 2020, Xi'an, China</li>
+      </ul>
+      NLP Intern @ <a href="https://www.nii.ac.jp/en/">Rich AI</a>
+      <ul class="custom-margin">
+        <li>Jul 2019 - Oct 2019, Beijing, China</li>
+      </ul>
+      Research Intern @ <a href="https://www.nii.ac.jp/en/">National Institute of Informatics</a>
+      <ul class="custom-margin">
+        <li>Supervised by <a href="https://www.tamagawa.jp/research/brain_e/aibot.html">Prof. Tetsunari Inamura</a></li>
+        <li>Feb 2018 - May 2018, Tokyo, Japan</li>
+      </ul>
+      Student Intern @ <a href="https://www.unsw.edu.au">The University of New South Wales</a>
+      <ul>
+        <li>Supervised by <a href="https://www.unsw.edu.au/staff/elias-aboutanios">Prof. Elias Aboutanios</a></li>
+        <li>Feb 2016 - June 2016, Sydney, Australia</li>
+      </ul>
+    </div>
+
+    <!-- Teaching Assistant -->
+    <hr class="section-divider">
+    <div class="teaching-assistant">
+      <h3>Teaching Assistant</h3>
+      <ul>
+        <li>
+          CS5293, Topics on Information Security, Semester B 2023/24, <a href="https://github.com/x-zheng16/CS5293-Tutorials">Code for Tutorial</a>
+        </li>
+        <li>CS4394, Information Security and Management, Semester A 2023/24</li>
+        <li>CS5293, opics on Information Security, Semester B 2021/22</li>
+        <li>CS4394 / CS5294, Information Security and Management, Semester A 2021/22</li>
+        <li>CS4293 / CS6290, Topics in Cybersecurity / Privacy-enhancing Technologies, Semester B, 2020/21</li>
+        <li>CS2310 / CS2311, Computer Programming, Semester A, 2020/21</li>
+      </ul>
+    </div>
+
+    {% comment %}
+      <!-- Social -->
+      {% if page.social %}
+        <div class="social">
+          <div class="contact-icons">{% include social.liquid %}</div>
+          <div class="contact-note">{{ site.contact_note }}</div>
+        </div>
+      {% endif %}
+    {% endcomment %}
   </article>
 </div>
