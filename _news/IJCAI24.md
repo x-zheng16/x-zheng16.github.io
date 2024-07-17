@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our work on intrinsic motivation for RL is accepted by IJCAI'24.
+Our work on [intrinsic motivation for RL](https://arxiv.org/abs/2407.09247) is accepted by IJCAI'24.
