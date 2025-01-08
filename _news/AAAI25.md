@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our work on [RL-based auditing for LLMs](https://x-zheng16.github.io) is accepted by AAAI'25.
+Our work on [RL-based auditing for LLMs](https://arxiv.org/abs/2501.02997) is accepted by AAAI'25.
