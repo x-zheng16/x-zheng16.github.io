@@ -1,14 +1,12 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - x-zheng16
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - x-zheng16/Awesome-Embodied-AI-Safety
+  - x-zheng16/JustAsk
+  - x-zheng16/System-Prompt-Open
+  - x-zheng16/OpenRedRL
+  - x-zheng16/uclaw
+  - x-zheng16/cc-swarm
