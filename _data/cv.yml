@@ -42,7 +42,7 @@
   type: time_table
   contents:
     - title: Research Assistant Professor
-      institution: Hong Kong Institute of AI for Science (HKAI-Sci), CityU HK
+      institution: Hong Kong Institute of AI for Science (HKAI-Sci), CityUHK
       year: 2025 - present
       description:
         - "Reinforcement learning for trustworthy & embodied AI"
@@ -102,13 +102,13 @@
   contents:
     - title: Program Committee Member
       items:
-        - "ICML 2026, CVPR 2026, ICLR 2026, AAAI 2026, ICRA 2026, MM 2025, ICLR 2025, AAAI 2025"
+        - "NeurIPS (2026), ICML (2026), ICLR (2026, 2025), CVPR (2026), ECCV (2026), AAAI (2026, 2025), MM (2026, 2025), ICRA (2026)"
     - title: Journal Reviewer
       items:
         - "IEEE TDSC, IEEE TSC, IEEE TC"
     - title: External Conference Reviewer
       items:
-        - "NeurIPS 2025, ICNP 2025, ESORICS 2022, AsiaCCS 2022, RAID 2021"
+        - "NeurIPS (2025), ICNP (2025), ESORICS (2022), AsiaCCS (2022), RAID (2021)"
 
 - title: Mentored Students
   type: nested_list
