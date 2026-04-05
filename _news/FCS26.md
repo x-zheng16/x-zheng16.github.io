@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our work on [RL-based red teaming](https://arxiv.org/abs/2506.04302) is accepted by Frontiers of Computer Science.
+Our work on [benchmarking RL-based red teaming](https://arxiv.org/abs/2506.04302) is accepted by Frontiers of Computer Science.
