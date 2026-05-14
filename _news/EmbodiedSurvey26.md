@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our survey on [embodied AI safety](https://x-zheng16.github.io/Awesome-Embodied-AI-Safety/) with 400+ papers is now available, covering risks, attacks, and defenses across perception, cognition, planning, interaction, and agentic systems.
+Our survey on [embodied AI safety](https://arxiv.org/abs/2605.02900) with 400+ papers is now available on arXiv, covering risks, attacks, and defenses across perception, cognition, planning, interaction, and agentic systems.
