@@ -9,6 +9,8 @@ nav_order: 3
 
 <div class="publications">
 
+Invited talks and seminars at academic institutions, industry labs, and CCF YOCSEF.
+
 {% assign years = site.data.talks | map: "year" | uniq | sort | reverse %}
 {% for yr in years %}
   <h2 class="bibliography">{{ yr }}</h2>
