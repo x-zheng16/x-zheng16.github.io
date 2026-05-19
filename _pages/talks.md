@@ -32,5 +32,5 @@ nav_order: 3
 | :--- | :--- | :--- |
 | —    | **Xi'an**, Northwestern Polytechnical University | Curiosity-Driven Auditing for LLMs |
 | —    | **Xi'an**, Northwestern Polytechnical University | Efficient Intrinsically Motivated Adversarial Policy Learning |
-| —    | **Online**, Griffith University | Intrinsically Motivated Adversarial Policy |
-| —    | **Melbourne Connect**, The University of Melbourne | Towards Efficient Evasion Attacks Against RL |
+| Aug 2 | **Gold Coast**, Griffith University | Intrinsically Motivated Adversarial Policy |
+| Jul 1 | **Melbourne Connect**, The University of Melbourne | Towards Efficient Evasion Attacks Against RL |
