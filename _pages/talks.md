@@ -21,7 +21,7 @@ nav_order: 3
 **Mar 19** &middot; **Hong Kong**, HKAI-Sci, CityUHK<br>
 *Harness Engineering*
 
-**Mar** &middot; **Hong Kong**, College of Computing, CityUHK (InnoCenter)<br>
+**Mar 19** &middot; **Hong Kong**, College of Computing, CityUHK (InnoCenter)<br>
 *Is OpenClaw All You Need? (Fireside Chat)*
 
 **Online** &middot; Institute of Trustworthy Embodied AI, Fudan (Prof. Xingjun Ma's Group)<br>
