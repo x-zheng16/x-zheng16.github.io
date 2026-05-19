@@ -2,7 +2,7 @@
 layout: page
 permalink: /talks/
 title: Talks
-description: Invited talks and seminars.
+description:
 nav: true
 nav_order: 3
 ---
@@ -11,7 +11,7 @@ nav_order: 3
 
 {% assign years = site.data.talks | map: "year" | uniq | sort | reverse %}
 {% for yr in years %}
-  <h2 class="year">{{ yr }}</h2>
+  <h2 class="bibliography">{{ yr }}</h2>
   {% assign yr_talks = site.data.talks | where: "year", yr %}
   <ol class="bibliography">
   {% for talk in yr_talks %}
