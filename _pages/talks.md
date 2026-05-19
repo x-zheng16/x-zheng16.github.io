@@ -16,7 +16,7 @@ nav_order: 3
 | Mar 30 | **Online**, Prof. Ziwei Wang's Web-Seminar, Lancaster University | From Robot Learning to Self-Evolving OpenClaw: Building and Securing AI Agent Systems |
 | Mar 19 | **Hong Kong**, HKAI-Sci, CityUHK | Harness Engineering |
 | Mar &nbsp; | **Hong Kong**, College of Computing, CityUHK (InnoCenter) | Is OpenClaw All You Need? (Fireside Chat) |
-| —    | **Shanghai**, Institute of Trustworthy Embodied AI, Fudan (Prof. Xingjun Ma's Group) | Reinforcement Learning for Agent Safety Evaluation |
+| —    | **Online**, Institute of Trustworthy Embodied AI, Fudan (Prof. Xingjun Ma's Group) | Reinforcement Learning for Agent Safety Evaluation |
 
 ## 2025
 
@@ -32,5 +32,5 @@ nav_order: 3
 | :--- | :--- | :--- |
 | —    | **Xi'an**, Northwestern Polytechnical University | Curiosity-Driven Auditing for LLMs |
 | —    | **Xi'an**, Northwestern Polytechnical University | Efficient Intrinsically Motivated Adversarial Policy Learning |
-| —    | **Gold Coast**, Griffith University | Intrinsically Motivated Adversarial Policy |
+| —    | **Online**, Griffith University | Intrinsically Motivated Adversarial Policy |
 | —    | **Melbourne Connect**, The University of Melbourne | Towards Efficient Evasion Attacks Against RL |
