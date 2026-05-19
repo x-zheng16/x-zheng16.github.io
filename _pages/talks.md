@@ -12,7 +12,7 @@ nav_order: 3
 | Date | Venue | Title |
 | :--- | :--- | :--- |
 | Apr 17 | **Hong Kong**, HKAI-Sci, CityUHK | Build Your Own Self-Evolving Science Agent with SciencePal 2.0 |
-| Apr 14 | **Beijing**, ByteDance | Agentic Red Teaming and Blue Teaming |
+| Apr &nbsp; | **Beijing**, ByteDance | Agentic Red Teaming and Blue Teaming |
 | Mar 30 | **Online**, Prof. Ziwei Wang's Web-Seminar, Lancaster University | From Robot Learning to Self-Evolving OpenClaw: Building and Securing AI Agent Systems |
 | Mar 19 | **Hong Kong**, HKAI-Sci, CityUHK | Harness Engineering |
 | Mar &nbsp; | **Hong Kong**, College of Computing, CityUHK (InnoCenter) | Is OpenClaw All You Need? (Fireside Chat) |
