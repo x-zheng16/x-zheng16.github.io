@@ -1,0 +1,90 @@
+- year: 2026
+  date: "Apr 17"
+  title: "Build Your Own Self-Evolving Science Agent with SciencePal 2.0"
+  venue_abbr: HKAI-Sci
+  host: "HKAI-Sci, CityUHK"
+  location: "Hong Kong"
+
+- year: 2026
+  date: "Apr 14"
+  title: "Agentic Red Teaming and Blue Teaming"
+  venue_abbr: ByteDance
+  host: "ByteDance"
+  location: "Beijing"
+
+- year: 2026
+  date: "Mar 30"
+  title: "From Robot Learning to Self-Evolving OpenClaw: Building and Securing AI Agent Systems"
+  venue_abbr: Lancaster
+  host: "Prof. Ziwei Wang's Web-Seminar, Lancaster University"
+  location: "Web-Seminar"
+
+- year: 2026
+  date: "Mar 19"
+  title: "Harness Engineering"
+  venue_abbr: HKAI-Sci
+  host: "HKAI-Sci, CityUHK"
+  location: "Hong Kong"
+
+- year: 2026
+  date: "Mar 19"
+  title: "Is OpenClaw All You Need? (Fireside Chat)"
+  venue_abbr: CityUHK
+  host: "College of Computing, CityUHK (InnoCenter)"
+  location: "Hong Kong"
+
+- year: 2026
+  date: ""
+  title: "Reinforcement Learning for Agent Safety Evaluation"
+  venue_abbr: Fudan
+  host: "Institute of Trustworthy Embodied AI, Fudan (Prof. Xingjun Ma's Group)"
+  location: "Web-Seminar"
+
+- year: 2025
+  date: "Aug 30"
+  title: "Towards Robust Embodied AI: Skill Discovery and Red Teaming"
+  venue_abbr: YOCSEF
+  host: "CCF YOCSEF"
+  location: "Xi'an"
+
+- year: 2025
+  date: "May 28"
+  title: "Reinforcement Learning-Based Adversarial Safety Evaluation and Defense Enhancement for Large Language Models"
+  venue_abbr: SUSTech
+  host: "Southern University of Science and Technology"
+  location: "Shenzhen"
+
+- year: 2025
+  date: "Apr 27"
+  title: "Reinforcement Fine-Tuning for Large Model Red-/Blue-Teaming"
+  venue_abbr: YOCSEF
+  host: "CCF YOCSEF"
+  location: "Xi'an"
+
+- year: 2024
+  date: "Nov 29"
+  title: "Curiosity-Driven Auditing for LLMs"
+  venue_abbr: NPU
+  host: "Northwestern Polytechnical University"
+  location: "Xi'an"
+
+- year: 2024
+  date: "Sep 30"
+  title: "Efficient Intrinsically Motivated Adversarial Policy Learning"
+  venue_abbr: NPU
+  host: "Northwestern Polytechnical University"
+  location: "Xi'an"
+
+- year: 2024
+  date: "Aug 2"
+  title: "Intrinsically Motivated Adversarial Policy"
+  venue_abbr: Griffith
+  host: "Griffith University"
+  location: "Web-Seminar"
+
+- year: 2024
+  date: "Jul 1"
+  title: "Towards Efficient Evasion Attacks Against RL"
+  venue_abbr: UniMelb
+  host: "The University of Melbourne"
+  location: "Melbourne Connect"

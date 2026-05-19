@@ -7,47 +7,37 @@ nav: true
 nav_order: 3
 ---
 
-## 2026
+<div class="publications">
 
-**Apr 17** &middot; **Hong Kong**, HKAI-Sci, CityUHK<br>
-*Build Your Own Self-Evolving Science Agent with SciencePal 2.0*
+{% assign years = site.data.talks | map: "year" | uniq | sort | reverse %}
+{% for yr in years %}
+  <h2 class="year">{{ yr }}</h2>
+  {% assign yr_talks = site.data.talks | where: "year", yr %}
+  {% for talk in yr_talks %}
+    <div class="row">
+      <div class="col col-sm-2 abbr">
+        {% assign venue = site.data.venues[talk.venue_abbr] %}
+        {% if venue and venue.color != blank %}
+          <abbr class="badge rounded w-100" style="background-color:{{ venue.color }}">
+            {% if venue.url %}
+              <a href="{{ venue.url }}">{{ talk.venue_abbr }}</a>
+            {% else %}
+              <div>{{ talk.venue_abbr }}</div>
+            {% endif %}
+          </abbr>
+        {% else %}
+          <abbr class="badge rounded w-100">{{ talk.venue_abbr }}</abbr>
+        {% endif %}
+      </div>
+      <div class="col-sm-10">
+        <div class="title">{{ talk.title }}</div>
+        <div class="author">{{ talk.host }}</div>
+        <div class="periodical">
+          {{ talk.location }}{% if talk.date != "" %} &middot; {{ talk.date }} {{ yr }}{% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endfor %}
 
-**Apr 14** &middot; **Beijing**, ByteDance<br>
-*Agentic Red Teaming and Blue Teaming*
-
-**Mar 30** &middot; **Online**, Prof. Ziwei Wang's Web-Seminar, Lancaster University<br>
-*From Robot Learning to Self-Evolving OpenClaw: Building and Securing AI Agent Systems*
-
-**Mar 19** &middot; **Hong Kong**, HKAI-Sci, CityUHK<br>
-*Harness Engineering*
-
-**Mar 19** &middot; **Hong Kong**, College of Computing, CityUHK (InnoCenter)<br>
-*Is OpenClaw All You Need? (Fireside Chat)*
-
-**Online** &middot; Institute of Trustworthy Embodied AI, Fudan (Prof. Xingjun Ma's Group)<br>
-*Reinforcement Learning for Agent Safety Evaluation*
-
-## 2025
-
-**Aug 30** &middot; **Xi'an**, CCF YOCSEF<br>
-*Towards Robust Embodied AI: Skill Discovery and Red Teaming*
-
-**May 28** &middot; **Shenzhen**, Southern University of Science and Technology<br>
-*Reinforcement Learning-Based Adversarial Safety Evaluation and Defense Enhancement for Large Language Models*
-
-**Apr 27** &middot; **Xi'an**, CCF YOCSEF<br>
-*Reinforcement Fine-Tuning for Large Model Red-/Blue-Teaming*
-
-## 2024
-
-**Nov 29** &middot; **Xi'an**, Northwestern Polytechnical University<br>
-*Curiosity-Driven Auditing for LLMs*
-
-**Sep 30** &middot; **Xi'an**, Northwestern Polytechnical University<br>
-*Efficient Intrinsically Motivated Adversarial Policy Learning*
-
-**Aug 2** &middot; **Gold Coast**, Griffith University<br>
-*Intrinsically Motivated Adversarial Policy*
-
-**Jul 1** &middot; **Melbourne Connect**, The University of Melbourne<br>
-*Towards Efficient Evasion Attacks Against RL*
+</div>
