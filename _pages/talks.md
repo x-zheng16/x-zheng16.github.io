@@ -40,14 +40,14 @@ nav_order: 3
 
 ## 2024
 
+**Nov 29** &middot; **Xi'an**, Northwestern Polytechnical University<br>
+*Curiosity-Driven Auditing for LLMs*
+
+**Sep 30** &middot; **Xi'an**, Northwestern Polytechnical University<br>
+*Efficient Intrinsically Motivated Adversarial Policy Learning*
+
 **Aug 2** &middot; **Gold Coast**, Griffith University<br>
 *Intrinsically Motivated Adversarial Policy*
 
 **Jul 1** &middot; **Melbourne Connect**, The University of Melbourne<br>
 *Towards Efficient Evasion Attacks Against RL*
-
-**Xi'an** &middot; Northwestern Polytechnical University<br>
-*Curiosity-Driven Auditing for LLMs*
-
-**Xi'an** &middot; Northwestern Polytechnical University<br>
-*Efficient Intrinsically Motivated Adversarial Policy Learning*
