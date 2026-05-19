@@ -12,7 +12,7 @@ nav_order: 3
 **Apr 17** &middot; **Hong Kong**, HKAI-Sci, CityUHK<br>
 *Build Your Own Self-Evolving Science Agent with SciencePal 2.0*
 
-**Apr** &middot; **Beijing**, ByteDance<br>
+**Apr 14** &middot; **Beijing**, ByteDance<br>
 *Agentic Red Teaming and Blue Teaming*
 
 **Mar 30** &middot; **Online**, Prof. Ziwei Wang's Web-Seminar, Lancaster University<br>
