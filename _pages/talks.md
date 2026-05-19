@@ -9,7 +9,7 @@ nav_order: 3
 
 <div class="publications">
 
-Invited talks and seminars at academic institutions, industry labs, and CCF YOCSEF.
+Invited talks and seminars at academic institutions, industry labs, and professional forums.
 
 {% assign years = site.data.talks | map: "year" | uniq | sort | reverse %}
 {% for yr in years %}
