@@ -74,8 +74,8 @@
       topic: "RL"
       destination: "Tsinghua PhD '22"
 
-- institution: "Chinese Academy of Sciences"
-  url: "https://english.cas.cn"
+- institution: "Institute of Automation, CAS"
+  url: "http://english.ia.cas.cn"
   members:
     - name: "Yuxue Cao"
       degree: "MS"
