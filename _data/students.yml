@@ -75,7 +75,7 @@
       destination: "Tsinghua PhD '22"
 
 - institution: "Chinese Academy of Sciences"
-  url: ""
+  url: "https://english.cas.cn"
   members:
     - name: "Yuxue Cao"
       degree: "MS"
