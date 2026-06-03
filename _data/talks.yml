@@ -6,6 +6,13 @@
   location: "Hong Kong"
 
 - year: 2026
+  date: "Jun 5"
+  title: "SciencePal 2.0: Your Self-Evolving Science Agent Team"
+  venue_abbr: Tencent
+  host: "2026 Tencent Cloud AI Industry Applications Summit"
+  location: ""
+
+- year: 2026
   date: "Apr 17"
   title: "Build Your Own Self-Evolving Science Agent with SciencePal 2.0"
   venue_abbr: HKAI-Sci
