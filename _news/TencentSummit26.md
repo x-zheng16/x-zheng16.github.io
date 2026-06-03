@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Invited to speak at the **2026 Tencent Cloud AI Industry Applications Summit** on "SciencePal 2.0: Your Self-Evolving Science Agent Team".
+Invited to speak at the **2026 Tencent Cloud AI Industry Applications Summit** (China National Convention Center, Beijing) on "SciencePal 2.0: Your Self-Evolving Science Agent Team".
