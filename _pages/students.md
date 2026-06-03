@@ -9,7 +9,7 @@ nav_order: 3
 
 <div class="publications">
 
-Students I have mentored, grouped by institution. Degrees: PhD, MS (master's), UG (undergraduate).
+Students I am currently mentoring or have mentored, grouped by institution. Degrees: PhD, MS (master's), UG (undergraduate).
 
 {% for group in site.data.students %}
   <h2 class="bibliography">
