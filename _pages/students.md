@@ -23,7 +23,7 @@ Students I am currently mentoring or have mentored, grouped by institution. Degr
           <abbr class="badge rounded w-100">{{ m.degree }}</abbr>
         </div>
         <div class="col-sm-10">
-          <div class="title">{{ m.name }}{% if m.achievement %} <span class="badge rounded" style="background-color: var(--global-theme-color); color: #fff;">{{ m.achievement }}</span>{% endif %}</div>
+          <div class="title">{% if m.url %}<a href="{{ m.url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}{% if m.achievement %} <span class="badge rounded" style="background-color: var(--global-theme-color); color: #fff;">{{ m.achievement }}</span>{% endif %}</div>
           <div class="author">{{ m.topic }}</div>
           {% if m.destination != "" %}
           <div class="periodical">&rarr; {{ m.destination }}</div>
