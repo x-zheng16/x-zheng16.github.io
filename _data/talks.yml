@@ -1,4 +1,11 @@
 - year: 2026
+  date: "Jun 16"
+  title: "Hands-on with Claude Code: Frontier Code Agents for Research and Browser/Computer Use"
+  venue_abbr: CityUHK
+  host: "CityU Joint Summer School on AI for Science"
+  location: "Hong Kong"
+
+- year: 2026
   date: "Apr 17"
   title: "Build Your Own Self-Evolving Science Agent with SciencePal 2.0"
   venue_abbr: HKAI-Sci
