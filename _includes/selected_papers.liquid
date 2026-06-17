@@ -1,3 +1,10 @@
 <div class="publications">
-  {% bibliography --group_by none --query @*[selected=true]* %}
+  <h4 class="selected-theme" style="text-transform:uppercase;letter-spacing:0.06em;font-size:0.9rem;margin:1.4rem 0 0.5rem;opacity:0.75">RL Safety</h4>
+  {% bibliography --group_by none --query @*[selected=true && category=rl]* %}
+
+  <h4 class="selected-theme" style="text-transform:uppercase;letter-spacing:0.06em;font-size:0.9rem;margin:1.6rem 0 0.5rem;opacity:0.75">LLM Safety</h4>
+  {% bibliography --group_by none --query @*[selected=true && category=llm]* %}
+
+  <h4 class="selected-theme" style="text-transform:uppercase;letter-spacing:0.06em;font-size:0.9rem;margin:1.6rem 0 0.5rem;opacity:0.75">Agent Safety</h4>
+  {% bibliography --group_by none --query @*[selected=true && category=agent]* %}
 </div>
