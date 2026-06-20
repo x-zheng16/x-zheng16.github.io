@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Giving an invited workshop at the **2026 CityU Joint Summer School on AI for Science**: "Hands-on with Claude Code: Frontier Code Agents for Research and Browser/Computer Use".
+Giving an invited talk at the **2026 CityUDG**: "Hands-on with Claude Code: Frontier Code Agents for Research and Browser/Computer Use".
