@@ -20,6 +20,7 @@ social: true # includes social icons at the bottom of the page
 Research Assistant Professor \\
 [Hong Kong Institute of AI for Science (HKAI-Sci)](https://www.cityu.edu.hk/hkai-sci) \\
 [City University of Hong Kong](https://www.cityu.edu.hk) \\
+Chief Scientist, [SciencePal 2.0](https://sciencepal.ai) \\
 [Google Scholar](https://scholar.google.com/citations?hl=en&user=lqirTjkAAAAJ&view_op=list_works&sortby=pubdate) | [GitHub](https://github.com/x-zheng16) | [CityUHK Scholar](https://scholars.cityu.edu.hk/en/persons/xiang-zheng(1bedd262-cda0-4bd3-b42c-98526a5edb04)/publications.html?remoteOrigin=false&page=0)
 
 I am a Research Assistant Professor at the Hong Kong Institute of AI for Science (HKAI-Sci), City University of Hong Kong.
