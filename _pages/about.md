@@ -25,8 +25,7 @@ Chief Scientist, [SciencePal 2.0](https://sciencepal.ai) \\
 
 I am a Research Assistant Professor at the Hong Kong Institute of AI for Science (HKAI-Sci), City University of Hong Kong.
 I also work closely with [Prof. Xingjun Ma](https://xingjunm.github.io) at the [Institute of Trustworthy Embodied AI](https://teai.fudan.edu.cn), Fudan University.
-My research is positioned at the intersection of **Reinforcement Learning**, **Trustworthy AI**, **Generative AI** (LLMs, diffusion models, and AI agents), and **Robot Learning**.
-I am particularly passionate about developing robust and efficient reinforcement learning algorithms to enable **Trustworthy Decision Making** in real-world systems.
+My research develops robust and efficient RL algorithms for trustworthy science, computer-use, and embodied agents.
 I also collaborate closely with industry: my research has contributed to [ByteDance](https://www.bytedance.com)'s [AgentArmor](https://developer.volcengine.com/articles/7628812879973580838) agent-safety framework, [Foxconn](https://www.honhai.com) Research Institute's [FoxBrain](https://www.nvidia.com/en-us/case-studies/foxconn-develops-physical-ai-enabled-smart-factories-with-digital-twins/) foundation model (in collaboration with [NVIDIA](https://www.nvidia.com)), and HKAI-Sci's [SciencePal 2.0](https://sciencepal.ai) self-evolving science agent.
 I have been honored to receive the prestigious [CityUHK Presidential PhD Scholarship](https://www.cityu.edu.hk/media/news/2020/06/16/prestigious-new-scholarships-hk156m-world-class-phd-candidates).
 
