@@ -9,13 +9,6 @@ nav_order: 3
 
 <div class="publications">
 
-## Openings
-
-I currently have **1–2 openings** for Research Assistants (RAs) and Ph.D. students, co-supervised with [Prof. Wei-Ying Ma](https://www.cityu.edu.hk/hkai-sci/members/ma-wei-ying/?lang=en), on **AI for Science** and **Recursive Self-Improving Agents**.
-Interested candidates are welcome to email me at [xiang.zheng@cityu.edu.hk](mailto:xiang.zheng@cityu.edu.hk) with a CV and a brief research statement.
-
-## Current and Past Students
-
 Students I am currently mentoring or have mentored, grouped by institution. Degrees: PhD, MS (master's), UG (undergraduate).
 
 {% for group in site.data.students %}

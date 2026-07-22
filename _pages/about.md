@@ -27,9 +27,11 @@ I am a Research Assistant Professor at the Hong Kong Institute of AI for Science
 I also work closely with [Prof. Xingjun Ma](https://xingjunm.github.io) at the [Institute of Trustworthy Embodied AI](https://teai.fudan.edu.cn), Fudan University.
 My research develops robust and efficient RL algorithms for trustworthy science, computer-use, and embodied agents.
 I also collaborate closely with industry: my research has contributed to [ByteDance](https://www.bytedance.com)'s [AgentArmor](https://developer.volcengine.com/articles/7628812879973580838) agent-safety framework, [Foxconn](https://www.honhai.com) Research Institute's [FoxBrain](https://www.nvidia.com/en-us/case-studies/foxconn-develops-physical-ai-enabled-smart-factories-with-digital-twins/) foundation model (in collaboration with [NVIDIA](https://www.nvidia.com)), and HKAI-Sci's [SciencePal 2.0](https://sciencepal.ai) self-evolving science agent.
-I currently have [1–2 openings](/students/) for RAs and Ph.D. students, co-supervised with [Prof. Wei-Ying Ma](https://www.cityu.edu.hk/hkai-sci/members/ma-wei-ying/?lang=en), on AI for Science and Recursive Self-Improving Agents.
 I have been honored to receive the prestigious [CityUHK Presidential PhD Scholarship](https://www.cityu.edu.hk/media/news/2020/06/16/prestigious-new-scholarships-hk156m-world-class-phd-candidates).
 
 I received my Ph.D. from the [Department of Computer Science](https://www.cs.cityu.edu.hk) at [City University of Hong Kong](https://www.cityu.edu.hk) in 2024, under the guidance of [Prof. Cong Wang](https://www.cs.cityu.edu.hk/~congwang/).
 Prior to that, I earned my Master’s degree in Control Science and Engineering from the [Department of Automation](https://www.au.tsinghua.edu.cn/en/) at [Tsinghua University](https://www.tsinghua.edu.cn/en/) in 2019, where I was advised by [Prof. Tao Zhang](https://www.au.tsinghua.edu.cn/info/1110/1573.htm).
 I hold dual Bachelor’s degrees in Automation and Mathematics from the [Shen Yuan Honors College](https://hc.buaa.edu.cn) (formerly the School of Advanced Engineering) at [Beihang University](https://ev.buaa.edu.cn), where I graduated in 2016.
+
+I currently have **1–2 openings** for Research Assistants (RAs) and Ph.D. students, co-supervised with [Prof. Wei-Ying Ma](https://www.cityu.edu.hk/hkai-sci/members/ma-wei-ying/?lang=en), on **AI for Science** and **Recursive Self-Improving Agents**.
+Interested candidates are welcome to email me at [xiang.zheng@cityu.edu.hk](mailto:xiang.zheng@cityu.edu.hk) with a CV and a brief research statement.
