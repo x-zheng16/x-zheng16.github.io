@@ -54,7 +54,7 @@
       degree: "MS"
       topic: "RL, Blue Teaming for VLM"
       destination: "UIUC PhD '26"
-      achievement: "ICLR'25"
+      achievement: "ICLR'25; PR'26"
       url: "https://github.com/Vinsonzyh"
     - name: "Zixing Chen"
       degree: "MS"
@@ -73,6 +73,7 @@
       degree: "UG"
       topic: "VLA Safety, Misinformation"
       destination: ""
+      achievement: "IROS'26"
       url: "https://scholar.google.com/citations?user=beYykFsAAAAJ"
 
 - institution: "Tsinghua University"
@@ -82,6 +83,7 @@
       degree: "MS"
       topic: "RL, Safe RL, Robot Learning, Space Robot Control"
       destination: "Tsinghua PhD '22"
+      achievement: "IROS'21; RA-L'22; AST'22/'23; CoRL'23; DSN'24"
 
 - institution: "Institute of Automation, CAS"
   url: "http://english.ia.cas.cn"
@@ -90,6 +92,7 @@
       degree: "MS"
       topic: "RL, Robot Learning, Space Robot Control"
       destination: "Siemens"
+      achievement: "IROS'21; RA-L'22; AST'22/'23; CoRL'23"
 
 - institution: "Northwestern Polytechnical University"
   url: "https://en.nwpu.edu.cn"
