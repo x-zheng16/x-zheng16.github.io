@@ -32,6 +32,11 @@
   institution: "City University of Hong Kong"
   project: "RL for Agent-as-a-Judge"
 
+- name: "Cheng Gui"
+  level: RA
+  institution: "City University of Hong Kong"
+  project: "Recursive Self-Improvement Safety"
+
 - name: "Ruofan Wang"
   level: PhD
   institution: "Fudan University"
