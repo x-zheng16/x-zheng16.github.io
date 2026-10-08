@@ -1,0 +1,5 @@
+<article class="pub">
+  <div class="ti">{{ include.p.title }}</div>
+  <div class="au">{{ include.p.authors_html }}</div>
+  <div class="meta"><i>{{ include.p.where }}</i>{% for l in include.p.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</div>
+</article>

@@ -1,103 +1,92 @@
-# Students currently mentoring or have mentored, grouped by institution.
-# Source of truth: cv/xiang-cv/CV-Xiang Zheng.tex "Mentored Students" block.
-# degree: PhD | MS | UG. destination: optional next step (left blank if none).
+# Students I mentor or have mentored, grouped on the page by institution (in this order).
+# papers: venues of accepted papers, space separated. destination: next position, shown in blue.
 
-- institution: "City University of Hong Kong"
-  url: "https://www.cityu.edu.hk"
-  members:
-    - name: "Longxiang Wang"
-      degree: "PhD"
-      topic: "RL, AI for Privacy, Agent Safety"
-      destination: ""
-      url: "https://scholar.google.com/citations?user=1LrWjUUAAAAJ"
-    - name: "Pinsheng Xu"
-      degree: "PhD"
-      topic: "Multi-Agent System Safety"
-      destination: ""
-      url: "https://scholars.cityu.edu.hk/en/persons/pinshenxu2/"
-    - name: "Xutao Mao"
-      degree: "PhD"
-      topic: "RL, VLM Safety, Agent Safety"
-      destination: ""
-      achievement: "ICML'26"
-      url: "https://scholar.google.com/citations?user=O0S0uiAAAAAJ"
-    - name: "Chenghao Yao"
-      degree: "MS"
-      topic: "RL, Unlearning"
-      destination: ""
-    - name: "Shuxuan Lye"
-      degree: "MS"
-      topic: "GUI Agent Safety"
-      destination: ""
-    - name: "Xiao Hu"
-      degree: "MS"
-      topic: "RL, Agent-as-Judge"
-      destination: ""
+- name: "Longxiang Wang"
+  level: PhD
+  institution: "City University of Hong Kong"
+  project: "RL for AI Safety and Privacy"
 
-- institution: "Fudan University"
-  url: "https://teai.fudan.edu.cn"
-  members:
-    - name: "Ruofan Wang"
-      degree: "PhD"
-      topic: "RL, Red Teaming for VLM"
-      destination: ""
-    - name: "Zilong Wang"
-      degree: "PhD"
-      topic: "RL, Red Teaming for Text-to-Image Model"
-      destination: ""
-      achievement: "CVPR'26"
-    - name: "Xiao Li"
-      degree: "MS"
-      topic: "RL, Multi-Agent System Safety"
-      destination: ""
-    - name: "Yunhan Zhao"
-      degree: "MS"
-      topic: "RL, Blue Teaming for VLM"
-      destination: "UIUC PhD '26"
-      achievement: "ICLR'25; PR'26"
-      url: "https://github.com/Vinsonzyh"
-    - name: "Zixing Chen"
-      degree: "MS"
-      topic: "RL, VLA Safety"
-      destination: ""
-    - name: "Jiayu Li"
-      degree: "MS"
-      topic: "VLA Safety"
-      destination: ""
-    - name: "Jiale Ding"
-      degree: "UG"
-      topic: "RL, LLM Safety"
-      destination: "HKUST PhD '26 (HK PhD Fellowship)"
-      url: "https://scholar.google.com/citations?user=zBR5Qk4AAAAJ"
-    - name: "Zonghuan Xu"
-      degree: "UG"
-      topic: "VLA Safety, Misinformation"
-      destination: ""
-      achievement: "IROS'26"
-      url: "https://scholar.google.com/citations?user=beYykFsAAAAJ"
+- name: "Pinsheng Xu"
+  level: PhD
+  institution: "City University of Hong Kong"
+  project: "Multi-Agent System Safety"
 
-- institution: "Tsinghua University"
-  url: "https://www.tsinghua.edu.cn/en/"
-  members:
-    - name: "Shengjie Wang"
-      degree: "MS"
-      topic: "RL, Safe RL, Robot Learning, Space Robot Control"
-      destination: "Tsinghua PhD '22"
-      achievement: "IROS'21; RA-L'22; AST'22/'23; CoRL'23; DSN'24"
+- name: "Xutao Mao"
+  level: PhD
+  institution: "City University of Hong Kong"
+  project: "RL for VLM and Agent Safety"
+  papers: "ICML26"
 
-- institution: "Institute of Automation, CAS"
-  url: "http://english.ia.cas.cn"
-  members:
-    - name: "Yuxue Cao"
-      degree: "MS"
-      topic: "RL, Robot Learning, Space Robot Control"
-      destination: "Siemens"
-      achievement: "IROS'21; RA-L'22; AST'22/'23; CoRL'23"
+- name: "Chenghao Yao"
+  level: MS
+  institution: "City University of Hong Kong"
+  project: "RL for Machine Unlearning"
 
-- institution: "Northwestern Polytechnical University"
-  url: "https://en.nwpu.edu.cn"
-  members:
-    - name: "Siyuan Zhang"
-      degree: "MS"
-      topic: "Agent for Crowdsensing"
-      destination: ""
+- name: "Shuxuan Lye"
+  level: MS
+  institution: "City University of Hong Kong"
+  project: "GUI Agent Safety"
+
+- name: "Xiao Hu"
+  level: MS
+  institution: "City University of Hong Kong"
+  project: "RL for Agent-as-a-Judge"
+
+- name: "Ruofan Wang"
+  level: PhD
+  institution: "Fudan University"
+  project: "RL for VLM Red Teaming"
+
+- name: "Zilong Wang"
+  level: PhD
+  institution: "Fudan University"
+  project: "RL for Text-to-Image Red Teaming"
+  papers: "CVPR26"
+
+- name: "Xiao Li"
+  level: MS
+  institution: "Fudan University"
+  project: "RL for Multi-Agent System Safety"
+
+- name: "Yunhan Zhao"
+  level: MS
+  institution: "Fudan University"
+  project: "RL for VLM Blue Teaming"
+  papers: "ICLR25 PR26"
+  destination: ["UIUC Ph.D. (2026)"]
+
+- name: "Zixing Chen"
+  level: MS
+  institution: "Fudan University"
+  project: "RL for VLA Safety"
+
+- name: "Jiayu Li"
+  level: MS
+  institution: "Fudan University"
+  project: "VLA Safety"
+
+- name: "Jiale Ding"
+  level: UG
+  institution: "Fudan University"
+  project: "RL for LLM Safety"
+  destination: ["HKUST Ph.D. (2026) with HK PhD Fellowship"]
+
+- name: "Zonghuan Xu"
+  level: UG
+  institution: "Fudan University"
+  project: "VLA Safety and Misinformation"
+  papers: "IROS26"
+
+- name: "Shengjie Wang"
+  level: MS
+  institution: "Tsinghua University"
+  project: "Safe RL for Space Robot Control"
+  papers: "IROS21 RA-L22 AST22/23 CoRL23 DSN24"
+  destination: ["Tsinghua Ph.D. (2022)"]
+
+- name: "Yuxue Cao"
+  level: MS
+  institution: "Institute of Automation (CAS)"
+  project: "RL for Space Robot Control"
+  papers: "IROS21 RA-L22 AST22/23 CoRL23"
+  destination: ["Siemens"]

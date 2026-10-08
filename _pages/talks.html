@@ -1,0 +1,21 @@
+---
+layout: xz
+title: Talks
+permalink: /talks/
+---
+<div class="page list">
+  {% include xz/pagehead.liquid title="Talks" intro="Invited talks and seminars at universities, industry labs, and forums." %}
+  {%- assign groups = site.data.talks | group_by_exp: "t", "t.date | slice: 0, 4" -%}
+  {%- for g in groups %}
+  <section class="yearblock">
+    <h2 class="yearhead">{{ g.name }}</h2>
+    <div class="yearbody">
+      <div class="dated">
+        {%- for t in g.items %}
+        {% include xz/talk.liquid t=t month=true %}
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+  {%- endfor %}
+</div>

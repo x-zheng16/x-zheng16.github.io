@@ -1,0 +1,22 @@
+---
+layout: xz
+title: Publications
+permalink: /publications/
+---
+{%- capture intro %}* equal contribution &nbsp;† corresponding author. The full record is on <a href="{{ site.data.home.scholar }}">Google Scholar</a>.{% endcapture -%}
+<div class="page list">
+  {% include xz/pagehead.liquid title="Publications" intro=intro %}
+  {%- for y in site.data.xz_pub_years %}
+  <section class="yearblock">
+    <h2 class="yearhead">{{ y }}</h2>
+    <div class="yearbody">
+      <div class="publist">
+        {%- assign ps = site.data.xz_pubs | where: "year", y -%}
+        {%- for p in ps %}
+        {% include xz/pub.liquid p=p %}
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+  {%- endfor %}
+</div>

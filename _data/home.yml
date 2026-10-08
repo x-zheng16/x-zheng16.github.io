@@ -1,0 +1,119 @@
+# Content of the home page that is not a publication, talk, news item or student.
+# Source of truth for the facts is PROFILE.md; this file holds the wording shown on the page.
+# House style: no structural commas. Use "at" inside names and line breaks or spacing between fields.
+
+name: Xiang Zheng
+name_zh: 郑翔
+email: xiang.zheng@cityu.edu.hk
+scholar: https://scholar.google.com/citations?hl=en&user=lqirTjkAAAAJ&view_op=list_works&sortby=pubdate
+github: https://github.com/x-zheng16
+orcid: https://orcid.org/0000-0002-2990-2169
+openreview: https://openreview.net/profile?id=~Xiang_Zheng4
+
+role_html: >-
+  <span class="t">Research Assistant Professor</span><br>
+  <a href="https://www.cityu.edu.hk/hkai-sci">Hong Kong Institute of AI for Science</a><br>
+  City University of Hong Kong<br>
+  Chief Scientist of <a href="https://sciencepal.ai">SciencePal 2.0</a>
+
+about:
+  - >-
+    I am a Research Assistant Professor at the Hong Kong Institute of AI for Science (HKAI-Sci), City University of Hong Kong,
+    and work closely with <a href="https://xingjunm.github.io">Prof. Xingjun Ma</a> at the
+    <a href="https://teai.fudan.edu.cn">Institute of Trustworthy Embodied AI</a>, Fudan University.
+    My research develops robust and efficient reinforcement-learning algorithms for trustworthy science, computer-use, and embodied agents.
+  - >-
+    I also collaborate closely with industry: my research has contributed to ByteDance’s
+    <a href="https://developer.volcengine.com/articles/7628812879973580838">AgentArmor</a> agent-safety framework,
+    Foxconn Research Institute’s <a href="https://www.nvidia.com/en-us/case-studies/foxconn-develops-physical-ai-enabled-smart-factories-with-digital-twins/">FoxBrain</a>
+    foundation model (with NVIDIA), and HKAI-Sci’s <a href="https://sciencepal.ai">SciencePal 2.0</a> self-evolving science agent.
+    I was honored to receive the <a href="https://www.cityu.edu.hk/media/news/2020/06/16/prestigious-new-scholarships-hk156m-world-class-phd-candidates">CityUHK Presidential PhD Scholarship</a>.
+  - >-
+    I received my Ph.D. in Computer Science from City University of Hong Kong in 2024, advised by
+    <a href="https://www.cs.cityu.edu.hk/~congwang/">Prof. Cong Wang</a>; my M.S. in Control Science and Engineering
+    from Tsinghua University in 2019, advised by Prof. Tao Zhang; and dual B.S. degrees in Automation and Mathematics
+    from the Shen Yuan Honors College, Beihang University, in 2016.
+
+# Research themes. Each item links to its paper (first link of the bib entry) unless url is given.
+themes:
+  - title: AI for Science
+    desc: Recursive Self-Improving Agent Team for Scientific Discovery
+    items:
+      - { label: SciencePal 2.0, venue: HKAI-Sci, url: "https://sciencepal.ai" }
+  - title: Trustworthy AI
+    desc: Reinforcement Learning for Agent Safety
+    items:
+      - { label: Just Ask, venue: ICML 2026, key: zheng2026justask }
+      - { label: GenBreak, venue: CVPR 2026, key: wang2026genbreak }
+      - { label: CALM, venue: AAAI 2025, key: zheng2025calm }
+  - title: Embodied AI
+    desc: Robust Robot Learning and VLA Safety
+    items:
+      - { label: Safety in Embodied AI, venue: arXiv preprint, key: li2026embodied }
+      - { label: DropVLA, venue: IROS 2026, key: xu2025dropvla }
+      - { label: CIM, venue: IJCAI 2024, key: zheng2024constrained }
+      - { label: IMAP, venue: DSN 2024, key: zheng2024toward }
+  - title: Recursive Self-Improvement
+    desc: Safety of Self-Improving Agents
+    items:
+      - { label: Practice Makes Unsafe, venue: arXiv preprint, key: mao2026practice }
+      - { label: Agent Hacks Agent, venue: arXiv preprint, key: mao2026agenthacks }
+
+# Leave openings_html empty to hide the Openings row.
+openings_html: >-
+  I currently have 1–2 openings for self-motivated Research Assistants and Ph.D. students, co-supervised with
+  <a href="https://www.cityu.edu.hk/hkai-sci/members/ma-wei-ying/?lang=en">Prof. Wei-Ying Ma</a>, on
+  <em>AI for Science</em> and <em>Recursive Self-Improving Agents</em>. Interested candidates are welcome to email me at
+  <span class="select-all">xiang.zheng@cityu.edu.hk</span> with a CV and a brief research statement.
+
+experience:
+  - { years: "2026–now", role: Research Assistant Professor, at: "City University of Hong Kong (HKAI-Sci)" }
+  - { years: "2024–2026", role: Postdoctoral Fellow, at: "City University of Hong Kong", advisor: "Cong Wang" }
+  - { years: "2020–2024", role: Graduate Research Assistant, at: "City University of Hong Kong", advisor: "Cong Wang" }
+  - { years: "2022–2023", role: Visiting Researcher, at: "Xi'an Jiaotong University", advisor: "Chao Shen" }
+  - { years: "2019–2020", role: Visiting Researcher, at: "Xi'an Jiaotong University", advisor: "Chao Shen and Xingjun Ma" }
+  - { years: "2018", role: Research Intern, at: "National Institute of Informatics", advisor: "Tetsunari Inamura" }
+  - { years: "2016–2019", role: Graduate Research Assistant, at: "Tsinghua University", advisor: "Tao Zhang" }
+  - { years: "2016", role: Research Intern, at: "The University of New South Wales", advisor: "Elias Aboutanios" }
+
+# Honors: details are separated into spaced columns; monetary amounts are left out.
+honors:
+  - { year: "2026", name: "ICML Gold Reviewer Award", details: ["top 25%"] }
+  - { year: "2024", name: "IJCAI Travel Grant", details: ["IJCAI Organization and AIJ Division"] }
+  - { year: "2024", name: "International Conference Grant", details: ["City University of Hong Kong"] }
+  - { year: "2024", name: "DSN Student Travel Grant", details: ["DSN Student Travel Awards Committee"] }
+  - { year: "2022–2023", name: "Research Activities Fund", details: ["City University of Hong Kong"] }
+  - { year: "2020–2024", name: "Institutional Research Tuition Grant", details: ["City University of Hong Kong"] }
+  - { year: "2020–2024", name: "CityUHK Presidential PhD Scholarship", details: ["2/73"] }
+  - { year: "2018", name: "NII MOU Research Activities Grant", details: ["National Institute of Informatics Japan"] }
+  - { year: "2016", name: "CSC Scholarship", details: ["China Scholarship Council"] }
+  - { year: "2015", name: "Stars of Advanced Engineering", details: ["Shen Yuan Honors College at Beihang University", "highest honor at the Honors College"] }
+
+# Service: one venue per line. years is display text (a range for consecutive years).
+service:
+  organizer:
+    - { venue: "PRCV 2026", note: "Special Session Organizer", url: "https://www.prcv.cn/web/#/calls/callForSpecialSessionsPapers" }
+  program_committee:
+    - { venue: "NeurIPS", years: "2026" }
+    - { venue: "ICML", years: "2026" }
+    - { venue: "ICLR", years: "2025–2027" }
+    - { venue: "CVPR", years: "2026" }
+    - { venue: "ECCV", years: "2026" }
+    - { venue: "AAAI", years: "2025–2027" }
+    - { venue: "ACM MM", years: "2025–2026" }
+    - { venue: "ICRA", years: "2026" }
+  journal_reviewer:
+    - "ACM Computing Surveys (CSUR)"
+    - "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)"
+    - "IEEE Transactions on Dependable and Secure Computing (TDSC)"
+    - "IEEE Transactions on Services Computing (TSC)"
+    - "IEEE Transactions on Computers (TC)"
+    - "Transactions on Machine Learning Research (TMLR)"
+    - "IEEE Internet of Things Journal (IoT-J)"
+  external_reviewer:
+    - { venue: "ACL", years: "2026" }
+    - { venue: "NeurIPS", years: "2025" }
+    - { venue: "ICNP", years: "2025" }
+    - { venue: "ESORICS", years: "2022" }
+    - { venue: "AsiaCCS", years: "2022" }
+    - { venue: "RAID", years: "2021" }

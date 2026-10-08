@@ -1,0 +1,5 @@
+{%- assign n = include.n -%}
+<div class="tl">
+  {%- if include.month %}<div class="d mon">{{ n.date | date: "%b" }}</div>{% else %}<div class="d">{{ n.date | date: "%Y.%m" }}</div>{% endif -%}
+  <div class="x">{{ n.content | remove: "<p>" | remove: "</p>" | strip }}{% if n.congrats %} <span class="congrats">{{ n.congrats }}</span>{% endif %}</div>
+</div>

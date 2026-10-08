@@ -1,0 +1,22 @@
+---
+layout: xz
+title: News
+permalink: /news/
+---
+<div class="page list">
+  {% include xz/pagehead.liquid title="News" %}
+  {%- assign news = site.news | sort: "date" | reverse -%}
+  {%- assign groups = news | group_by_exp: "n", "n.date | date: '%Y'" -%}
+  {%- for g in groups %}
+  <section class="yearblock">
+    <h2 class="yearhead">{{ g.name }}</h2>
+    <div class="yearbody">
+      <div class="dated">
+        {%- for n in g.items %}
+        {% include xz/news.liquid n=n month=true %}
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+  {%- endfor %}
+</div>
