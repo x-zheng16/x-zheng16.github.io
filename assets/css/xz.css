@@ -1,7 +1,7 @@
 /* Xiang Zheng homepage.
    Layout: a 720px reading measure hung off a 168px small-caps label rail.
    Type: one serif family (Source Serif 4, optical sizes) plus Noto Serif SC for the Chinese name.
-   Color: a single soft dark-gray theme; one ink-blue for hover, "upcoming" and student destinations. */
+   Color: a single midnight-ink theme; one ink-blue for hover, "upcoming" and student destinations. */
 
 /* ---------- reset (subset of Tailwind preflight) ---------- */
 *, ::before, ::after { box-sizing: border-box; border: 0 solid #e5e7eb; }
@@ -17,12 +17,12 @@ button { font-family: inherit; font-size: 100%; font-weight: inherit; line-heigh
 
 /* ---------- tokens ---------- */
 :root {
-  --bg: #2b2d31;
-  --fg: #d9d7d1;
-  --ink-2: #b5b3ae;
-  --muted: #9a9a96;
-  --hair: #3b3d42;
-  --link-line: #57595e;
+  --bg: #1c2230;
+  --fg: #dce1e9;
+  --ink-2: #b4bccb;
+  --muted: #8b95a6;
+  --hair: #2b3344;
+  --link-line: #4a5570;
   --accent: #9db0f0;
   --serif: "Source Serif 4", "Source Serif Pro", Georgia, serif;
   --cjk: "Noto Serif SC", "Songti SC", "STSong", serif;
@@ -80,7 +80,7 @@ p { text-wrap: pretty; }
 /* the photo spans from the cap height of the name to the baseline of the link row */
 .hero { display: flex; flex-wrap: wrap; column-gap: var(--gap); row-gap: 24px; align-items: flex-start; }
 .hero .photo { flex: 0 0 var(--rail); }
-.hero .photo img { display: block; width: 158px; height: 198px; max-width: 100%; margin-top: 7px; object-fit: cover; border-radius: 3px; filter: brightness(.78) contrast(.95); }
+.hero .photo img { display: block; width: 158px; height: 198px; max-width: 100%; margin-top: 7px; object-fit: cover; border-radius: 3px; filter: brightness(.74) contrast(.95); }
 .hero .who { flex: 999 1 460px; min-width: 0; max-width: 720px; }
 .hero h1 { margin: 0; font-size: 46px; line-height: 1.05; letter-spacing: -0.012em; font-weight: 500; }
 .hero h1 .zh { font-family: var(--cjk); font-weight: 400; font-size: 26px; letter-spacing: .08em; color: var(--muted); margin-left: 14px; vertical-align: baseline; }
