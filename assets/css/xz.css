@@ -91,8 +91,8 @@ p { text-wrap: pretty; }
 .linkrow a:hover { color: var(--accent); }
 
 /* ---------- research: title, description and paper list line up across the two columns ---------- */
-.themes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 44px; }
-.theme { display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 6px; margin-bottom: 30px; }
+.themes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 44px; }
+.theme { display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 6px; }
 .theme h3 { margin: 0; font-size: 17px; font-weight: 600; line-height: 1.35; }
 .theme p { margin: 0; font-size: 15.5px; line-height: 1.55; color: var(--ink-2); }
 .theme ul { margin: 8px 0 0; padding: 0; list-style: none; font-size: 15px; line-height: 1.6; color: var(--muted); align-self: start; }
