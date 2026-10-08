@@ -23,7 +23,6 @@
             {%- assign parts = item | split: "|" %}
           <a href="{{ parts[0] | relative_url }}"{% if page.url == parts[0] %} aria-current="page"{% endif %}>{{ parts[1] }}</a>
           {%- endfor %}
-          <a href="{{ '/cv/' | relative_url }}">CV</a>
         </nav>
       </div>
     </div>
