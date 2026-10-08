@@ -151,7 +151,6 @@ p { text-wrap: pretty; }
 .dated.tight { gap: 10px; }
 .tl { display: block; position: relative; }
 .tl .d { position: absolute; right: calc(100% + 24px); top: 0; width: 120px; text-align: right; font-size: 14.5px; line-height: 1.65; padding-top: 4px; color: var(--muted); font-variant-numeric: lining-nums tabular-nums; }
-.tl .d.mon { font-variant-caps: all-small-caps; letter-spacing: .1em; font-size: 15.5px; padding-top: 2px; }
 .tl .x { display: block; min-width: 0; }
 .congrats { color: var(--muted); font-style: italic; }
 .tag { font-size: 13px; font-style: italic; color: var(--accent); margin-left: 8px; }
