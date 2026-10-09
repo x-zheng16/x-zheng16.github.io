@@ -185,8 +185,7 @@ newsletter:
 
 collections:
   news:
-    output: true
-    permalink: /:collection/:title/
+    output: false
   projects:
     output: false
     permalink: /projects/:path/

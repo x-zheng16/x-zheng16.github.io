@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#1c2230">
+    <title>{% if page.permalink == '/' %}Xiang Zheng{% else %}{{ page.title }} · Xiang Zheng{% endif %}</title>
+    <meta name="description" content="Xiang Zheng (郑翔), Research Assistant Professor at the Hong Kong Institute of AI for Science, City University of Hong Kong. Reinforcement learning for trustworthy science, computer-use and embodied agents.">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="icon" href="data:,">
+    <link rel="preload" href="{{ '/assets/fonts/source-serif-4-normal-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{ '/assets/css/xz.css' | relative_url | bust_file_cache }}">
+    <script src="{{ '/assets/js/xz.js' | relative_url | bust_file_cache }}" defer></script>
+  </head>
+  <body>
+    <div class="topnav">
+      <div class="wrap">
+        <nav class="navlinks" aria-label="Main">
+          {%- assign nav = "/|About,/publications/|Publications,/students/|Students,/talks/|Talks,/news/|News" | split: "," -%}
+          {%- for item in nav -%}
+            {%- assign parts = item | split: "|" %}
+          <a href="{{ parts[0] | relative_url }}"{% if page.url == parts[0] %} aria-current="page"{% endif %}>{{ parts[1] }}</a>
+          {%- endfor %}
+        </nav>
+      </div>
+    </div>
+    <main class="wrap">
+{{ content }}
+    </main>
+    <footer class="foot">
+      <div class="wrap">
+        <span>Last updated {{ site.time | date: "%Y.%m.%d" }}</span>
+      </div>
+    </footer>
+  </body>
+</html>

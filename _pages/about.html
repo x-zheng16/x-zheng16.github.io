@@ -1,0 +1,152 @@
+---
+layout: xz
+title: About
+permalink: /
+---
+{%- assign h = site.data.home -%}
+<div class="page">
+  <header class="hero">
+    <div class="photo"><img src="{{ '/assets/img/xz-portrait.jpg' | relative_url }}" alt="Portrait of Xiang Zheng" width="158" height="198"></div>
+    <div class="who">
+      <h1>{{ h.name }}<span class="zh">{{ h.name_zh }}</span></h1>
+      <p class="role">{{ h.role_html }}</p>
+      <nav class="linkrow" aria-label="Profiles">
+        <span class="select-all">{{ h.email }}</span>
+        <a href="{{ h.scholar }}">Google Scholar</a>
+        <a href="{{ h.github }}">GitHub</a>
+        <a href="{{ h.orcid }}">ORCID</a>
+        <a href="{{ h.openreview }}">OpenReview</a>
+        <a href="{{ '/cv/' | relative_url }}">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="row">
+    <h2 class="label">About</h2>
+    <div class="body">
+      {%- for para in h.about %}
+      <p>{{ para }}</p>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="row">
+    <h2 class="label">Research</h2>
+    <div class="body">
+      <div class="themes">
+        {%- for t in h.themes %}
+        <div class="theme">
+          <h3>{{ t.title }}</h3>
+          <p>{{ t.desc }}</p>
+          <ul>
+            {%- for i in t.items -%}
+              {%- if i.url -%}{%- assign u = i.url -%}{%- else -%}
+                {%- assign p = site.data.xz_pubs | where: "key", i.key | first -%}
+                {%- assign u = p.links.first.url | default: "/publications/" -%}
+              {%- endif %}
+            <li><a href="{{ u }}">{{ i.label }}</a> <span class="tv">{{ i.venue }}</span></li>
+            {%- endfor %}
+          </ul>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  {%- if h.openings_html and h.openings_html != "" %}
+  <section class="row">
+    <h2 class="label">Openings</h2>
+    <div class="body">
+      <div class="openings"><p>{{ h.openings_html }}</p></div>
+    </div>
+  </section>
+  {%- endif %}
+
+  <section class="row">
+    <h2 class="label">News</h2>
+    <div class="body">
+      <div class="dated">
+        {%- assign news = site.news | sort: "date" | reverse -%}
+        {%- for n in news limit: 8 %}
+        {% include xz/news.liquid n=n %}
+        {%- endfor %}
+      </div>
+      <a href="{{ '/news/' | relative_url }}" class="more">All news →</a>
+    </div>
+  </section>
+
+  <section class="row">
+    <h2 class="label">Publications</h2>
+    <div class="body">
+      <p class="legend">* equal contribution &nbsp;† corresponding author</p>
+      <div class="publist">
+        {%- assign selected = site.data.xz_pubs | where: "selected", true -%}
+        {%- for p in selected limit: 10 %}
+        {% include xz/pub.liquid p=p %}
+        {%- endfor %}
+      </div>
+      <a href="{{ '/publications/' | relative_url }}" class="more">All publications →</a>
+    </div>
+  </section>
+
+  <section class="row">
+    <h2 class="label">Talks</h2>
+    <div class="body">
+      <div class="dated">
+        {%- for t in site.data.talks limit: 5 %}
+        {% include xz/talk.liquid t=t %}
+        {%- endfor %}
+      </div>
+      <a href="{{ '/talks/' | relative_url }}" class="more">All talks →</a>
+    </div>
+  </section>
+
+  <section class="row">
+    <h2 class="label">Experience</h2>
+    <div class="body">
+      <div class="dated tight">
+        {%- for e in h.experience %}
+        <div class="tl"><div class="d">{{ e.years }}</div><div class="x">{{ e.role }} <span class="muted">at {{ e.at }}</span>{% if e.advisor %}<span class="muted"> (with {{ e.advisor }})</span>{% endif %}</div></div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="row">
+    <h2 class="label">Honors</h2>
+    <div class="body">
+      <div class="dated tight">
+        {%- assign prev = "" -%}
+        {%- for a in h.honors %}
+        <div class="tl"><div class="d">{% if a.year != prev %}{{ a.year }}{% endif %}</div><div class="x"><span class="spaced"><span>{{ a.name }}</span>{% for d in a.details %}<span class="muted">{{ d }}</span>{% endfor %}</span></div></div>
+        {%- assign prev = a.year -%}
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="row">
+    <h2 class="label">Service</h2>
+    <div class="body">
+      {%- assign s = h.service %}
+      <div class="svc">
+        <div class="svc-g">
+          <h3 class="svc-h">Organizer</h3>
+          <ul class="svc-l">{% for o in s.organizer %}<li><a href="{{ o.url }}">{{ o.venue }}</a> <span class="muted">{{ o.note }}</span></li>{% endfor %}</ul>
+        </div>
+        <div class="svc-g">
+          <h3 class="svc-h">Program Committee</h3>
+          <ul class="svc-l">{% for c in s.program_committee %}<li>{{ c.venue }} <span class="muted">{{ c.years }}</span></li>{% endfor %}</ul>
+        </div>
+        <div class="svc-g">
+          <h3 class="svc-h">Journal Reviewer</h3>
+          <ul class="svc-l">{% for j in s.journal_reviewer %}<li>{{ j }}</li>{% endfor %}</ul>
+        </div>
+        <div class="svc-g">
+          <h3 class="svc-h">External Reviewer</h3>
+          <ul class="svc-l">{% for c in s.external_reviewer %}<li>{{ c.venue }} <span class="muted">{{ c.years }}</span></li>{% endfor %}</ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
