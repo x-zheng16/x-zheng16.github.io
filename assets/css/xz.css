@@ -1,7 +1,8 @@
 /* Xiang Zheng homepage.
    Layout: a 720px reading measure hung off a 168px small-caps label rail.
    Type: one serif family (Source Serif 4, optical sizes) plus Noto Serif SC for the Chinese name.
-   Color: a single midnight-ink theme; one ink-blue for hover, "upcoming" and student destinations. */
+   Color: a single neutral-gray dark theme taken from the Claude app gray scale (background #151515);
+   one ink-blue for hover, "upcoming" and student destinations. */
 
 /* ---------- reset (subset of Tailwind preflight) ---------- */
 *, ::before, ::after { box-sizing: border-box; border: 0 solid #e5e7eb; }
@@ -64,12 +65,12 @@ button { font-family: inherit; font-size: 100%; font-weight: inherit; line-heigh
 
 /* ---------- tokens ---------- */
 :root {
-  --bg: #1c2230;
-  --fg: #dce1e9;
-  --ink-2: #b4bccb;
-  --muted: #8b95a6;
-  --hair: #2b3344;
-  --link-line: #4a5570;
+  --bg: #151515;
+  --fg: #d2d1c7;
+  --ink-2: #b4b3a8;
+  --muted: #898781;
+  --hair: #2c2c2a;
+  --link-line: #454442;
   --accent: #9db0f0;
   --serif: "Source Serif 4", "Source Serif Pro", Georgia, serif;
   --cjk: "Noto Serif SC", "Songti SC", "STSong", serif;
