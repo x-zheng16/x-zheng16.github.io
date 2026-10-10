@@ -146,7 +146,7 @@ p { text-wrap: pretty; }
 /* the photo spans from the cap height of the name to the baseline of the link row */
 .hero { display: flex; flex-wrap: wrap; column-gap: var(--gap); row-gap: 24px; align-items: flex-start; }
 .hero .photo { flex: 0 0 var(--rail); }
-.hero .photo img { display: block; width: 158px; height: 198px; max-width: 100%; margin-top: 7px; object-fit: cover; }
+.hero .photo img { display: block; width: 158px; height: 198px; max-width: 100%; margin-top: 7px; object-fit: cover; border-radius: 3px; }
 .hero .who { flex: 999 1 460px; min-width: 0; max-width: 720px; }
 .hero h1 { margin: 0; font-size: 46px; line-height: 1.05; letter-spacing: -0.012em; font-weight: 500; }
 .hero h1 .zh { font-family: var(--cjk); font-weight: 400; font-size: 26px; letter-spacing: .08em; color: var(--muted); margin-left: 14px; vertical-align: baseline; }
