@@ -166,11 +166,11 @@ p { text-wrap: pretty; }
 .theme li a { color: var(--ink-2); }
 .theme .tv { margin-left: 0.35em; }
 
-/* ---------- dated lists: dates hang in the rail, right-aligned ---------- */
+/* ---------- dated lists: dates hang in the rail, left-aligned in a column after the year ---------- */
 .dated { display: flex; flex-direction: column; gap: 14px; }
 .dated.tight { gap: 10px; }
 .tl { display: block; position: relative; }
-.tl .d { position: absolute; right: calc(100% + 24px); top: 0; width: 120px; text-align: right; font-size: 14.5px; line-height: 1.65; padding-top: 4px; color: var(--muted); font-variant-numeric: lining-nums tabular-nums; }
+.tl .d { position: absolute; left: calc(72px - var(--rail) - var(--gap)); top: 0; width: calc(var(--rail) - 72px); text-align: left; font-size: 14.5px; line-height: 1.65; padding-top: 4px; color: var(--muted); font-variant-numeric: lining-nums tabular-nums; }
 .tl .x { display: block; min-width: 0; }
 .congrats { color: var(--muted); font-style: italic; }
 .tag { font-size: 13px; font-style: italic; color: var(--accent); margin-left: 8px; }
