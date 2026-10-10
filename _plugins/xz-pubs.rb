@@ -81,7 +81,6 @@ module XZ
 
       if type == "conference" && (m = venue.sub(/ Poster$/, "").match(/^([^']+)'(\d{2})\s*(.*)$/))
         conf = "#{m[1]} 20#{m[2]}"
-        return "Findings of #{conf}" if m[3] == "Findings"
         return conf if m[3].empty? || m[3] == "E&D"
         return "#{conf} #{m[3]}"
       end
