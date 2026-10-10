@@ -2,7 +2,8 @@
    Layout: a 720px reading measure hung off a 168px small-caps label rail.
    Type: one serif family (Source Serif 4, optical sizes) plus Noto Serif SC for the Chinese name.
    Color: the al-folio light and dark themes, following the system unless the visitor picks one with the
-   nav toggle; one accent (al-folio blue / cyan) for hover, "upcoming" and student destinations. */
+   nav toggle; one accent, CityUHK red (lightened in the dark theme), for links, the current page,
+   hover, "upcoming" and student destinations. */
 
 /* ---------- reset (subset of Tailwind preflight) ---------- */
 *, ::before, ::after { box-sizing: border-box; border: 0 solid #e5e7eb; }
@@ -72,7 +73,7 @@ button { font-family: inherit; font-size: 100%; font-weight: inherit; line-heigh
   --muted: #828282;
   --hair: #424246;
   --link-line: #4f4f54;
-  --accent: #2698ba;
+  --accent: #de6480; /* CityUHK red #CC103C, lightened to 5.1:1 on the dark background */
   --serif: "Source Serif 4", "Source Serif Pro", Georgia, serif;
   --cjk: "Noto Serif SC", "Songti SC", "STSong", serif;
   --rail: 168px;
@@ -81,12 +82,12 @@ button { font-family: inherit; font-size: 100%; font-weight: inherit; line-heigh
 }
 /* al-folio light theme: chosen explicitly, or by the system when no choice is stored */
 :root[data-theme="light"] {
-  --bg: #ffffff; --fg: #000000; --ink-2: #2b2b2b; --muted: #6e6e6e; --hair: #e6e6e6; --link-line: #c8c8c8; --accent: #0076df;
+  --bg: #ffffff; --fg: #000000; --ink-2: #2b2b2b; --muted: #6e6e6e; --hair: #e6e6e6; --link-line: #c8c8c8; --accent: #cc103c;
   color-scheme: light;
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
-    --bg: #ffffff; --fg: #000000; --ink-2: #2b2b2b; --muted: #6e6e6e; --hair: #e6e6e6; --link-line: #c8c8c8; --accent: #0076df;
+    --bg: #ffffff; --fg: #000000; --ink-2: #2b2b2b; --muted: #6e6e6e; --hair: #e6e6e6; --link-line: #c8c8c8; --accent: #cc103c;
     color-scheme: light;
   }
 }
@@ -103,7 +104,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 ::selection { background: color-mix(in srgb, var(--accent) 22%, transparent); }
-a { color: inherit; text-decoration: underline; text-decoration-color: var(--link-line); text-decoration-thickness: 1px; text-underline-offset: 0.22em; transition: color .15s, text-decoration-color .15s; }
+a { color: var(--accent); text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1px; text-underline-offset: 0.22em; transition: color .15s, text-decoration-color .15s; }
 a:hover { color: var(--accent); text-decoration-color: currentColor; }
 a:focus-visible, button:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 h1, h2, h3 { text-wrap: balance; font-weight: 500; }
@@ -121,13 +122,13 @@ p { text-wrap: pretty; }
 .navlinks { flex: 1 1 auto; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0 22px; font-size: 15.5px; }
 .navlinks a { text-decoration: none; color: var(--muted); padding: 10px 0; position: relative; }
 .navlinks a:hover { color: var(--fg); }
-.navlinks a[aria-current="page"] { color: var(--fg); }
+.navlinks a[aria-current="page"] { color: var(--accent); }
 .themetoggle { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: var(--muted); }
 .themetoggle:hover { color: var(--fg); }
 .themetoggle svg { width: 18px; height: 18px; }
 .themetoggle .sun, :root[data-theme-now="light"] .themetoggle .moon { display: none; }
 :root[data-theme-now="light"] .themetoggle .sun { display: block; }
-.navlinks a[aria-current="page"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: 6px; height: 1px; background: var(--fg); }
+.navlinks a[aria-current="page"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: 6px; height: 1px; background: var(--accent); }
 
 /* ---------- page skeleton ---------- */
 .page { padding-block: 72px 112px; display: flex; flex-direction: column; gap: 76px; }
