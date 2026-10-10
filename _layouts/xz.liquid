@@ -25,7 +25,7 @@
     <div class="topnav">
       <div class="wrap">
         <nav class="navlinks" aria-label="Main">
-          {%- assign nav = "/|About,/publications/|Publications,/students/|Students,/talks/|Talks,/news/|News" | split: "," -%}
+          {%- assign nav = "/|About,/publications/|Publications,/team/|Team,/talks/|Talks,/news/|News" | split: "," -%}
           {%- for item in nav -%}
             {%- assign parts = item | split: "|" %}
           <a href="{{ parts[0] | relative_url }}"{% if page.url == parts[0] %} aria-current="page"{% endif %}>{{ parts[1] }}</a>
