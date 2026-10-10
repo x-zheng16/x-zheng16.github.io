@@ -7,6 +7,23 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
+  // light / dark toggle: the system decides until the visitor picks; the pick is remembered
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: light)");
+  var current = function () { return root.getAttribute("data-theme") || (media.matches ? "light" : "dark"); };
+  var mark = function () { root.setAttribute("data-theme-now", current()); };
+  mark();
+  media.addEventListener("change", mark);
+  var toggle = document.querySelector(".themetoggle");
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      var next = current() === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+      mark();
+    });
+  }
+
   // "and N more" on long author lists
   document.querySelectorAll(".au-b .morebtn").forEach(function (btn) {
     btn.addEventListener("click", function () {

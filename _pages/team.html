@@ -1,19 +1,23 @@
 ---
 layout: xz
-title: Students
-permalink: /students/
+title: Team
+permalink: /team/
 ---
 <div class="page list">
-  {% include xz/pagehead.liquid title="Students" intro="Students I am currently mentoring or have mentored." %}
-  {%- assign groups = site.data.students | group_by: "institution" -%}
-  {%- for g in groups %}
+  {% include xz/pagehead.liquid title="Team" %}
+  {%- assign roles = "PhD|PhD,MS|Master,UG|Undergraduate,RA|Research Assistant" | split: "," -%}
+  {%- for r in roles %}
+  {%- assign rp = r | split: "|" -%}
+  {%- assign members = site.data.students | where: "level", rp[0] -%}
+  {%- if members.size > 0 %}
   <section class="yearblock">
-    <h2 class="yearhead inst">{{ g.name }}</h2>
+    <h2 class="yearhead inst">{{ rp[1] }}</h2>
     <div class="yearbody">
       <div class="people">
-        {%- for s in g.items %}
+        {%- for s in members %}
         <div class="person">
-          <div><span class="n">{{ s.name }}</span><span class="lvl">{{ s.level }}</span></div>
+          <div class="n">{{ s.name }}</div>
+          <div class="i">{{ s.institution }}</div>
           <div class="p">{{ s.project }}</div>
           {%- if s.papers %}
           {%- assign ps = s.papers | split: " " %}
@@ -27,5 +31,6 @@ permalink: /students/
       </div>
     </div>
   </section>
+  {%- endif %}
   {%- endfor %}
 </div>

@@ -1,7 +1,7 @@
 {%- assign t = include.t -%}
 {%- assign mm = t.date | slice: 5, 2 | plus: 0 | minus: 1 -%}
-{%- assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," -%}
+{%- assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," -%}
 <div class="tl">
-  {%- if include.month %}<div class="d mon">{{ months[mm] }}</div>{% else %}<div class="d">{{ t.date | slice: 0, 7 | replace: "-", "." }}</div>{% endif -%}
+  {%- if include.month %}{% unless include.same %}<div class="d">{{ months[mm] }}</div>{% endunless %}{% else %}<div class="d">{{ t.date | slice: 0, 7 | replace: "-", "." }}</div>{% endif -%}
   <div class="x">{{ t.title }}<span class="tag" data-until="{{ t.date }}" hidden>upcoming</span><div class="sub"><span class="spaced"><span>{{ t.venue }}</span><span>{{ t.location }}</span></span></div></div>
 </div>
