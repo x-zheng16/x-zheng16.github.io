@@ -73,6 +73,7 @@ button { font-family: inherit; font-size: 100%; font-weight: inherit; line-heigh
   --muted: #828282;
   --hair: #424246;
   --link-line: #4f4f54;
+  --photo-filter: brightness(.88); /* tone the white studio background down on dark */
   --accent: #de6480; /* CityUHK red #CC103C, lightened to 5.1:1 on the dark background */
   --serif: "Source Serif 4", "Source Serif Pro", Georgia, serif;
   --cjk: "Noto Serif SC", "Songti SC", "STSong", serif;
@@ -82,12 +83,12 @@ button { font-family: inherit; font-size: 100%; font-weight: inherit; line-heigh
 }
 /* al-folio light theme: chosen explicitly, or by the system when no choice is stored */
 :root[data-theme="light"] {
-  --bg: #ffffff; --fg: #000000; --ink-2: #2b2b2b; --muted: #6e6e6e; --hair: #e6e6e6; --link-line: #c8c8c8; --accent: #cc103c;
+  --bg: #ffffff; --fg: #000000; --ink-2: #2b2b2b; --muted: #6e6e6e; --hair: #e6e6e6; --link-line: #c8c8c8; --accent: #cc103c; --photo-filter: none;
   color-scheme: light;
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
-    --bg: #ffffff; --fg: #000000; --ink-2: #2b2b2b; --muted: #6e6e6e; --hair: #e6e6e6; --link-line: #c8c8c8; --accent: #cc103c;
+    --bg: #ffffff; --fg: #000000; --ink-2: #2b2b2b; --muted: #6e6e6e; --hair: #e6e6e6; --link-line: #c8c8c8; --accent: #cc103c; --photo-filter: none;
     color-scheme: light;
   }
 }
@@ -146,7 +147,7 @@ p { text-wrap: pretty; }
 /* the photo spans from the cap height of the name to the baseline of the link row */
 .hero { display: flex; flex-wrap: wrap; column-gap: var(--gap); row-gap: 24px; align-items: flex-start; }
 .hero .photo { flex: 0 0 var(--rail); }
-.hero .photo img { display: block; width: 158px; height: 198px; max-width: 100%; margin-top: 7px; object-fit: cover; border-radius: 3px; filter: brightness(.74) contrast(.95); }
+.hero .photo img { display: block; width: 158px; height: 198px; max-width: 100%; margin-top: 7px; object-fit: cover; border-radius: 3px; filter: var(--photo-filter); }
 .hero .who { flex: 999 1 460px; min-width: 0; max-width: 720px; }
 .hero h1 { margin: 0; font-size: 46px; line-height: 1.05; letter-spacing: -0.012em; font-weight: 500; }
 .hero h1 .zh { font-family: var(--cjk); font-weight: 400; font-size: 26px; letter-spacing: .08em; color: var(--muted); margin-left: 14px; vertical-align: baseline; }
@@ -201,7 +202,7 @@ p { text-wrap: pretty; }
 /* ---------- students ---------- */
 .people { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px 36px; }
 .person .n { font-weight: 600; }
-.person .lvl { font-variant-caps: all-small-caps; letter-spacing: .08em; color: var(--muted); margin-left: 8px; font-size: 15px; }
+.person .i { font-size: 14.5px; color: var(--muted); }
 .person .p { font-size: 15px; color: var(--ink-2); line-height: 1.5; }
 .person .o { font-size: 14.5px; color: var(--muted); font-style: italic; }
 .person .dest { font-size: 15px; font-weight: 600; color: var(--accent); }
