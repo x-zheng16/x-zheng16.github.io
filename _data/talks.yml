@@ -1,6 +1,7 @@
 # Invited talks, newest first. The order here is the order on the page.
 # date: YYYY-MM-DD, or YYYY-MM when the day is not fixed. A talk whose date is today or later
-# gets an "upcoming" tag in the browser. venue: no commas, use "at" (Forum at Conference).
+# gets an "upcoming" tag in the browser. venue: no commas, use "at" (Forum at Conference);
+# a host group reads "Institution (Prof. Name's Group)" with the name linked to the homepage (inline HTML).
 
 - date: "2026-10-31"
   title: "SciencePal 2.0 Self-Evolving Research Agent"
@@ -14,22 +15,22 @@
 
 - date: "2026-09-03"
   title: "Trustworthy Recursive Self-Improvement"
-  venue: "Southern University of Science and Technology"
+  venue: "Southern University of Science and Technology (<a href=\"https://jianyu-niu.github.io/\">Prof. Jianyu Niu</a>'s Group)"
   location: "Online"
 
 - date: "2026-08-27"
   title: "Towards Trustworthy Agents: From Red Teaming to Trustworthy Recursive Self-Improving"
-  venue: "Victoria Harbour Academic Salon at Huawei Hong Kong Research Institute"
+  venue: "Victoria Harbour Academic Salon"
   location: "Hong Kong"
 
 - date: "2026-06-16"
   title: "Hands-on with Claude Code: Frontier Code Agents for Research and Browser/Computer Use"
   venue: "CityUHK Joint Summer School on AI for Science"
-  location: "Hong Kong"
+  location: "Dongguan"
 
 - date: "2026-06-05"
   title: "SciencePal 2.0: Your Self-Evolving Science Agent Team"
-  venue: "Tencent Cloud AI Industry Applications Summit at China National Convention Center"
+  venue: "Tencent Cloud AI Industry Applications Summit"
   location: "Beijing"
 
 - date: "2026-04-17"
@@ -44,12 +45,12 @@
 
 - date: "2026-03-30"
   title: "From Robot Learning to Self-Evolving OpenClaw: Building and Securing AI Agent Systems"
-  venue: "Prof. Ziwei Wang's Web-Seminar at Lancaster University"
+  venue: "Lancaster University (<a href=\"https://www.lancaster.ac.uk/engineering/about/people/ziwei-wang\">Prof. Ziwei Wang</a>'s Group)"
   location: "Online"
 
 - date: "2026-03-19"
-  title: "Is OpenClaw All You Need? (Fireside Chat)"
-  venue: "College of Computing at CityUHK (InnoCenter)"
+  title: "Is OpenClaw All You Need?"
+  venue: "College of Computing at CityUHK (with <a href=\"https://www.cs.cityu.edu.hk/~congwang/\">Prof. Cong Wang</a>)"
   location: "Hong Kong"
 
 - date: "2026-03-19"
@@ -59,7 +60,7 @@
 
 - date: "2026-02"
   title: "Reinforcement Learning for Agent Safety Evaluation"
-  venue: "Institute of Trustworthy Embodied AI at Fudan (Prof. Xingjun Ma's Group)"
+  venue: "Institute of Trustworthy Embodied AI at Fudan (<a href=\"http://xingjunma.com/\">Prof. Xingjun Ma</a>'s Group)"
   location: "Online"
 
 - date: "2025-08-30"
@@ -69,7 +70,7 @@
 
 - date: "2025-05-28"
   title: "Reinforcement Learning-Based Adversarial Safety Evaluation and Defense Enhancement for Large Language Models"
-  venue: "Southern University of Science and Technology"
+  venue: "Southern University of Science and Technology (<a href=\"https://jianyu-niu.github.io/\">Prof. Jianyu Niu</a>'s Group)"
   location: "Shenzhen"
 
 - date: "2025-04-27"
@@ -79,20 +80,20 @@
 
 - date: "2024-11-29"
   title: "Curiosity-Driven Auditing for LLMs"
-  venue: "Northwestern Polytechnical University"
+  venue: "School of Computer Science at Northwestern Polytechnical University (<a href=\"https://harrycui.github.io/\">Prof. Helei Cui</a>'s Group)"
   location: "Xi'an"
 
 - date: "2024-09-30"
   title: "Efficient Intrinsically Motivated Adversarial Policy Learning"
-  venue: "Northwestern Polytechnical University"
+  venue: "School of Computer Science at Northwestern Polytechnical University (<a href=\"https://harrycui.github.io/\">Prof. Helei Cui</a>'s Group)"
   location: "Xi'an"
 
 - date: "2024-08-02"
   title: "Intrinsically Motivated Adversarial Policy"
-  venue: "Griffith University"
-  location: "Gold Coast"
+  venue: "Griffith University (<a href=\"https://leozhangcs.github.io/\">Prof. Leo Yu Zhang</a>'s Group)"
+  location: "Online"
 
 - date: "2024-07-01"
   title: "Towards Efficient Evasion Attacks Against RL"
-  venue: "The University of Melbourne"
-  location: "Melbourne Connect"
+  venue: "School of Computing and Information Systems at the University of Melbourne (<a href=\"https://xyuancs.github.io/\">Prof. Xingliang Yuan</a>'s and <a href=\"https://fengliu90.github.io/\">Prof. Feng Liu</a>'s Groups)"
+  location: "Melbourne"
