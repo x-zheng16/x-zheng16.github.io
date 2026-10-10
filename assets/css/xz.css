@@ -132,7 +132,7 @@ p { text-wrap: pretty; }
 .navlinks a[aria-current="page"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: 6px; height: 1px; background: var(--accent); }
 
 /* ---------- page skeleton ---------- */
-.page { padding-block: 72px 112px; display: flex; flex-direction: column; gap: 76px; }
+.page { padding-block: 72px 80px; display: flex; flex-direction: column; gap: 76px; }
 .page.list { gap: 56px; }
 /* rail labels sit on the baseline of the first line on the right */
 .row { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: var(--gap); row-gap: 10px; }
@@ -215,7 +215,7 @@ p { text-wrap: pretty; }
 .svc-l .muted { font-variant-numeric: lining-nums; font-size: 15px; }
 
 /* ---------- footer ---------- */
-footer.foot { padding-block: 28px 48px; font-size: 14px; color: var(--muted); border-top: 1px solid var(--hair); }
+footer.foot { padding-block: 12px 14px; font-size: 13.5px; color: var(--muted); border-top: 1px solid var(--hair); }
 footer.foot .wrap { display: flex; flex-wrap: wrap; justify-content: center; text-align: center; gap: 6px 24px; }
 
 /* ---------- narrow screens ---------- */
@@ -225,7 +225,7 @@ footer.foot .wrap { display: flex; flex-wrap: wrap; justify-content: center; tex
   .wrap { padding-inline: 20px; }
   .topnav { position: static; }
   .navlinks { gap: 0 16px; font-size: 15px; }
-  .page { padding-block: 40px 80px; gap: 56px; }
+  .page { padding-block: 40px 56px; gap: 56px; }
   .row > .label, .yearhead { position: static; flex-basis: 100%; }
   .yearhead { display: flex; align-items: baseline; gap: 10px; position: sticky; top: env(safe-area-inset-top, 0px); background: var(--bg); padding-block: 8px; z-index: 5; }
   .hero .photo { flex-basis: 100%; }
