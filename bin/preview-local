@@ -6,7 +6,6 @@ cd "$root"
 
 export PATH="/opt/homebrew/opt/ruby@3.3/bin:/opt/homebrew/lib/ruby/gems/3.3.0/bin:${PATH:-/usr/bin:/bin}"
 export BUNDLE_FROZEN=true
-export BUNDLE_PATH=vendor/bundle
 export JEKYLL_ENV=development
 export LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 
