@@ -8,6 +8,7 @@ export PATH="/opt/homebrew/opt/ruby@3.3/bin:/opt/homebrew/lib/ruby/gems/3.3.0/bi
 export BUNDLE_FROZEN=true
 export BUNDLE_PATH=vendor/bundle
 export JEKYLL_ENV=development
+export LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 
 port=${PORT:-4000}
 printf 'Homepage preview: http://127.0.0.1:%s/\n' "$port"
