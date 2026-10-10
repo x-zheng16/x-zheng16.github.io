@@ -69,7 +69,6 @@ openings_html: >-
 experience:
   - { years: "2026–now", role: Research Assistant Professor, at: "City University of Hong Kong (HKAI-Sci)" }
   - { years: "2024–2026", role: Postdoctoral Fellow, at: "City University of Hong Kong", advisor: "Cong Wang" }
-  - { years: "2020–2024", role: Graduate Research Assistant, at: "City University of Hong Kong", advisor: "Cong Wang" }
   - { years: "2022–2023", role: Visiting Researcher, at: "Xi'an Jiaotong University", advisor: "Chao Shen" }
   - { years: "2019–2020", role: Visiting Researcher, at: "Xi'an Jiaotong University", advisor: "Chao Shen and Xingjun Ma" }
   - { years: "2018", role: Research Intern, at: "National Institute of Informatics", advisor: "Tetsunari Inamura" }
@@ -84,7 +83,7 @@ honors:
   - { year: "2024", name: "DSN Student Travel Grant", details: ["DSN Student Travel Awards Committee"] }
   - { year: "2022–2023", name: "Research Activities Fund", details: ["City University of Hong Kong"] }
   - { year: "2020–2024", name: "Institutional Research Tuition Grant", details: ["City University of Hong Kong"] }
-  - { year: "2020–2024", name: "CityUHK Presidential PhD Scholarship", details: ["2/73"] }
+  - { year: "2020–2024", name: "CityUHK Presidential PhD Scholarship", details: [] }
   - { year: "2018", name: "NII MOU Research Activities Grant", details: ["National Institute of Informatics Japan"] }
   - { year: "2016", name: "CSC Scholarship", details: ["China Scholarship Council"] }
   - { year: "2015", name: "Stars of Advanced Engineering", details: ["Shen Yuan Honors College at Beihang University", "highest honor at the Honors College"] }
@@ -96,12 +95,12 @@ service:
   program_committee:
     - { venue: "NeurIPS", years: "2026" }
     - { venue: "ICML", years: "2026" }
-    - { venue: "ICLR", years: "2025–2027" }
+    - { venue: "ICLR", years: "2027, 2026, 2025" }
     - { venue: "CVPR", years: "2026" }
     - { venue: "ECCV", years: "2026" }
     - { venue: "EMNLP", years: "2026" }
-    - { venue: "AAAI", years: "2025–2027" }
-    - { venue: "ACM MM", years: "2025–2026" }
+    - { venue: "AAAI", years: "2027, 2026, 2025" }
+    - { venue: "ACM MM", years: "2026, 2025" }
     - { venue: "ICRA", years: "2026" }
   journal_reviewer:
     - "ACM Computing Surveys (CSUR)"
