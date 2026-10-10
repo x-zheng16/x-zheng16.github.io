@@ -277,7 +277,7 @@ sass:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ["robots.txt", "assets/js/search/*.js", "assets/libs/**/*"]
+  exclude: ["robots.txt", "assets/js/search/*.js", "assets/libs/**/*", "assets/css/xz.css"] # xz.css: the minifier strips the spaces calc() needs
   uglifier_args:
     harmony: true
 

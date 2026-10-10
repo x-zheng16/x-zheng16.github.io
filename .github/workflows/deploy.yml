@@ -88,6 +88,13 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
+      - name: Check calc() kept its spaces 🔍
+        run: |
+          # calc(a+b) without spaces is invalid CSS and the browser drops the whole declaration
+          if grep -rnoE 'calc\([^;}]*[^ ]\+[^ ][^;}]*' _site/assets/css/; then
+            echo "::error::a minified calc() lost the spaces around +"
+            exit 1
+          fi
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
