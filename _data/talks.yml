@@ -1,7 +1,10 @@
 # Invited talks, newest first. The order here is the order on the page.
 # date: YYYY-MM-DD, or YYYY-MM when the day is not fixed. A talk whose date is today or later
-# gets an "upcoming" tag in the browser. venue: no commas, use "at" (Forum at Conference);
-# a host group reads "Institution (Prof. Name's Group)" with the name linked to the homepage (inline HTML).
+# gets an "upcoming" tag in the browser. venue: no commas, use "at" (Forum at Conference).
+# Invited by a university or company: name the host down to the school, department or team when known
+# ("School of X at University"), else stop at the university or company; add "(Prof. Name's Group)" with the
+# name linked to the homepage (inline HTML). Invited by a conference: the conference plus its track or forum.
+# location: the city, or Online. No buildings, halls or salon names.
 
 - date: "2026-10-31"
   title: "SciencePal 2.0 Self-Evolving Research Agent"
