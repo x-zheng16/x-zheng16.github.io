@@ -173,6 +173,7 @@ p { text-wrap: pretty; }
 .tl { display: block; position: relative; }
 .tl .d { position: absolute; top: 0; left: calc(var(--date-x) - var(--rail) - var(--gap)); width: calc(var(--rail) + var(--gap) - var(--date-x) - 12px); font-size: 14.5px; line-height: 1.65; padding-top: 4px; color: var(--muted); font-variant-numeric: lining-nums tabular-nums; }
 .tl .x { display: block; min-width: 0; }
+.hl { color: var(--accent); }
 .congrats { font-style: italic; }
 .tag { font-size: 13px; font-style: italic; color: var(--accent); margin-left: 8px; }
 .sub { color: var(--muted); font-size: 15.5px; }
