@@ -81,7 +81,7 @@ honors:
   - { year: "2020–2024", name: "CityUHK Presidential PhD Scholarship", details: ["City University of Hong Kong"] }
   - { year: "2018", name: "NII MOU Research Activities Grant", details: ["National Institute of Informatics Japan"] }
   - { year: "2016", name: "CSC Scholarship", details: ["China Scholarship Council"] }
-  - { year: "2015", name: "Stars of Advanced Engineering", details: ["Shen Yuan Honors College at Beihang University", "highest honor at the Honors College"] }
+  - { year: "2015", name: "Stars of Advanced Engineering", details: ["Shen Yuan Honors College at Beihang University"] }
 
 # Service: one venue per line. years is display text (a range for consecutive years).
 service:
