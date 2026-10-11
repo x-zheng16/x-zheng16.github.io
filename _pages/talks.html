@@ -11,18 +11,12 @@ permalink: /talks/
     <h2 class="yearhead">{{ g.name }}</h2>
     <div class="yearbody">
       <div class="dated">
-        {%- assign names = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," -%}
-        {%- assign months = g.items | group_by_exp: "t", "t.date | slice: 5, 2" -%}
-        {%- for mg in months %}
-        {%- assign mm = mg.name | plus: 0 | minus: 1 %}
-        <div class="mgroup">
-          <div class="d">{{ names[mm] }}</div>
-          <div class="mitems">
-            {%- for t in mg.items %}
-            {% include xz/talk.liquid t=t bare=true %}
-            {%- endfor %}
-          </div>
-        </div>
+        {%- assign prev = "" -%}
+        {%- for t in g.items %}
+        {%- assign m = t.date | slice: 5, 2 -%}
+        {%- if m == prev %}{% assign same = true %}{% else %}{% assign same = false %}{% endif %}
+        {% include xz/talk.liquid t=t month=true same=same %}
+        {%- assign prev = m -%}
         {%- endfor %}
       </div>
     </div>
