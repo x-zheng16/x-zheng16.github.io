@@ -12,12 +12,16 @@ permalink: /news/
     <h2 class="yearhead">{{ g.name }}</h2>
     <div class="yearbody">
       <div class="dated">
-        {%- assign prev = "" -%}
-        {%- for n in g.items %}
-        {%- assign m = n.date | date: "%m" -%}
-        {%- if m == prev %}{% assign same = true %}{% else %}{% assign same = false %}{% endif %}
-        {% include xz/news.liquid n=n month=true same=same %}
-        {%- assign prev = m -%}
+        {%- assign months = g.items | group_by_exp: "n", "n.date | date: '%m'" -%}
+        {%- for mg in months %}
+        <div class="mgroup">
+          <div class="d">{{ mg.items.first.date | date: "%B" }}</div>
+          <div class="mitems">
+            {%- for n in mg.items %}
+            {% include xz/news.liquid n=n bare=true %}
+            {%- endfor %}
+          </div>
+        </div>
         {%- endfor %}
       </div>
     </div>
