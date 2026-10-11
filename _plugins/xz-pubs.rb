@@ -81,7 +81,9 @@ module XZ
 
       if type == "conference" && (m = venue.sub(/ Poster$/, "").match(/^([^']+)'(\d{2})\s*(.*)$/))
         conf = "#{m[1]} 20#{m[2]}"
-        return conf if m[3].empty? || m[3] == "E&D"
+        # Posters go unmarked (every paper is one); a track or an Oral is named.
+        return conf if m[3].empty?
+        return "#{conf} E&D Track" if m[3] == "E&D"
         return "#{conf} #{m[3]}"
       end
       full = type == "journal" && !venue_full.include?("(") ? "#{venue_full} (#{venue})" : venue_full
