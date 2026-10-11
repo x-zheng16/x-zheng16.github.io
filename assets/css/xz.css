@@ -79,6 +79,7 @@ button { font-family: inherit; font-size: 100%; font-weight: inherit; line-heigh
   --cjk: "Noto Serif SC", "Songti SC", "STSong", serif;
   --rail: 168px;
   --gap: 48px;
+  --date-x: 104px;
   color-scheme: dark;
 }
 /* al-folio light theme: chosen explicitly, or by the system when no choice is stored */
@@ -166,12 +167,12 @@ p { text-wrap: pretty; }
 .theme li a { color: var(--ink-2); }
 .theme .tv { margin-left: 0.35em; font-style: italic; }
 
-/* ---------- dated lists: a left-aligned date column inside the body, clear of the rail labels ---------- */
+/* ---------- dated lists: dates hang in the rail at --date-x, clear of the longest dated label (Experience) ---------- */
 .dated { display: flex; flex-direction: column; gap: 14px; }
 .dated.tight { gap: 10px; }
-.tl { display: grid; grid-template-columns: 92px minmax(0, 1fr); column-gap: 20px; }
-.tl .d { grid-column: 1; font-size: 14.5px; line-height: 1.65; padding-top: 4px; color: var(--muted); font-variant-numeric: lining-nums tabular-nums; }
-.tl .x { grid-column: 2; display: block; min-width: 0; }
+.tl { display: block; position: relative; }
+.tl .d { position: absolute; top: 0; left: calc(var(--date-x) - var(--rail) - var(--gap)); width: calc(var(--rail) + var(--gap) - var(--date-x) - 12px); font-size: 14.5px; line-height: 1.65; padding-top: 4px; color: var(--muted); font-variant-numeric: lining-nums tabular-nums; }
+.tl .x { display: block; min-width: 0; }
 .congrats { font-style: italic; }
 .tag { font-size: 13px; font-style: italic; color: var(--accent); margin-left: 8px; }
 .sub { color: var(--muted); font-size: 15.5px; }
@@ -234,7 +235,6 @@ footer.foot .wrap { display: flex; flex-wrap: wrap; justify-content: center; tex
   .linkrow { gap: 4px 16px; }
   .ptitle { font-size: 38px; }
   .themes { grid-template-columns: minmax(0, 1fr); }
-  .tl { display: block; }
-  .tl .d { padding: 0; }
+  .tl .d { position: static; width: auto; padding: 0; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
