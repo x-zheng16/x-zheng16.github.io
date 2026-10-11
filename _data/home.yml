@@ -68,18 +68,17 @@ experience:
   - { years: "2022–2023", role: Visiting Researcher, at: "Xi'an Jiaotong University", advisor: "Chao Shen" }
   - { years: "2019–2020", role: Visiting Researcher, at: "Xi'an Jiaotong University", advisor: "Chao Shen and Xingjun Ma" }
   - { years: "2018", role: Research Intern, at: "National Institute of Informatics", advisor: "Tetsunari Inamura" }
-  - { years: "2016–2019", role: Graduate Research Assistant, at: "Tsinghua University", advisor: "Tao Zhang" }
   - { years: "2016", role: Research Intern, at: "The University of New South Wales", advisor: "Elias Aboutanios" }
 
-# Honors: details are separated into spaced columns; monetary amounts are left out.
+# Honors: the name carries any qualifier such as a percentile; details name the awarding body in muted text. Monetary amounts are left out.
 honors:
-  - { year: "2026", name: "ICML Gold Reviewer Award", details: ["top 25%"] }
+  - { year: "2026", name: "ICML Gold Reviewer Award (top 25%)", details: ["International Conference on Machine Learning"] }
   - { year: "2024", name: "IJCAI Travel Grant", details: ["IJCAI Organization and AIJ Division"] }
   - { year: "2024", name: "International Conference Grant", details: ["City University of Hong Kong"] }
   - { year: "2024", name: "DSN Student Travel Grant", details: ["DSN Student Travel Awards Committee"] }
   - { year: "2022–2023", name: "Research Activities Fund", details: ["City University of Hong Kong"] }
   - { year: "2020–2024", name: "Institutional Research Tuition Grant", details: ["City University of Hong Kong"] }
-  - { year: "2020–2024", name: "CityUHK Presidential PhD Scholarship", details: [] }
+  - { year: "2020–2024", name: "CityUHK Presidential PhD Scholarship", details: ["City University of Hong Kong"] }
   - { year: "2018", name: "NII MOU Research Activities Grant", details: ["National Institute of Informatics Japan"] }
   - { year: "2016", name: "CSC Scholarship", details: ["China Scholarship Council"] }
   - { year: "2015", name: "Stars of Advanced Engineering", details: ["Shen Yuan Honors College at Beihang University", "highest honor at the Honors College"] }

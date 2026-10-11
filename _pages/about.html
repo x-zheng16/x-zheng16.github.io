@@ -116,10 +116,8 @@ permalink: /
     <h2 class="label">Honors</h2>
     <div class="body">
       <div class="dated tight">
-        {%- assign prev = "" -%}
         {%- for a in h.honors %}
-        <div class="tl"><div class="d">{% if a.year != prev %}{{ a.year }}{% endif %}</div><div class="x"><span class="spaced"><span>{{ a.name }}</span>{% for d in a.details %}<span class="muted">{{ d }}</span>{% endfor %}</span></div></div>
-        {%- assign prev = a.year -%}
+        <div class="tl"><div class="d">{{ a.year }}</div><div class="x"><span class="spaced"><span>{{ a.name }}</span>{% for d in a.details %}<span class="muted">{{ d }}</span>{% endfor %}</span></div></div>
         {%- endfor %}
       </div>
     </div>
