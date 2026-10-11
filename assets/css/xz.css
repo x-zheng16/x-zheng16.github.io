@@ -80,7 +80,6 @@ button { font-family: inherit; font-size: 100%; font-weight: inherit; line-heigh
   --rail: 168px;
   --gap: 48px;
   --date-x: 104px;
-  --date-w: calc(var(--rail) + var(--gap) - var(--date-x) - 12px);
   color-scheme: dark;
 }
 /* al-folio light theme: chosen explicitly, or by the system when no choice is stored */
@@ -174,10 +173,6 @@ p { text-wrap: pretty; }
 .tl { display: block; position: relative; }
 .tl .d { position: absolute; top: 0; left: calc(var(--date-x) - var(--rail) - var(--gap)); width: calc(var(--rail) + var(--gap) - var(--date-x) - 12px); font-size: 14.5px; line-height: 1.65; padding-top: 4px; color: var(--muted); font-variant-numeric: lining-nums tabular-nums; }
 .tl .x { display: block; min-width: 0; }
-/* list pages group entries by month; the month sticks beside its year while its entries scroll */
-.mgroup { display: grid; grid-template-columns: var(--date-w) minmax(0, 1fr); column-gap: 12px; margin-left: calc(var(--date-x) - var(--rail) - var(--gap)); }
-.mgroup > .d { grid-column: 1; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 84px); align-self: start; font-size: 14.5px; line-height: 1.65; padding-top: 4px; color: var(--muted); }
-.mitems { grid-column: 2; display: flex; flex-direction: column; gap: 14px; }
 .congrats { font-style: italic; }
 .tag { font-size: 13px; font-style: italic; color: var(--accent); margin-left: 8px; }
 .sub { color: var(--muted); font-size: 15.5px; }
@@ -241,7 +236,5 @@ footer.foot .wrap { display: flex; flex-wrap: wrap; justify-content: center; tex
   .ptitle { font-size: 38px; }
   .themes { grid-template-columns: minmax(0, 1fr); }
   .tl .d { position: static; width: auto; padding: 0; }
-  .mgroup { display: block; margin-left: 0; }
-  .mgroup > .d { position: static; padding: 0; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
