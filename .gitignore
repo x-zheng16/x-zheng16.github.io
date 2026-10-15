@@ -12,4 +12,5 @@ node_modules/
 vendor
 .idea
 CLAUDE.local.md
-memory/cc-scratch/
+memory/
+cc-scratch/
