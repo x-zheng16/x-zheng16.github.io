@@ -44,6 +44,7 @@ themes:
       - { label: HarmProfile, venue: EMNLP 2026 Findings, key: ma2026harmprofile }
       - { label: Just Ask, venue: ICML 2026, key: zheng2026justask }
       - { label: GenBreak, venue: CVPR 2026, key: wang2026genbreak }
+      - { label: BlueSuffix, venue: ICLR 2025, key: zhao2025bluesuffix }
       - { label: CALM, venue: AAAI 2025, key: zheng2025calm }
   - title: Embodied AI
     desc: Robust Robot Learning and VLA Safety
