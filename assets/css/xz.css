@@ -67,7 +67,7 @@ button { font-family: inherit; font-size: 100%; font-weight: inherit; line-heigh
 /* ---------- tokens ---------- */
 :root {
   /* al-folio dark theme */
-  --bg: #1c1c1d;
+  --bg: #1b1c1e;
   --fg: #e8e8e8;
   --ink-2: #c4c4c4;
   --muted: #828282;
