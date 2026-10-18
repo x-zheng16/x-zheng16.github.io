@@ -76,6 +76,7 @@ experience:
 
 # Honors: the name carries any qualifier such as a percentile; details name the awarding body in muted text. Monetary amounts are left out.
 honors:
+  - { year: "2026", name: "CVPR Outstanding Reviewer", details: ["Conference on Computer Vision and Pattern Recognition"] }
   - { year: "2026", name: "ICML Gold Reviewer Award (top 25%)", details: ["International Conference on Machine Learning"] }
   - { year: "2024", name: "IJCAI Travel Grant", details: ["IJCAI Organization and AIJ Division"] }
   - { year: "2024", name: "International Conference Grant", details: ["City University of Hong Kong"] }
