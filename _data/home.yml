@@ -35,7 +35,7 @@ themes:
   - title: AI for Science
     desc: Recursive Self-Improving Agent Team for Scientific Discovery
     items:
-      - { label: SciencePal 2.0, venue: HKAI-Sci, url: "https://sciencepal.ai" }
+      - { label: SciencePal 2.0, venue: Production Science Agents, url: "https://sciencepal.ai" }
   - title: Trustworthy AI
     desc: Reinforcement Learning for Agent Safety
     items:
