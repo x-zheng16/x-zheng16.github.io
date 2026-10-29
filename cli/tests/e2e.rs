@@ -125,7 +125,7 @@ impl Repo {
         if command.get_program() == env!("CARGO_BIN_EXE_entrypoint-fixture")
             && command.get_args().next().is_some_and(|arg| arg == "worker")
         {
-            writeln!(stderr(), "fixture-worker-launch {}", child.id()).unwrap();
+            let _ = writeln!(stderr(), "fixture-worker-launch {}", child.id());
         }
         child
     }
