@@ -32,8 +32,14 @@ Use Ctrl-C to stop the preview.
 
 ## Tests
 
-Install Git and Rust, then run the deployment and entrypoint scenarios:
+Install Git and Rust on macOS or Linux, then run the deployment and entrypoint scenarios:
 
 ```sh
 cargo test --manifest-path cli/Cargo.toml --locked --features e2e --test e2e -- --test-threads=1
+```
+
+For the same scenarios in Linux with Docker:
+
+```sh
+docker build --target homepage-test .
 ```

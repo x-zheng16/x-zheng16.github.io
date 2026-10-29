@@ -1,8 +1,13 @@
 FROM rust:1-bookworm AS homepage-build
-WORKDIR /build
+WORKDIR /build/cli
 COPY cli/Cargo.toml cli/Cargo.lock ./
 COPY cli/src ./src
 RUN cargo build --release --locked --bin homepage
+
+FROM homepage-build AS homepage-test
+COPY cli/tests ./tests
+COPY bin/deploy bin/entry_point.sh /build/bin/
+RUN cargo test --locked --features e2e --test e2e -- --test-threads=1
 
 FROM ruby:latest
 ENV DEBIAN_FRONTEND=noninteractive
@@ -39,7 +44,7 @@ RUN gem install jekyll bundler
 RUN bundle install --no-cache
 EXPOSE 8080
 
-COPY --from=homepage-build /build/target/release/homepage /usr/local/bin/homepage
+COPY --from=homepage-build /build/cli/target/release/homepage /usr/local/bin/homepage
 COPY bin/entry_point.sh /usr/local/bin/entry_point.sh
 
 CMD ["/usr/local/bin/entry_point.sh"]

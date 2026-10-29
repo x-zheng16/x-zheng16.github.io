@@ -275,7 +275,20 @@ fn closed(mut stream: UnixStream) {
     assert_eq!(stream.read(&mut byte).unwrap(), 0);
 }
 
-fn started(rx: &mpsc::Receiver<(String, UnixStream)>) -> (UnixStream, Vec<UnixStream>) {
+type ChildSocket = (u32, UnixStream);
+
+fn closed_child((pid, stream): ChildSocket) {
+    closed(stream);
+    if cfg!(target_os = "linux") {
+        assert_eq!(unsafe { libc::kill(pid as i32, 0) }, -1);
+        assert_eq!(
+            std::io::Error::last_os_error().raw_os_error(),
+            Some(libc::ESRCH)
+        );
+    }
+}
+
+fn started(rx: &mpsc::Receiver<(String, UnixStream)>) -> (UnixStream, Vec<ChildSocket>) {
     let mut watch = None;
     let mut children = Vec::new();
     for _ in 0..3 {
@@ -284,7 +297,8 @@ fn started(rx: &mpsc::Receiver<(String, UnixStream)>) -> (UnixStream, Vec<UnixSt
             watch = Some(stream);
         } else {
             assert!(message.starts_with("serve ") || message.starts_with("worker "));
-            children.push(stream);
+            let pid = message.split_whitespace().nth(1).unwrap().parse().unwrap();
+            children.push((pid, stream));
         }
     }
     (watch.unwrap(), children)
@@ -409,6 +423,7 @@ fn entrypoint_lockfile_restart_and_owned_children() {
         let unrelated = repo.launch(
             repo.command(env!("CARGO_BIN_EXE_entrypoint-fixture"))
                 .arg("worker")
+                .arg("jekyll-unrelated")
                 .env("FIXTURE_SOCKET", repo.root.join("events.sock")),
         );
         let mut unrelated = Running {
@@ -430,7 +445,7 @@ fn entrypoint_lockfile_restart_and_owned_children() {
         watch.write_all(&[1]).unwrap();
         let (watch, restarted) = started(&rx);
         for child in children {
-            closed(child);
+            closed_child(child);
         }
         assert_eq!(repo.root.join("Gemfile.lock").exists(), tracked);
         if tracked {
@@ -444,7 +459,7 @@ fn entrypoint_lockfile_restart_and_owned_children() {
         server.stop();
         closed(watch);
         for child in restarted {
-            closed(child);
+            closed_child(child);
         }
         assert!(unrelated.child.try_wait().unwrap().is_none());
         drop(unrelated);
@@ -461,7 +476,7 @@ fn entrypoint_exits_on_watcher_and_server_failures() {
     watch.write_all(&[2]).unwrap();
     assert!(!server.child.wait().unwrap().success());
     for child in children {
-        closed(child);
+        closed_child(child);
     }
     drop(server);
     let mut server = repo.serve("serve");
@@ -481,7 +496,7 @@ fn entrypoint_interrupts_stop_owned_children() {
         server.interrupt(signal);
         closed(watch);
         for child in children {
-            closed(child);
+            closed_child(child);
         }
     }
 }
@@ -506,4 +521,62 @@ fn deploy_uses_existing_source_and_retains_push_failure_branch() {
     assert!(!output.status.success());
     assert_eq!(repo.git(&["branch", "--show-current"]), "gh-pages");
     assert!(repo.root.join("index.html").is_file());
+}
+
+#[test]
+fn source_only_package_builds_and_runs_entrypoint() {
+    let repo = Repo::new();
+    let package = repo.root.join(".git/package");
+    fs::create_dir_all(package.join("src")).unwrap();
+    let source = Path::new(env!("CARGO_MANIFEST_DIR"));
+    for file in [
+        "Cargo.toml",
+        "Cargo.lock",
+        "src/main.rs",
+        "src/deploy.rs",
+        "src/serve.rs",
+    ] {
+        fs::copy(source.join(file), package.join(file)).unwrap();
+    }
+    let home = PathBuf::from(std::env::var_os("HOME").unwrap());
+    let mut command = repo.command(env!("CARGO"));
+    command
+        .args([
+            "build",
+            "--locked",
+            "--offline",
+            "--bin",
+            "homepage",
+            "--manifest-path",
+        ])
+        .arg(package.join("Cargo.toml"))
+        .arg("--target-dir")
+        .arg(package.join("target"))
+        .env(
+            "CARGO_HOME",
+            std::env::var_os("CARGO_HOME").unwrap_or_else(|| home.join(".cargo").into_os_string()),
+        )
+        .env(
+            "RUSTUP_HOME",
+            std::env::var_os("RUSTUP_HOME")
+                .unwrap_or_else(|| home.join(".rustup").into_os_string()),
+        )
+        .stdout(Stdio::inherit())
+        .stderr(Stdio::inherit());
+    let mut child = repo.launch(&mut command);
+    let status = child.wait().unwrap();
+    repo.forget(child.id());
+    assert!(status.success());
+    let entry = source.join("../bin/deploy");
+    let child = repo.launch(
+        repo.command(entry)
+            .env("HOMEPAGE_BIN", package.join("target/debug/homepage"))
+            .arg("--help")
+            .stdout(Stdio::piped()),
+    );
+    let pid = child.id();
+    let output = child.wait_with_output().unwrap();
+    repo.forget(pid);
+    assert!(output.status.success());
+    assert!(String::from_utf8_lossy(&output.stdout).starts_with("usage: deploy "));
 }

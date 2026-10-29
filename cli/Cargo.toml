@@ -20,4 +20,5 @@ test = false
 
 [[test]]
 name = "e2e"
+path = "tests/e2e.rs"
 required-features = ["e2e"]

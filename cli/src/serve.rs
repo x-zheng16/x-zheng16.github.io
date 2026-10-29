@@ -62,7 +62,21 @@ impl Process {
         if let Some(waiter) = self.waiter.take() {
             let _ = waiter.join();
         }
-        child.wait()
+        let status = child.wait()?;
+        loop {
+            let result = unsafe { libc::waitpid(-(child.id() as i32), std::ptr::null_mut(), 0) };
+            if result > 0 {
+                continue;
+            }
+            let error = io::Error::last_os_error();
+            if error.raw_os_error() == Some(libc::ECHILD) {
+                break;
+            }
+            if error.kind() != io::ErrorKind::Interrupted {
+                return Err(error);
+            }
+        }
+        Ok(status)
     }
 }
 
@@ -172,6 +186,10 @@ fn start(tx: &Sender<Event>, generation: u64) -> Result<Process> {
 }
 
 pub fn serve() -> Result<()> {
+    #[cfg(target_os = "linux")]
+    if unsafe { libc::prctl(libc::PR_SET_CHILD_SUBREAPER, 1, 0, 0, 0) } != 0 {
+        return Err(io::Error::last_os_error().into());
+    }
     let (tx, rx) = mpsc::channel();
     let _signals = SignalThread::new(tx.clone())?;
     let mut watcher = watch(&tx)?;
