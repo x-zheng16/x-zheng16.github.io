@@ -190,13 +190,21 @@ fn native_readme_preview_from_clean_clone() {
     site.run(site.command("bu").arg("start"));
     site.run(site.command("bu").args([
         "run",
-        r#"page = await tabs.open('http://127.0.0.1:4000/');
-if (!(await page.evaluate(() => document.body.innerText)).includes('Xiang Zheng')) throw Error('Missing homepage');
-await page.goto('http://127.0.0.1:4000/publications/');
-if (!(await page.evaluate(() => document.body.innerText)).includes('Publications')) throw Error('Missing publications');
+        r#"page = await tabs.open('about:blank');
+await page.cdp('Network.enable');
+const pages = [];
+for (const [path, selector, expected] of [['/', 'main .hero h1', 'Xiang Zheng'], ['/publications/', 'main h1.ptitle', 'Publications']]) {
+  const url = 'http://127.0.0.1:4000' + path;
+  const received = browser.waitFor('Network.responseReceived', {sessionId: page.session, predicate: event => event.type === 'Document' && event.response.url === url});
+  const [navigation, network] = await Promise.all([page.goto(url), received]);
+  const heading = await page.evaluate(selector => document.querySelector(selector)?.firstChild?.textContent.trim(), selector);
+  const result = {url: navigation.url, status: network.response.status, heading};
+  if (result.url !== url || result.status !== 200 || heading !== expected) throw Error(JSON.stringify(result));
+  pages.push(result);
+}
 const css = await page.evaluate(async () => { const r = await fetch('/assets/css/main.css'); return {status: r.status, type: r.headers.get('content-type'), length: (await r.text()).length}; });
 if (css.status !== 200 || !css.type.includes('text/css') || css.length < 100) throw Error(JSON.stringify(css));
-({title: await page.evaluate(() => document.title), css})"#,
+({pages, css})"#,
     ]));
     site.run(site.command("bu").arg("stop"));
     assert_eq!(lock, fs::read(site.root.join("Gemfile.lock")).unwrap());
