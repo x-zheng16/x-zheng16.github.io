@@ -542,14 +542,16 @@ fn source_only_package_builds_and_runs_entrypoint() {
     let mut command = repo.command(env!("CARGO"));
     command
         .args([
-            "build",
+            "install",
             "--locked",
             "--offline",
             "--bin",
             "homepage",
-            "--manifest-path",
+            "--path",
         ])
-        .arg(package.join("Cargo.toml"))
+        .arg(&package)
+        .arg("--root")
+        .arg(package.join("install"))
         .arg("--target-dir")
         .arg(package.join("target"))
         .env(
@@ -570,7 +572,15 @@ fn source_only_package_builds_and_runs_entrypoint() {
     let entry = source.join("../bin/deploy");
     let child = repo.launch(
         repo.command(entry)
-            .env("HOMEPAGE_BIN", package.join("target/debug/homepage"))
+            .env_remove("HOMEPAGE_BIN")
+            .env(
+                "PATH",
+                std::env::join_paths(
+                    std::iter::once(package.join("install/bin"))
+                        .chain(std::env::split_paths(&std::env::var_os("PATH").unwrap())),
+                )
+                .unwrap(),
+            )
             .arg("--help")
             .stdout(Stdio::piped()),
     );

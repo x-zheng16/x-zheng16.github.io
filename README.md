@@ -5,7 +5,7 @@ and site dependencies, then run `bundle install` from the repository root.
 
 ## Deployment helper
 
-Install Rust 1.85 or newer with Cargo, then build the helper:
+Install Rust 1.85 or newer with Cargo, then install the helper:
 
 ```sh
 cargo install --path cli --locked --bin homepage
