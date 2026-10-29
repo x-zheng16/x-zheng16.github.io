@@ -3,7 +3,7 @@ mod fixture_worker;
 
 use std::collections::BTreeMap;
 use std::fs;
-use std::io::{BufRead, BufReader, Read, Write};
+use std::io::{BufRead, BufReader, Read, Write, stderr};
 use std::os::unix::{fs::symlink, net::UnixListener, net::UnixStream, process::CommandExt};
 use std::path::{Path, PathBuf};
 use std::process::{Child, Command, Output, Stdio};
@@ -121,15 +121,11 @@ impl Repo {
         let mut state = owned().lock().unwrap();
         let child = command.process_group(0).spawn().unwrap();
         state.get_mut(&self.root).unwrap().push(child.id());
+        drop(state);
         if command.get_program() == env!("CARGO_BIN_EXE_entrypoint-fixture")
             && command.get_args().next().is_some_and(|arg| arg == "worker")
         {
-            writeln!(
-                std::io::stderr().lock(),
-                "fixture-worker-launch {}",
-                child.id()
-            )
-            .unwrap();
+            writeln!(stderr(), "fixture-worker-launch {}", child.id()).unwrap();
         }
         child
     }
