@@ -27,6 +27,7 @@ impl Site {
             root.to_str().unwrap(),
         ]);
         let site = Self { repo, root };
+        fs::create_dir_all(site.repo.root.join(".git/tmp")).unwrap();
         site.git(&["branch", "-M", "master"]);
         site.git(&["config", "user.name", "Fixture"]);
         site.git(&["config", "user.email", "fixture@example.invalid"]);
@@ -59,6 +60,9 @@ impl Site {
             .env_remove("HOMEPAGE_BIN")
             .env_remove("PORT")
             .env("BUNDLE_FROZEN", "true")
+            .env("TMPDIR", self.repo.root.join(".git/tmp"))
+            .env("LANG", "C")
+            .env("LC_ALL", "C")
             .env("BU_HOME", self.repo.root.join(".git/bu"))
             .env("BU_PROFILE", "")
             .env("BU_AGENT", "homepage-e2e")
@@ -93,8 +97,10 @@ impl Site {
         let pid = child.id();
         let output = child.wait_with_output().unwrap();
         self.repo.forget(pid);
-        println!("{}", String::from_utf8_lossy(&output.stdout));
-        eprintln!("{}", String::from_utf8_lossy(&output.stderr));
+        if command.get_program() != "git" || !output.status.success() {
+            println!("{}", String::from_utf8_lossy(&output.stdout));
+            eprintln!("{}", String::from_utf8_lossy(&output.stderr));
+        }
         assert!(output.status.success(), "{command:?}: {}", output.status);
         String::from_utf8(output.stdout)
             .unwrap()

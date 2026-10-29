@@ -13,6 +13,7 @@ done
 
 export BUNDLE_FROZEN=true
 export JEKYLL_ENV=development
+export RUBYOPT="${RUBYOPT:+$RUBYOPT }-EUTF-8:UTF-8"
 
 port=${PORT:-4000}
 printf 'Homepage preview: http://127.0.0.1:%s/\n' "$port"

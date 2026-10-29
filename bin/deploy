@@ -1,2 +1,3 @@
 #!/bin/sh
+export RUBYOPT="${RUBYOPT:+$RUBYOPT }-EUTF-8:UTF-8"
 exec "${HOMEPAGE_BIN:-homepage}" deploy "$@"
