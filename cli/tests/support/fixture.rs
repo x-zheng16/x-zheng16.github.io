@@ -15,6 +15,7 @@ fn main() {
     let args: Vec<_> = env::args().collect();
     let program = Path::new(&args[0]).file_name().unwrap().to_str().unwrap();
     if args.get(1).is_some_and(|arg| arg == "worker") {
+        eprintln!("fixture-worker-pid {}", process::id());
         let mut stream = event(&format!("worker {}", process::id()));
         let _ = stream.read(&mut [0]);
         return;
@@ -55,6 +56,7 @@ fn main() {
                 .arg("worker")
                 .spawn()
                 .unwrap();
+            eprintln!("fixture-worker-launch {}", child.id());
             let mut stream = event(&format!("serve {} {}", process::id(), child.id()));
             let _ = stream.read(&mut [0]);
             let _ = child.kill();

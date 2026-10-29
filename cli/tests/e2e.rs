@@ -1,3 +1,6 @@
+#[path = "support/worker.rs"]
+mod fixture_worker;
+
 use std::collections::BTreeMap;
 use std::fs;
 use std::io::{BufRead, BufReader, Read, Write};
@@ -118,6 +121,16 @@ impl Repo {
         let mut state = owned().lock().unwrap();
         let child = command.process_group(0).spawn().unwrap();
         state.get_mut(&self.root).unwrap().push(child.id());
+        if command.get_program() == env!("CARGO_BIN_EXE_entrypoint-fixture")
+            && command.get_args().next().is_some_and(|arg| arg == "worker")
+        {
+            writeln!(
+                std::io::stderr().lock(),
+                "fixture-worker-launch {}",
+                child.id()
+            )
+            .unwrap();
+        }
         child
     }
 
