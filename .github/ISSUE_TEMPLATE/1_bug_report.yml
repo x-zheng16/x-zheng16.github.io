@@ -81,9 +81,7 @@ body:
       description: select all environments where you have experienced this issue
       multiple: true
       options:
-        - "Running locally with Docker (docker compose)"
-        - "Running locally with Docker (devcontainer)"
-        - "Running locally without Docker"
+        - "Running locally with Ruby and Bundler"
         - "Deployed site"
     validations:
       required: true
@@ -93,7 +91,7 @@ body:
       label: More info
       description: Add any other info about the issue here.
       placeholder: |
-        Add any other context about the problem here, such as versions of the libraries if running without docker, screenshots, links to the deployed site, etc.
+        Add any other context about the problem here, such as Ruby, Bundler and library versions if running locally, screenshots, links to the deployed site, etc.
     validations:
       required: false
 

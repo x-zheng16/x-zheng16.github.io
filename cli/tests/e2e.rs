@@ -1,18 +1,16 @@
-#[path = "support/worker.rs"]
-mod fixture_worker;
+#[path = "support/native.rs"]
+mod native;
 
 use std::collections::BTreeMap;
 use std::fs;
-use std::io::{BufRead, BufReader, Read, Write, stderr};
-use std::os::unix::{fs::symlink, net::UnixListener, net::UnixStream, process::CommandExt};
+use std::io::Write;
+use std::os::unix::{fs::symlink, process::CommandExt};
 use std::path::{Path, PathBuf};
 use std::process::{Child, Command, Output, Stdio};
 use std::sync::{
     Arc, Mutex, OnceLock,
     atomic::{AtomicU64, Ordering},
-    mpsc,
 };
-use std::time::Duration;
 
 type Processes = Arc<Mutex<BTreeMap<PathBuf, Vec<u32>>>>;
 
@@ -29,6 +27,7 @@ fn owned() -> &'static Processes {
         std::thread::spawn(move || {
             if let Some(signal) = signals.forever().next() {
                 for (path, pids) in cleanup.lock().unwrap().iter() {
+                    native::stop_browser(path);
                     for pid in pids {
                         unsafe {
                             libc::kill(-(*pid as i32), libc::SIGTERM);
@@ -68,20 +67,12 @@ impl Repo {
         };
         fs::create_dir_all(&repo.bin).unwrap();
         fs::create_dir_all(repo.root.join(".git/home")).unwrap();
-        fs::write(
-            repo.root.join(".gitignore"),
-            "events.sock\n_site/\nGemfile.lock\n",
-        )
-        .unwrap();
+        fs::write(repo.root.join(".gitignore"), "_site/\nGemfile.lock\n").unwrap();
         fs::write(repo.root.join("_config.yml"), "title: fixture\n").unwrap();
         fs::write(repo.root.join("source.txt"), "source\n").unwrap();
         fs::write(repo.root.join("CNAME"), "example.invalid\n").unwrap();
-        for name in ["bundle", "purgecss", "inotifywait"] {
-            symlink(
-                env!("CARGO_BIN_EXE_entrypoint-fixture"),
-                repo.bin.join(name),
-            )
-            .unwrap();
+        for name in ["bundle", "purgecss"] {
+            symlink(env!("CARGO_BIN_EXE_deploy-fixture"), repo.bin.join(name)).unwrap();
         }
         repo.git(&["init", "-b", "master"]);
         repo.git(&["config", "user.name", "Fixture"]);
@@ -122,11 +113,6 @@ impl Repo {
         let child = command.process_group(0).spawn().unwrap();
         state.get_mut(&self.root).unwrap().push(child.id());
         drop(state);
-        if command.get_program() == env!("CARGO_BIN_EXE_entrypoint-fixture")
-            && command.get_args().next().is_some_and(|arg| arg == "worker")
-        {
-            let _ = writeln!(stderr(), "fixture-worker-launch {}", child.id());
-        }
         child
     }
 
@@ -181,52 +167,11 @@ impl Repo {
         self.forget(pid);
         output
     }
-
-    fn events(&self) -> mpsc::Receiver<(String, UnixStream)> {
-        let socket = self.root.join("events.sock");
-        let listener = UnixListener::bind(socket).unwrap();
-        let (tx, rx) = mpsc::channel();
-        std::thread::spawn(move || {
-            for stream in listener.incoming() {
-                let stream = stream.unwrap();
-                let mut message = String::new();
-                BufReader::new(&stream).read_line(&mut message).unwrap();
-                if message.trim() == "stop" {
-                    break;
-                }
-                stream
-                    .set_read_timeout(Some(Duration::from_secs(10)))
-                    .unwrap();
-                if tx.send((message.trim().to_owned(), stream)).is_err() {
-                    break;
-                }
-            }
-        });
-        rx
-    }
-
-    fn serve(&self, fail: &str) -> Running {
-        let entry = Path::new(env!("CARGO_MANIFEST_DIR")).join("../bin/entry_point.sh");
-        let mut command = self.command(entry);
-        command
-            .env("FIXTURE_SOCKET", self.root.join("events.sock"))
-            .env("FIXTURE_FAIL", fail)
-            .process_group(0)
-            .stdout(Stdio::null())
-            .stderr(Stdio::inherit());
-        let child = self.launch(&mut command);
-        Running {
-            child,
-            root: self.root.clone(),
-        }
-    }
 }
 
 impl Drop for Repo {
     fn drop(&mut self) {
-        if let Ok(mut stream) = UnixStream::connect(self.root.join("events.sock")) {
-            let _ = writeln!(stream, "stop");
-        }
+        native::stop_browser(&self.root);
         if let Some(pids) = owned().lock().unwrap().remove(&self.root) {
             for pid in pids {
                 unsafe {
@@ -237,80 +182,6 @@ impl Drop for Repo {
         }
         fs::remove_dir_all(&self.root).unwrap();
     }
-}
-
-struct Running {
-    child: Child,
-    root: PathBuf,
-}
-
-impl Running {
-    fn stop(&mut self) {
-        self.interrupt(libc::SIGTERM);
-    }
-
-    fn interrupt(&mut self, signal: i32) {
-        unsafe {
-            libc::kill(self.child.id() as i32, signal);
-        }
-        assert_eq!(self.child.wait().unwrap().code(), Some(128 + signal));
-    }
-}
-
-impl Drop for Running {
-    fn drop(&mut self) {
-        if self.child.try_wait().unwrap().is_none() {
-            unsafe {
-                libc::kill(self.child.id() as i32, libc::SIGTERM);
-            }
-            let _ = self.child.wait();
-        }
-        owned()
-            .lock()
-            .unwrap()
-            .get_mut(&self.root)
-            .unwrap()
-            .retain(|pid| *pid != self.child.id());
-    }
-}
-
-fn next(rx: &mpsc::Receiver<(String, UnixStream)>) -> (String, UnixStream) {
-    rx.recv_timeout(Duration::from_secs(10))
-        .expect("entrypoint event within 10 seconds")
-}
-
-fn closed(mut stream: UnixStream) {
-    let mut byte = [0];
-    assert_eq!(stream.read(&mut byte).unwrap(), 0);
-}
-
-type ChildSocket = (u32, UnixStream);
-
-fn closed_child((pid, stream): ChildSocket) {
-    closed(stream);
-    if cfg!(target_os = "linux") {
-        assert_eq!(unsafe { libc::kill(pid as i32, 0) }, -1);
-        assert_eq!(
-            std::io::Error::last_os_error().raw_os_error(),
-            Some(libc::ESRCH)
-        );
-    }
-}
-
-fn started(rx: &mpsc::Receiver<(String, UnixStream)>) -> (UnixStream, Vec<ChildSocket>) {
-    let mut watch = None;
-    let mut children = Vec::new();
-    for _ in 0..3 {
-        let (message, stream) = next(rx);
-        if message.starts_with("watch ") {
-            watch = Some(stream);
-        } else {
-            assert!(message.starts_with("serve ") || message.starts_with("worker "));
-            let pid = message.split_whitespace().nth(1).unwrap().parse().unwrap();
-            children.push((pid, stream));
-        }
-    }
-    (watch.unwrap(), children)
 }
 
 #[test]
@@ -419,98 +290,6 @@ fn deploy_stops_on_build_failures() {
 }
 
 #[test]
-fn entrypoint_lockfile_restart_and_owned_children() {
-    for tracked in [false, true] {
-        let repo = Repo::new();
-        fs::write(repo.root.join("Gemfile.lock"), "original\n").unwrap();
-        if tracked {
-            repo.git(&["add", "-f", "Gemfile.lock"]);
-            repo.git(&["commit", "-m", "Track lockfile"]);
-            fs::write(repo.root.join("Gemfile.lock"), "changed\n").unwrap();
-        }
-        let rx = repo.events();
-        let unrelated = repo.launch(
-            repo.command(env!("CARGO_BIN_EXE_entrypoint-fixture"))
-                .arg("worker")
-                .arg("jekyll-unrelated")
-                .env("FIXTURE_SOCKET", repo.root.join("events.sock")),
-        );
-        let mut unrelated = Running {
-            child: unrelated,
-            root: repo.root.clone(),
-        };
-        let (_, unrelated_stream) = next(&rx);
-        let mut server = repo.serve("");
-        let (mut watch, children) = started(&rx);
-        assert_eq!(repo.root.join("Gemfile.lock").exists(), tracked);
-        if tracked {
-            assert_eq!(
-                fs::read_to_string(repo.root.join("Gemfile.lock")).unwrap(),
-                "original\n"
-            );
-        }
-        fs::write(repo.root.join("Gemfile.lock"), "changed again\n").unwrap();
-        fs::write(repo.root.join("_config.yml"), "title: changed\n").unwrap();
-        watch.write_all(&[1]).unwrap();
-        let (watch, restarted) = started(&rx);
-        for child in children {
-            closed_child(child);
-        }
-        assert_eq!(repo.root.join("Gemfile.lock").exists(), tracked);
-        if tracked {
-            assert_eq!(
-                fs::read_to_string(repo.root.join("Gemfile.lock")).unwrap(),
-                "original\n"
-            );
-        }
-        assert!(unrelated.child.try_wait().unwrap().is_none());
-        assert!(!repo.root.join(".git/home/gitconfig").exists());
-        server.stop();
-        closed(watch);
-        for child in restarted {
-            closed_child(child);
-        }
-        assert!(unrelated.child.try_wait().unwrap().is_none());
-        drop(unrelated);
-        closed(unrelated_stream);
-    }
-}
-
-#[test]
-fn entrypoint_exits_on_watcher_and_server_failures() {
-    let repo = Repo::new();
-    let rx = repo.events();
-    let mut server = repo.serve("");
-    let (mut watch, children) = started(&rx);
-    watch.write_all(&[2]).unwrap();
-    assert!(!server.child.wait().unwrap().success());
-    for child in children {
-        closed_child(child);
-    }
-    drop(server);
-    let mut server = repo.serve("serve");
-    let (message, watch) = next(&rx);
-    assert!(message.starts_with("watch "));
-    assert!(!server.child.wait().unwrap().success());
-    closed(watch);
-}
-
-#[test]
-fn entrypoint_interrupts_stop_owned_children() {
-    for signal in [libc::SIGINT, libc::SIGHUP] {
-        let repo = Repo::new();
-        let rx = repo.events();
-        let mut server = repo.serve("");
-        let (watch, children) = started(&rx);
-        server.interrupt(signal);
-        closed(watch);
-        for child in children {
-            closed_child(child);
-        }
-    }
-}
-
-#[test]
 fn deploy_uses_existing_source_and_retains_push_failure_branch() {
     let repo = Repo::new();
     repo.git(&["checkout", "-b", "source"]);
@@ -533,18 +312,12 @@ fn deploy_uses_existing_source_and_retains_push_failure_branch() {
 }
 
 #[test]
-fn source_only_package_builds_and_runs_entrypoint() {
+fn source_only_package_builds_and_runs_deploy() {
     let repo = Repo::new();
     let package = repo.root.join(".git/package");
     fs::create_dir_all(package.join("src")).unwrap();
     let source = Path::new(env!("CARGO_MANIFEST_DIR"));
-    for file in [
-        "Cargo.toml",
-        "Cargo.lock",
-        "src/main.rs",
-        "src/deploy.rs",
-        "src/serve.rs",
-    ] {
+    for file in ["Cargo.toml", "Cargo.lock", "src/main.rs", "src/deploy.rs"] {
         fs::copy(source.join(file), package.join(file)).unwrap();
     }
     let home = PathBuf::from(std::env::var_os("HOME").unwrap());

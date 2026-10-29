@@ -1,5 +1,4 @@
 mod deploy;
-mod serve;
 
 use std::io;
 use std::process::{Command, ExitCode, ExitStatus};
@@ -62,8 +61,7 @@ fn main() -> ExitCode {
     let args: Vec<_> = std::env::args().skip(1).collect();
     let result = match args.split_first() {
         Some((command, args)) if command == "deploy" => deploy::deploy(args),
-        Some((command, _)) if command == "serve" => serve::serve(),
-        _ => Err(error("usage: homepage deploy [OPTIONS] | serve")),
+        _ => Err(error("usage: homepage deploy [OPTIONS]")),
     };
     match result {
         Ok(()) => ExitCode::SUCCESS,

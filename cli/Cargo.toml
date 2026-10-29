@@ -5,7 +5,7 @@ edition = "2024"
 rust-version = "1.85"
 default-run = "homepage"
 
-[dependencies]
+[dev-dependencies]
 libc = "0.2"
 signal-hook = "0.3"
 
@@ -13,7 +13,7 @@ signal-hook = "0.3"
 e2e = []
 
 [[bin]]
-name = "entrypoint-fixture"
+name = "deploy-fixture"
 path = "tests/support/fixture.rs"
 required-features = ["e2e"]
 test = false

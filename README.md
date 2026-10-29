@@ -1,45 +1,60 @@
 # Xiang Zheng's Personal Page
 
-A Jekyll website based on al-folio. See [INSTALL.md](INSTALL.md) for Ruby, Bundler
-and site dependencies, then run `bundle install` from the repository root.
+A Jekyll website based on al-folio.
+
+## Install
+
+Install Git, Ruby 3.3 with Bundler 2.5.7, ImageMagick and
+[uv](https://docs.astral.sh/uv/getting-started/installation/), and put their
+executables on `PATH`. On Windows, use WSL. See [INSTALL.md](INSTALL.md) for
+platform setup. From the repository root, run:
+
+```sh
+gem install bundler -v 2.5.7
+bundle install
+uv python install 3.13
+```
+
+## Local preview
+
+```sh
+bin/preview-local
+```
+
+Open <http://127.0.0.1:4000>. Use Ctrl-C to stop. Set `PORT` to choose another
+port. Restart the command after changing `_config.yml`.
 
 ## Deployment helper
 
-Install Rust 1.85 or newer with Cargo, then install the helper:
+Install Rust 1.85 or newer with Cargo, Node.js 22 or newer, and
+[pnpm](https://pnpm.io/installation). Then run:
 
 ```sh
 cargo install --path cli --locked --bin homepage
+pnpm add --global purgecss
 bin/deploy --help
 ```
 
-Run `bin/deploy` from a clean repository root. It asks for confirmation before
-replacing the deployment branch and force-pushing it to `origin`. Install
-`purgecss` on `PATH`, for example with `pnpm add --global purgecss`.
-Use `bin/deploy --no-push` to prepare a local deployment branch without pushing.
-Set `HOMEPAGE_BIN` to use a separately installed helper binary.
-
-## Container preview
-
-Install Docker with Compose, then run:
+Put Cargo's and pnpm's binary directories on `PATH`. Run `bin/deploy` from a
+clean repository root in the Python environment:
 
 ```sh
-docker compose up --build
+uv run --python 3.13 --no-project --with-requirements requirements.txt -- bin/deploy --no-push
 ```
 
-Open <http://localhost:8080>. Outside Docker, `bin/entry_point.sh` needs the built
-helper, Bundler and `inotifywait` on `PATH` (Linux, package `inotify-tools`).
-Use Ctrl-C to stop the preview.
+Omit `--no-push` to publish. The helper asks for confirmation before replacing
+the deployment branch and force-pushing it to `origin`. Set `HOMEPAGE_BIN` to
+use a separately installed helper. See `bin/deploy --help` for options.
 
 ## Tests
 
-Install Git and Rust on macOS or Linux, then run the deployment and entrypoint scenarios:
+Install the dependencies above and [bu](https://github.com/x-zheng16/cc-plugin-tool-use-browser-use)
+with Chrome, plus `lsof`. Run individual Cargo integration scenarios:
 
 ```sh
-cargo test --manifest-path cli/Cargo.toml --locked --features e2e --test e2e -- --test-threads=1
+cargo test --manifest-path cli/Cargo.toml --locked --features e2e --test e2e native::native_readme_preview_from_clean_clone -- --exact --test-threads=1
+cargo test --manifest-path cli/Cargo.toml --locked --features e2e --test e2e native::native_deploy_from_clean_clone -- --exact --test-threads=1
 ```
 
-For the same scenarios in Linux with Docker:
-
-```sh
-docker build --target homepage-test .
-```
+Use `deploy_` instead of either scenario name, without `--exact`, for the
+deployment option and failure scenarios.
