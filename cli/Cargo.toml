@@ -1,0 +1,23 @@
+[package]
+name = "homepage"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+default-run = "homepage"
+
+[dependencies]
+libc = "0.2"
+signal-hook = "0.3"
+
+[features]
+e2e = []
+
+[[bin]]
+name = "entrypoint-fixture"
+path = "tests/support/fixture.rs"
+required-features = ["e2e"]
+test = false
+
+[[test]]
+name = "e2e"
+required-features = ["e2e"]

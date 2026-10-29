@@ -1,3 +1,11 @@
 _site/
-.git/
+.git
 assets/
+.worktree/
+cc-scratch/
+cli/target/
+cli/cc-scratch/
+memory/
+CLAUDE.local.md
+node_modules/
+vendor/
