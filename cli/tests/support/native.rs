@@ -200,6 +200,11 @@ for (const [path, selector, expected] of [['/', 'main .hero h1', 'Xiang Zheng'],
   const heading = await page.evaluate(selector => document.querySelector(selector)?.firstChild?.textContent.trim(), selector);
   const result = {url: navigation.url, status: network.response.status, heading};
   if (result.url !== url || result.status !== 200 || heading !== expected) throw Error(JSON.stringify(result));
+  if (path === '/') {
+    const profiles = await page.evaluate(() => Array.from(document.querySelectorAll('nav[aria-label="Profiles"] a'), a => ({label: a.textContent.trim(), url: a.href})));
+    if (JSON.stringify(profiles.map(a => a.label)) !== JSON.stringify(['Google Scholar', 'GitHub', 'CityUHK Scholar', 'CV']) || profiles[2].url !== "https://scholars.cityu.edu.hk/en/persons/xzheng235/") throw Error(JSON.stringify(profiles));
+    result.profiles = profiles;
+  }
   pages.push(result);
 }
 const css = await page.evaluate(async () => { const r = await fetch('/assets/css/main.css'); return {status: r.status, type: r.headers.get('content-type'), length: (await r.text()).length}; });
