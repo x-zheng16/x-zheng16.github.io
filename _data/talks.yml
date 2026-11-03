@@ -6,6 +6,11 @@
 # name linked to the homepage (inline HTML). Invited by a conference: the conference plus its track or forum.
 # location: the city, or Online. No buildings, halls or salon names.
 
+- date: "2027-02-19"
+  title: "Invited talk"
+  venue: "<a href=\"https://wsdm-agent.github.io/1st-DeepSearch-Workshop-WSDM-2027/index.html\">DeepSearch: 1st Workshop on Deep Search and Research Agents for the Web</a> at WSDM 2027"
+  location: "Hong Kong"
+
 - date: "2026-10-31"
   title: "SciencePal 2.0 Self-Evolving Research Agent"
   venue: "Medical Large Model Agent Forum at CHIP 2026"

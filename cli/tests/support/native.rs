@@ -193,7 +193,7 @@ fn native_readme_preview_from_clean_clone() {
         r#"page = await tabs.open('about:blank');
 await page.cdp('Network.enable');
 const pages = [];
-for (const [path, selector, expected] of [['/', 'main .hero h1', 'Xiang Zheng'], ['/publications/', 'main h1.ptitle', 'Publications']]) {
+for (const [path, selector, expected] of [['/', 'main .hero h1', 'Xiang Zheng'], ['/publications/', 'main h1.ptitle', 'Publications'], ['/talks/', 'main h1.ptitle', 'Talks'], ['/news/', 'main h1.ptitle', 'News']]) {
   const url = 'http://127.0.0.1:4000' + path;
   const received = browser.waitFor('Network.responseReceived', {sessionId: page.session, predicate: event => event.type === 'Document' && event.response.url === url});
   const [navigation, network] = await Promise.all([page.goto(url), received]);
@@ -204,6 +204,11 @@ for (const [path, selector, expected] of [['/', 'main .hero h1', 'Xiang Zheng'],
     const profiles = await page.evaluate(() => Array.from(document.querySelectorAll('nav[aria-label="Profiles"] a'), a => ({label: a.textContent.trim(), url: a.href})));
     if (JSON.stringify(profiles.map(a => a.label)) !== JSON.stringify(['Google Scholar', 'GitHub', 'CityUHK Scholar', 'CV']) || profiles[2].url !== "https://scholars.cityu.edu.hk/en/persons/xzheng235/") throw Error(JSON.stringify(profiles));
     result.profiles = profiles;
+  }
+  if (path !== '/publications/') {
+    const invitations = await page.evaluate(url => Array.from(document.querySelectorAll('main .tl .x')).filter(row => Array.from(row.querySelectorAll('a')).some(a => a.href === url)).map(row => ({text: row.innerText, date: row.querySelector('.tag')?.dataset.until})), "https://wsdm-agent.github.io/1st-DeepSearch-Workshop-WSDM-2027/index.html");
+    if (invitations.length !== (path === '/' ? 2 : 1) || invitations.some(row => !row.text.includes('DeepSearch') || !row.text.includes('WSDM 2027')) || (path !== '/news/' && !invitations.some(row => row.date === '2027-02-19'))) throw Error(JSON.stringify({path, invitations}));
+    result.invitations = invitations;
   }
   pages.push(result);
 }
