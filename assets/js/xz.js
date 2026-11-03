@@ -33,11 +33,10 @@
     });
   });
 
-  // "upcoming" tag on talks whose date (YYYY-MM-DD, or YYYY-MM for the whole month) has not passed
   var now = new Date();
   document.querySelectorAll(".tag[data-until]").forEach(function (tag) {
     var p = tag.getAttribute("data-until").split("-").map(Number);
-    var end = p.length > 2 ? new Date(p[0], p[1] - 1, p[2] + 1) : new Date(p[0], p[1], 1);
+    var end = p.length === 1 ? new Date(p[0] + 1, 0, 1) : p.length > 2 ? new Date(p[0], p[1] - 1, p[2] + 1) : new Date(p[0], p[1], 1);
     if (now < end) tag.hidden = false;
   });
 })();

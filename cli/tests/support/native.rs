@@ -206,9 +206,14 @@ for (const [path, selector, expected] of [['/', 'main .hero h1', 'Xiang Zheng'],
     result.profiles = profiles;
   }
   if (path !== '/publications/') {
-    const invitations = await page.evaluate(url => Array.from(document.querySelectorAll('main .tl .x')).filter(row => Array.from(row.querySelectorAll('a')).some(a => a.href === url)).map(row => ({text: row.innerText, date: row.querySelector('.tag')?.dataset.until})), "https://wsdm-agent.github.io/1st-DeepSearch-Workshop-WSDM-2027/index.html");
-    if (invitations.length !== (path === '/' ? 2 : 1) || invitations.some(row => !row.text.includes('DeepSearch') || !row.text.includes('WSDM 2027')) || (path !== '/news/' && !invitations.some(row => row.date === '2027-02-19'))) throw Error(JSON.stringify({path, invitations}));
-    result.invitations = invitations;
+    result.invitations = [];
+    for (const workshop of [{"url":"https://www.adai.ai/dai/2026/workshops.html","venue":"AI Scientists: From LLM Agents to Autonomous Research","conference":"DAI 2026","date":"2026"},{"url":"https://wsdm-agent.github.io/1st-DeepSearch-Workshop-WSDM-2027/index.html","venue":"DeepSearch: 1st Workshop on Deep Search and Research Agents for the Web","conference":"WSDM 2027","date":"2027-02-19"}]) {
+      const invitations = await page.evaluate(url => Array.from(document.querySelectorAll('main .tl .x')).filter(row => Array.from(row.querySelectorAll('a')).some(a => a.href === url)).map(row => ({text: row.innerText, date: row.querySelector('.tag')?.dataset.until, dateText: row.closest('.tl').querySelector('.d')?.textContent.trim(), upcoming: Boolean(row.querySelector('.tag:not([hidden])'))})), workshop.url);
+      const talk = invitations.find(row => row.date);
+      if (invitations.length !== (path === '/' ? 2 : 1) || invitations.some(row => !row.text.includes(workshop.venue) || !row.text.includes(workshop.conference)) || (path !== '/news/' && talk?.date !== workshop.date)) throw Error(JSON.stringify({path, workshop, invitations}));
+      if (talk && workshop.date.length === 4 && (talk.dateText !== (path === '/' ? workshop.date : 'TBA') || talk.upcoming !== (new Date().getFullYear() <= Number(workshop.date)))) throw Error(JSON.stringify({path, talk}));
+      result.invitations.push({workshop, invitations});
+    }
   }
   pages.push(result);
 }
