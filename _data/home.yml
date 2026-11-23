@@ -38,9 +38,11 @@ themes:
   - title: Trustworthy AI
     desc: Reinforcement Learning for Agent Safety
     items:
+      - { label: ADMIT, venue: EACL 2027, key: wu2025admit }
       - { label: ISC, venue: NeurIPS 2026, key: wu2026internal }
       - { label: VEX-Bench, venue: NeurIPS 2026, key: huang2026vexbench }
       - { label: HarmProfile, venue: EMNLP 2026 Findings, key: ma2026harmprofile }
+      - { label: STARE, venue: ICML 2026, key: mao2026stare }
       - { label: Just Ask, venue: ICML 2026, key: zheng2026justask }
       - { label: GenBreak, venue: CVPR 2026, key: wang2026genbreak }
       - { label: BlueSuffix, venue: ICLR 2025, key: zhao2025bluesuffix }
