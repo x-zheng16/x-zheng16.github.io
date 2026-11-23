@@ -18,6 +18,7 @@ module XZ
 
       bib = BibTeX.open(path, parse_names: false)
       pubs = bib.data.select { |e| e.is_a?(BibTeX::Entry) }.map { |e| build(e) }
+        .each_with_index.sort_by { |p, i| [-p["year"], i] }.map(&:first)
       site.data["xz_pubs"] = pubs
       site.data["xz_pub_years"] = pubs.map { |p| p["year"] }.uniq.sort.reverse
     end
