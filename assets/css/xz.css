@@ -66,15 +66,15 @@ button { font-family: inherit; font-size: 100%; font-weight: inherit; line-heigh
 
 /* ---------- tokens ---------- */
 :root {
-  /* al-folio dark theme */
-  --bg: #1b1c1e;
-  --fg: #e8e8e8;
-  --ink-2: #c4c4c4;
-  --muted: #828282;
-  --hair: #424246;
-  --link-line: #4f4f54;
-  --photo-filter: brightness(.88); /* tone the white studio background down on dark */
-  --accent: #de6480; /* CityUHK red #CC103C, lightened to 5.1:1 on the dark background */
+  /* dark theme: a blue-gray base, bright enough for dimmer external monitors */
+  --bg: #22252b;
+  --fg: #ededed;
+  --ink-2: #d0d0d0;
+  --muted: #9a9a9a;
+  --hair: #474a52;
+  --link-line: #565a63;
+  --photo-filter: brightness(.95); /* tone the white studio background down on dark */
+  --accent: #e8728d; /* CityUHK red #CC103C, lightened to 5.3:1 on the dark background */
   --serif: "Source Serif 4", "Source Serif Pro", Georgia, serif;
   --cjk: "Noto Serif SC", "Songti SC", "STSong", serif;
   --rail: 168px;
