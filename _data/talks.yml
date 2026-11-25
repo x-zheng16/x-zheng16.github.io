@@ -3,6 +3,7 @@
 # ("School of X at University"), else stop at the university or company; add "(Prof. Name's Group)" with the
 # name linked to the homepage (inline HTML). Invited by a conference: the conference plus its track or forum.
 # location: the city, or Online. No buildings, halls or salon names.
+# recording: optional URL of a public recording, linked after the date.
 
 - date: "2027-02-19"
   title: "Towards Trustworthy Recursive Self-Improving Science Agents"
