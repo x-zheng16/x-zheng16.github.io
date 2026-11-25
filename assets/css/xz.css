@@ -177,6 +177,8 @@ p { text-wrap: pretty; }
 .congrats { font-style: italic; }
 .tag { font-size: 13px; font-style: italic; color: var(--accent); margin-left: 8px; }
 .sub { color: var(--muted); font-size: 15.5px; }
+.talks { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; color: var(--muted); line-height: 1.55; }
+.talks .tt { color: var(--fg); }
 
 /* ---------- publications ---------- */
 .legend { margin: 0; font-size: 14.5px; color: var(--muted); }
