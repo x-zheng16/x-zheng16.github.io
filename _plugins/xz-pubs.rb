@@ -54,6 +54,7 @@ module XZ
         "authors_html" => authors_html(f.(:author).to_s),
         "where" => h(where(type, venue, venue_full, year, f.(:arxiv))),
         "links" => links(type, e, f),
+        "url" => main_url(f),
       }
     end
 
@@ -89,6 +90,13 @@ module XZ
       end
       full = type == "journal" && !venue_full.include?("(") ? "#{venue_full} (#{venue})" : venue_full
       full =~ /\d{4}/ ? full : "#{full} #{year}"
+    end
+
+    def main_url(f)
+      return f.(:openreview).to_s if f.(:openreview)
+      return "https://doi.org/#{f.(:doi)}" if f.(:doi)
+      return "https://arxiv.org/abs/#{f.(:arxiv)}" if f.(:arxiv)
+      f.(:website)&.to_s
     end
 
     def links(type, e, f)
